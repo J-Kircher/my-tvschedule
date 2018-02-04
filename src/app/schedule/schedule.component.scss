@@ -1,0 +1,31 @@
+.day {
+  vertical-align: middle;
+}
+.row {
+  margin: 0px;
+}
+.container {
+  white-space: nowrap;
+  overflow-y: hidden;
+  padding: 0px;
+}
+.show {
+  margin: 0 5px 5px 5px;
+  border: 1px;
+  padding: 1px;
+}
+.timeslot-header {
+  margin: 2px;
+  padding: 0px;
+  min-height: 50px;
+  width: 300px;
+  text-align: center;
+  font-weight: bold;
+}
+.timeslot {
+  margin: 2px;
+  padding: 0px;
+  min-height: 50px;
+  width: 300px;
+  background-color: lightgreen;
+}

@@ -1,0 +1,88 @@
+<div id="scheduleTable" class="container well" style="float: left">
+  <p>My TV Schedule</p>
+  <div class="row well" style="background-color: #9999FF;">
+    <div class="day col-sm-1">Day</div>
+    <div class="container col-sm-11">
+      <div class="timeslot-header col-md-4">8:00 pm</div>
+      <div class="timeslot-header col-md-4">9:00 pm</div>
+      <div class="timeslot-header col-md-4">10:00 pm</div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Sunday</div>
+    <div class="container col-sm-11">
+      <div id="S8" class="timeslot col-md-4"></div>
+      <div id="S9" class="timeslot col-md-4"></div>
+      <div id="SX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Monday</div>
+    <div class="container col-sm-11">
+      <div id="M8" class="timeslot col-md-4"></div>
+      <div id="M9" class="timeslot col-md-4"></div>
+      <div id="MX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Tuesday</div>
+    <div class="container col-sm-11">
+      <div id="T8" class="timeslot col-md-4"></div>
+      <div id="T9" class="timeslot col-md-4"></div>
+      <div id="TX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Wednesday</div>
+    <div class="container col-sm-11">
+      <div id="W8" class="timeslot col-md-4"></div>
+      <div id="W9" class="timeslot col-md-4"></div>
+      <div id="WX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Thursday</div>
+    <div class="container col-sm-11">
+      <div id="R8" class="timeslot col-md-4"></div>
+      <div id="R9" class="timeslot col-md-4"></div>
+      <div id="RX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Friday</div>
+    <div class="container col-sm-11">
+      <div id="F8" class="timeslot col-md-4"></div>
+      <div id="F9" class="timeslot col-md-4"></div>
+      <div id="FX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Saturday</div>
+    <div class="container col-sm-11">
+      <div id="A8" class="timeslot col-md-4"></div>
+      <div id="A9" class="timeslot col-md-4"></div>
+      <div id="AX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+  <div class="row well">
+    <div class="col-sm-1">Streaming</div>
+    <div class="container col-sm-11">
+      <div id="N8" class="timeslot col-md-4"></div>
+      <div id="N9" class="timeslot col-md-4"></div>
+      <div id="NX" class="timeslot col-md-4"></div>
+    </div>
+  </div>
+</div>
+
+<div style="float: left">
+  <p>Shows Between Seasons</p>
+  <div>
+    <li class="show" *ngFor="let show of shows">
+      <a href="{{ show.link }}">
+        <img src="/assets/images/Networks/{{ show.network }}.gif" alt="{{ show.network }}"
+        title="{{ show.network }}" border="0"><img src="/assets/images/Shows/{{ show.image }}"
+        alt="{{ show.name }}" title="{{ show.info }}" border="0">
+      </a>
+    </li>
+  </div>
+</div>
