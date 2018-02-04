@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>TV Schedule</title>
+<link rel="stylesheet" href="Site.css" type="text/css" />
+<link rel="stylesheet" href="./jquery-ui-1.10.3/themes/base/jquery.ui.all.css">
+<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+<script src="./jquery-ui-1.10.3/ui/jquery.ui.core.js"></script>
+<script src="./jquery-ui-1.10.3/ui/jquery.ui.widget.js"></script>
+<script src="./jquery-ui-1.10.3/ui/jquery.ui.mouse.js"></script>
+<script src="./jquery-ui-1.10.3/ui/jquery.ui.draggable.js"></script>
+<script src="./jquery-ui-1.10.3/ui/jquery.ui.droppable.js"></script>
+<script src="./jquery-ui-1.10.3/ui/jquery.ui.sortable.js"></script>
+<link xrel="stylesheet" xhref="./jquery-ui-1.10.3/demos/demos.css">
+<script src="./Shows.js"></script>
+
+<style>
+#scheduleTable { float: left; margin: 10px; }
+#showsBetween, #showsEnded { list-style-type: none; margin: 0; padding: 0 0 2.5em; float: left; margin-right: 10px; }
+#showsBetween li, #showsEnded li { margin: 0 5px 5px 5px; padding: 1px; font-size: 1.2em; height: 50px; width: 300px; }
+.floatLeft { float: left; }
+tr { vertical-align:text-top; }
+th { vertical-align:middle; }
+td { height: 50px; width: 302px; }
+ul, li {
+    list-style-image: none;
+    list-style: none;
+    list-style-type: none;
+}
+li {
+    height: 50px; width: 300px;
+}
+.show {
+    -o-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity:1;
+}
+.hide {
+    -o-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity:0;
+}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+
+    $(function () {
+
+        $('body').css('background', '#FCFCFC url(./images/tv.gif) no-repeat');
+        //$('body').css('background', '#FCFCFC url(./images/tv.gif)');
+
+        $('td').attr('class', 'connectedSortable');
+
+        //$( "#showsBetween li" ).draggable({ revert: "invalid" });
+        //$( "#showsEnded li" ).draggable({ revert: "invalid" });
+
+        $( "td" ).droppable({
+            activeClass: "ui-state-hover",
+            hoverClass: "ui-state-active",
+            drop: dropTableComplete
+        });
+
+        $( "ul" ).droppable({
+            activeClass: "ui-state-hover",
+            hoverClass: "ui-state-active",
+            drop: dropULComplete
+        });
+
+        $( "#showsBetween, #showsEnded" ).sortable({
+            connectWith: ".connectedSortable"
+        }).disableSelection();
+
+        $( "td, #showsBetween" ).sortable({
+            connectWith: ".connectedSortable"
+        }).disableSelection();
+
+        // reset the schedule table
+        //localStorage.removeItem('myShows');
+
+        BuildUL();
+
+    });
+
+    function BuildUL () {
+
+        var savedShows = getShows();
+
+        for (var i = 0; i < show.length; i++) {
+
+            // compare saved shows to the array and
+            // use the status from the saved info
+            for (var j = 0; j < savedShows.length; j++) {
+                if (show[i].name == savedShows[j].name) {
+                    show[i].status = savedShows[j].status;
+                }
+            }
+
+            // place the elements of the show array where they belong
+            switch(show[i].status) {
+                case "B":
+                    $('#showsBetween').append(BuildLI(show[i]));
+                    break;
+                case "E":
+                    $('#showsEnded').append(BuildLI(show[i]));
+                    break;
+                default:
+                    $('#' + show[i].status).append(BuildLI(show[i]));
+            }
+        }
+    }
+
+    function BuildLI (currShow) {
+
+        return($('<li class="ui-state-default">').append(
+                    $('<a>').attr('href', currShow.link).append(
+                        $('<img>').attr({src: 'images/Networks/' + currShow.network + '.gif',
+                                         alt: currShow.network,
+                                       title: currShow.network,
+                                       border: '0'})).append(
+                        $('<img>').attr({src: 'images/Shows/' + currShow.image,
+                                         alt: currShow.name,
+                                       title: currShow.info,
+                                       border: '0'})
+                )));
+    }
+
+    function dropTableComplete (event, ui) {
+
+        //alert("dropTableComplete");
+        $(this)
+            .find("td")
+            .addClass("ui-state-highlight");
+
+        var tdCellId = this.id;
+        var movedShow = ui.draggable.find("img").eq(1).attr("alt");
+
+        for (var i = 0; i < show.length; i++) {
+            // update the status of the moved show
+            // to relect the cell id of the table
+            if (show[i].name == movedShow) {
+                show[i].status = tdCellId;
+            }
+        }
+
+        saveShows();
+    }
+
+    function dropULComplete (event, ui) {
+
+        //alert("dropULComplete");
+        var newStatus;
+        switch (this.id) {
+            case "showsBetween":
+                newStatus = "B";
+                break;
+            case "showsEnded":
+                newStatus = "E";
+                break;
+            default:
+                newStatus = "";
+        }
+
+        var movedShow = ui.draggable.find("img").eq(1).attr("alt");
+
+        for (var i = 0; i < show.length; i++) {
+            // update the status of the moved show
+            // to relect the id of the list object
+            if (show[i].name == movedShow) {
+                show[i].status = newStatus;
+            }
+        }
+
+        saveShows();
+    }
+
+    function saveShows () {
+        var jsonText = JSON.stringify(show, ["name","status"]);
+        //alert(jsonText);
+        localStorage.setItem('myShows',jsonText);
+    }
+
+    function getShows () {
+        var retrieved = localStorage.getItem('myShows');
+        if (retrieved == null) {
+            return ([]);
+        } else {
+            return(JSON.parse(retrieved));
+        }
+    }
+
+    /*
+    function checkTable() {
+        $('#scheduleTable td:has(a)').each(function() {
+            alert(this.id);
+            //alert($('a').attr('href'));
+        });
+        //$('#scheduleTable tr').each(function() {
+        //    $('td a').each(function () {
+        //        alert($(this).attr('title'));
+        //    });
+        //});
+    }
+    */
+
+//]]>
+</script>
+</head>
+<body>
+<div id="scheduleTable" style="display:inherit;">
+<table border="1">
+    <caption><b>TV Schedule</b></caption>
+    <tr>
+        <th>Day</th>
+        <th>8:00 pm</th>
+        <th>9:00 pm</th>
+        <th>10:00 pm</th>
+    </tr>
+    <tr>
+        <th>Sunday</th>
+        <td id="S8"></td>
+        <td id="S9"></td>
+        <td id="SX"></td>
+    </tr>
+    <tr>
+        <th>Monday</th>
+        <td id="M8"></td>
+        <td id="M9"></td>
+        <td id="MX"></td>
+    </tr>
+    <tr>
+        <th>Tuesday</th>
+        <td id="T8"></td>
+        <td id="T9"></td>
+        <td id="TX"></td>
+    </tr>
+    <tr>
+        <th>Wednesday</th>
+        <td id="W8"></td>
+        <td id="W9"></td>
+        <td id="WX"></td>
+    </tr>
+    <tr>
+        <th>Thursday</th>
+        <td id="R8"></td>
+        <td id="R9"></td>
+        <td id="RX"></td>
+    </tr>
+    <tr>
+        <th>Friday</th>
+        <td id="F8"></td>
+        <td id="F9"></td>
+        <td id="FX"></td>
+    </tr>
+    <tr>
+        <th>Saturday</th>
+        <td id="A8"></td>
+        <td id="A9"></td>
+        <td id="AX"></td>
+    </tr>
+    <tr>
+        <th>Streaming</th>
+        <td id="N8"></td>
+        <td id="N9"></td>
+        <td id="NX"></td>
+    </tr>
+</table>
+</div>
+<br>
+
+<div id="showsBetweenHeader" class="floatLeft">
+<p>Shows Between Seasons</p>
+<ul id="showsBetween" class="connectedSortable">
+</ul>
+</div>
+
+<button id="toggleButton" onclick="toggleShow()">Hide Ended</button>
+<div id="showsEndedHeader" class="floatLeft">
+<p>Ended</p>
+<ul id="showsEnded" class="connectedSortable">
+</ul>
+</div>
+
+<script>
+const showsEnded = document.querySelector('#showsEndedHeader');
+const toggleBtn = document.getElementById("toggleButton");
+
+function toggleShow() {
+    if (showsEnded.className == "hide") {
+        showsEnded.className = "show";
+        toggleBtn.innerText = "Hide Ended";
+    } else {
+        showsEnded.className = "hide";
+        toggleBtn.innerText = "Show Ended";
+    }
+}
+
+showsEnded.addEventListener('click', toggleShow);
+</script>
+
+</body>
+</html>
