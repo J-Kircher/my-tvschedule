@@ -5,11 +5,13 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { ShowsService } from './service/shows.service';
 
 import { AppComponent } from './app.component';
+import { ShowComponent } from './show/show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
