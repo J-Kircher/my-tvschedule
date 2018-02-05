@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IShow } from '../model/shows.model';
+import { IShow, ITimeSlot } from '../model/shows.model';
 
 const SHOWS: IShow[] = [
   { 'name': 'Gotham', 'network': 'FOX', 'link': 'http://www.fox.com/gotham/', 'image': 'Gotham2.gif', 'info': 'Thursdays 8:00PM (Thursday, September 21)', 'status': 'B' },
@@ -15,6 +15,33 @@ const SHOWS: IShow[] = [
   { 'name': 'The Punisher', 'network': 'Netflix', 'link': 'http://www.netflix.com/punisher', 'image': 'Punisher.gif', 'info': 'Streaming (November 17)', 'status': 'B' },
   { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings.gif', 'info': 'Wednesdays 9:00PM (Wednesday, November 29)', 'status': 'B' },
   { 'name': 'The X-Files', 'network': 'FOX', 'link': 'http://www.fox.com/the-x-files/', 'image': 'XFiles2016.gif', 'info': 'Wednesdays 8:00PM (Wednesday, January 3)', 'status': 'B' }
+];
+
+const TIMESLOTS: ITimeSlot[] = [
+  { 'name': 'S8', 'shows': [] },
+  { 'name': 'S9', 'shows': [] },
+  { 'name': 'SX', 'shows': [] },
+  { 'name': 'M8', 'shows': [] },
+  { 'name': 'M9', 'shows': [] },
+  { 'name': 'MX', 'shows': [] },
+  { 'name': 'T8', 'shows': [] },
+  { 'name': 'T9', 'shows': [] },
+  { 'name': 'TX', 'shows': [] },
+  { 'name': 'W8', 'shows': [] },
+  { 'name': 'W9', 'shows': [] },
+  { 'name': 'WX', 'shows': [] },
+  { 'name': 'R8', 'shows': [] },
+  { 'name': 'R9', 'shows': [] },
+  { 'name': 'RX', 'shows': [] },
+  { 'name': 'F8', 'shows': [] },
+  { 'name': 'F9', 'shows': [] },
+  { 'name': 'FX', 'shows': [] },
+  { 'name': 'A8', 'shows': [] },
+  { 'name': 'A9', 'shows': [] },
+  { 'name': 'AX', 'shows': [] },
+  { 'name': 'N8', 'shows': [] },
+  { 'name': 'N9', 'shows': [] },
+  { 'name': 'NX', 'shows': [] }
 ];
 
 @Injectable()
@@ -43,5 +70,30 @@ export class ShowsService {
 
   getShowByIndex(index: number): IShow {
     return SHOWS[index];
+  }
+
+  getTimeSlots(): ITimeSlot[] {
+    return TIMESLOTS;
+  }
+
+  getTimeSlot(name: string): ITimeSlot {
+    return TIMESLOTS.find(s => s.name === name);
+  }
+
+  getTimeSlotIndex(name: string): number {
+    let counter = 0;
+    let index = -1;
+    TIMESLOTS.forEach(s => {
+      if (s.name === name) {
+        index = counter;
+      } else {
+        counter++;
+      }
+    });
+    return index;
+  }
+
+  getTimeSlotByIndex(index: number): ITimeSlot {
+    return TIMESLOTS[index];
   }
 }
