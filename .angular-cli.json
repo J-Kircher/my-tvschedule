@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/ng-drag-drop/style.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css"
       ],
@@ -64,6 +65,9 @@
     "class": {
       "spec": false
     },
-    "component": {}
+    "component": {},
+    "serve": {
+      "port": 4138
+    }
   }
 }
