@@ -1,5 +1,5 @@
 <div id="scheduleTable" class="container well" style="float: left">
-  <p>My TV Schedule</p>
+  <p>My TV Schedule </p>
   <div class="row well" style="background-color: #9999FF;">
     <div class="day col-sm-1">Day</div>
     <div class="container col-sm-11">
@@ -67,7 +67,13 @@
   <div class="row well">
     <div class="col-sm-1">Streaming</div>
     <div class="container col-sm-11">
-      <div id="N8" class="timeslot col-md-4"></div>
+      <div id="N8"
+        class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
+        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'N8')">
+        <li class="show" *ngFor="let item of timeSlots[getTSIdx('N8')]?.shows">
+          <app-show [show]="item"></app-show>
+        </li>
+      </div>
       <div id="N9" class="timeslot col-md-4"></div>
       <div id="NX" class="timeslot col-md-4"></div>
     </div>
@@ -76,13 +82,10 @@
 
 <div style="float: left">
   <p>Shows Between Seasons</p>
-  <div>
-    <li class="show" *ngFor="let show of shows">
-      <a href="{{ show.link }}">
-        <img src="/assets/images/Networks/{{ show.network }}.gif" alt="{{ show.network }}"
-        title="{{ show.network }}" border="0"><img src="/assets/images/Shows/{{ show.image }}"
-        alt="{{ show.name }}" title="{{ show.info }}" border="0">
-      </a>
+  <div class="list-group">
+    <li class="show list-group-item list-group-item-action" [draggable] *ngFor="let show of shows"
+      [dragClass]="'active'" [dragData]="show">
+      <app-show [show]="show"></app-show>
     </li>
   </div>
 </div>
