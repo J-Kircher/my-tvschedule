@@ -6,3 +6,8 @@ export interface IShow {
   info: string;
   status: string;
 }
+
+export interface ITimeSlot {
+  name: string;
+  shows: IShow[];
+}
