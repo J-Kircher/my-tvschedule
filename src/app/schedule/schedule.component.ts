@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { ShowsService } from '../service/shows.service';
-import { StorageService } from '../shared/storage.service';
+import { StorageService } from '../service/storage.service';
 import { IShow, ITimeSlot } from '../model/shows.model';
 
 @Component({
@@ -13,12 +13,37 @@ import { IShow, ITimeSlot } from '../model/shows.model';
 export class ScheduleComponent implements OnInit {
   private postseason = false;
   private timeSlots: ITimeSlot[] = [];
+  private shows: IShow[] = [];
 
   constructor(private showsService: ShowsService, private storageService: StorageService) { }
 
   ngOnInit() {
     // console.table(this.shows);
     this.timeSlots = this.storageService.loadLocalStorage();
+    // Check for changes to SHOWS
+    this.checkShows();
+  }
+
+  checkShows(): void {
+    this.shows = this.showsService.getShows();
+    // Add new shows to SBS (Shows Between Seasons)
+    this.shows.forEach(s => {
+      if (!this.showsService.findShowInTimeSlots(s.name)) {
+        console.log('[schedule] checkShows() Adding: ' + s.name);
+        this.timeSlots[this.showsService.getTimeSlotIndex('SBS')].shows.push(s);
+        this.storageService.storeLocalStorage(this.timeSlots);
+      }
+    });
+    // Remove deleted shows from timeSlot
+    this.timeSlots.forEach(slot => {
+      slot.shows.forEach(show => {
+        if (!this.showsService.getShow(show.name)) {
+          console.log('[schedule] checkShows() Removing: ' + show.name);
+          this.removeItem(show, this.timeSlots[this.getTSIdx(slot.name)].shows);
+          this.storageService.storeLocalStorage(this.timeSlots);
+        }
+      });
+    });
   }
 
   onAnyDrop(e: any, slotName: string) {

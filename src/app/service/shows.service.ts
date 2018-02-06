@@ -14,7 +14,13 @@ const SHOWS: IShow[] = [
   { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead.gif', 'info': 'Sundays 9:00PM (Sunday, October 22)', 'status': 'B' },
   { 'name': 'The Punisher', 'network': 'Netflix', 'link': 'http://www.netflix.com/punisher', 'image': 'Punisher.gif', 'info': 'Streaming (November 17)', 'status': 'B' },
   { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings.gif', 'info': 'Wednesdays 9:00PM (Wednesday, November 29)', 'status': 'B' },
-  { 'name': 'The X-Files', 'network': 'FOX', 'link': 'http://www.fox.com/the-x-files/', 'image': 'XFiles2016.gif', 'info': 'Wednesdays 8:00PM (Wednesday, January 3)', 'status': 'B' }
+  { 'name': 'The X-Files', 'network': 'FOX', 'link': 'http://www.fox.com/the-x-files/', 'image': 'XFiles2016.gif', 'info': 'Wednesdays 8:00PM (Wednesday, January 3)', 'status': 'B' },
+  { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/sho/homeland/home', 'image': 'Homeland.gif', 'info': 'Sundays 9:00PM (Sunday, February 11)', 'status': 'B' },
+  { 'name': 'Ash vs Evil Dead', 'network': 'Starz', 'link': 'https://www.starz.com/series/ashvsevildead', 'image': 'AshVsEvilDead.gif', 'info': 'Sundays 9:00PM (Sunday, February 25)', 'status': 'B' },
+  { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones.gif', 'info': 'Streaming (March 8)', 'status': 'B' },
+  { 'name': 'Krypton', 'network': 'Syfy', 'link': 'http://www.syfy.com/krypton/', 'image': 'Krypton.gif', 'info': 'Wednesdays (Wednesday, March 21)', 'status': 'B' },
+  { 'name': 'A Series of Unfortunate Events', 'network': 'Netflix', 'link': 'http://www.netflix.com/unfortunate', 'image': 'Unfortunate.gif', 'info': 'Streaming (March 30)', 'status': 'B' },
+  { 'name': 'Elementary', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/elementary/', 'image': 'Elementary.gif', 'info': 'Mondays 10:00PM (Monday, April 30)', 'status': 'B' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
@@ -48,13 +54,13 @@ const TIMESLOTS: ITimeSlot[] = [
 @Injectable()
 export class ShowsService {
 
-  // getShows(): IShow[] {
-  //   return SHOWS;
-  // }
+  getShows(): IShow[] {
+    return SHOWS;
+  }
 
-  // getShow(name: string): IShow {
-  //   return SHOWS.find(s => s.name === name);
-  // }
+  getShow(name: string): IShow {
+    return SHOWS.find(s => s.name === name);
+  }
 
   // getShowIndex(name: string): number {
   //   let counter = 0;
@@ -96,5 +102,25 @@ export class ShowsService {
 
   getTimeSlotByIndex(index: number): ITimeSlot {
     return TIMESLOTS[index];
+  }
+
+  findShowInTimeSlots(showName): boolean {
+    let found = false;
+    let storedTimeSlots: ITimeSlot[] = [];
+
+    const storedConfigText = localStorage.getItem('timeSlots');
+    if (storedConfigText) {
+      storedTimeSlots = JSON.parse(storedConfigText);
+    }
+
+    storedTimeSlots.forEach(slot => {
+      slot.shows.forEach(show => {
+        if (show.name === showName) {
+          found = true;
+        }
+      });
+    });
+
+    return found;
   }
 }
