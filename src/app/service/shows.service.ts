@@ -41,36 +41,37 @@ const TIMESLOTS: ITimeSlot[] = [
   { 'name': 'AX', 'shows': [] },
   { 'name': 'N8', 'shows': [] },
   { 'name': 'N9', 'shows': [] },
-  { 'name': 'NX', 'shows': [] }
+  { 'name': 'NX', 'shows': [] },
+  { 'name': 'SBS', 'shows': SHOWS }
 ];
 
 @Injectable()
 export class ShowsService {
 
-  getShows(): IShow[] {
-    return SHOWS;
-  }
+  // getShows(): IShow[] {
+  //   return SHOWS;
+  // }
 
-  getShow(name: string): IShow {
-    return SHOWS.find(s => s.name === name);
-  }
+  // getShow(name: string): IShow {
+  //   return SHOWS.find(s => s.name === name);
+  // }
 
-  getShowIndex(name: string): number {
-    let counter = 0;
-    let index = -1;
-    SHOWS.forEach(s => {
-      if (s.name === name) {
-        index = counter;
-      } else {
-        counter++;
-      }
-    });
-    return index;
-  }
+  // getShowIndex(name: string): number {
+  //   let counter = 0;
+  //   let index = -1;
+  //   SHOWS.forEach(s => {
+  //     if (s.name === name) {
+  //       index = counter;
+  //     } else {
+  //       counter++;
+  //     }
+  //   });
+  //   return index;
+  // }
 
-  getShowByIndex(index: number): IShow {
-    return SHOWS[index];
-  }
+  // getShowByIndex(index: number): IShow {
+  //   return SHOWS[index];
+  // }
 
   getTimeSlots(): ITimeSlot[] {
     return TIMESLOTS;
