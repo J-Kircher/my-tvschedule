@@ -197,8 +197,11 @@
 <div style="float: left">
   <p>Shows Between Seasons</p>
   <div class="list-group">
-    <li class="show list-group-item list-group-item-action" [draggable] *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
-      [dragClass]="'active'" [dragData]="show">
+    <li class="show list-group-item list-group-item-action"
+      *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
+      [draggable] [dragClass]="'active'" [dragData]="show"
+      droppable [dragOverClass]="'drag-target-border'" [dragHintClass]="'drag-hint'"
+      (onDrop)="onAnyDrop($event, 'SBS')">
       <app-show [show]="show"></app-show>
     </li>
   </div>
