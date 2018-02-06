@@ -6,6 +6,7 @@ import { ShowsService } from './service/shows.service';
 
 import { AppComponent } from './app.component';
 import { ShowComponent } from './show/show.component';
+import { StorageService } from './shared/storage.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShowComponent } from './show/show.component';
     NgDragDropModule.forRoot()
   ],
   providers: [
-    ShowsService
+    ShowsService,
+    StorageService
   ],
   bootstrap: [AppComponent]
 })
