@@ -47,13 +47,20 @@ export class ScheduleComponent implements OnInit {
   }
 
   onAnyDrop(e: any, slotName: string) {
+    const fromSlot: string = e.dragData.slot;
     // const slotName = e.nativeEvent.srcElement.id;
     // console.log('[schedule] onAnyDrop() slotName: [' + slotName + ']');
+    // console.log('[schedule] onAnyDrop() fromSlot: [' + fromSlot + ']');
+    // console.log('[schedule] onAnyDrop() target: [' + e.nativeEvent.target.id + ']');
+    // console.log(e);
     if (slotName !== '') {
-      this.timeSlots[this.getTSIdx(slotName)].shows.push(e.dragData);
-      this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShow);
-      this.removeItem(e.dragData, this.timeSlots[this.getTSIdx('SBS')].shows);
-      this.storageService.storeLocalStorage(this.timeSlots);
+      if (slotName !== fromSlot) {
+        e.dragData.slot = slotName;
+        this.timeSlots[this.getTSIdx(slotName)].shows.push(e.dragData);
+        this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShow);
+        this.removeItem(e.dragData, this.timeSlots[this.getTSIdx(fromSlot)].shows);
+        this.storageService.storeLocalStorage(this.timeSlots);
+      }
     } else {
       console.log('[schedule] onAnyDrop() slotName is BAD');
       console.log(e);
