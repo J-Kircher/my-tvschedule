@@ -8,12 +8,12 @@ export class StorageService {
   constructor(private showsService: ShowsService) { }
 
   private getDefaultLocalStorage(): any {
-    console.log('[storage.service] getDefaultLocalStorage()');
+    // console.log('[storage.service] getDefaultLocalStorage()');
     return this.showsService.getTimeSlots();
   }
 
   public loadLocalStorage(): ITimeSlot[] {
-    console.log('[storage.service] loadLocalStorage()');
+    // console.log('[storage.service] loadLocalStorage()');
     let config = this.getDefaultLocalStorage();
 
     try {
@@ -31,7 +31,7 @@ export class StorageService {
   }
 
   public storeLocalStorage(newTimeSlots: ITimeSlot[]): void {
-    console.log('[storage.service] storeLocalStorage()');
+    // console.log('[storage.service] storeLocalStorage()');
     try {
       const configText = JSON.stringify(newTimeSlots);
       localStorage.setItem('timeSlots', configText);
