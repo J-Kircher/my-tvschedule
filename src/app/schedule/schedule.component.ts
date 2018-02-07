@@ -51,8 +51,6 @@ export class ScheduleComponent implements OnInit {
   onAnyDrop(e: any, slotName: string) {
     const fromSlot: string = e.dragData.slot;
     // const slotName = e.nativeEvent.srcElement.id;
-    // console.log('[schedule] onAnyDrop() slotName: [' + slotName + ']');
-    // console.log('[schedule] onAnyDrop() fromSlot: [' + fromSlot + ']');
     // console.log('[schedule] onAnyDrop() target: [' + e.nativeEvent.target.id + ']');
     // console.log(e);
     if (slotName !== '') {
@@ -62,10 +60,13 @@ export class ScheduleComponent implements OnInit {
         this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShow);
         this.removeItem(e.dragData, this.timeSlots[this.getTSIdx(fromSlot)].shows);
         this.storageService.storeLocalStorage(this.timeSlots);
+        console.log('Moving [' + e.dragData.name + '] from ' + fromSlot + ' to ' + slotName);
+      } else {
+        console.warn('NOT Moving [' + e.dragData.name + '], same slot');
       }
     } else {
-      console.log('[schedule] onAnyDrop() slotName is BAD');
-      console.log(e);
+      console.error('NOT moving [' + e.dragData.name + '], slotName is BAD');
+      console.error(e);
     }
   }
 
@@ -86,13 +87,17 @@ export class ScheduleComponent implements OnInit {
 }
 
 function sortShow(s1, s2) {
-  if (s1.name < s2.name) {
+  if (strip(s1.name) < strip(s2.name)) {
     return -1;
   } else {
-    if (s1.name > s2.name) {
+    if (strip(s1.name) > strip(s2.name)) {
       return 1;
     } else {
       return 0;
     }
   }
+}
+
+function strip(name) {
+  return name.replace(/^(a |an |the )/i, '').trim();
 }
