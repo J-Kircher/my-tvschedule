@@ -1,3 +1,7 @@
+._drag-handle:active {
+  border: #3500FF dashed 2px;
+}
+
 div.scroll-list {
   overflow: auto;
   max-height: 70vh;
@@ -15,16 +19,21 @@ div.scroll-list {
   border: #3c763d dashed 2px;
 }
 
+.tv-title {
+  font-size: 14pt;
+  font-weight: bold;
+}
 .day {
   vertical-align: middle;
+}
+.day-row {
+  min-width: 1015px;
 }
 .row {
   margin: 0px;
 }
-.container {
-  white-space: nowrap;
-  overflow-y: hidden;
-  padding: 0px;
+.flex-container {
+  display: flex;
 }
 .show {
   margin: 0px;
@@ -34,7 +43,6 @@ div.scroll-list {
 .timeslot-header {
   margin: 0px;
   padding: 2px;
-  min-height: 50px;
   width: 300px;
   text-align: center;
   font-weight: bold;
