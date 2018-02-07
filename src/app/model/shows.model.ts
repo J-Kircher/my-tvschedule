@@ -1,3 +1,12 @@
+export interface ISlot {
+  slot: string;
+}
+
+export interface ISchedule {
+  name: string;
+  time: ISlot[];
+}
+
 export interface IShow {
   name: string;
   network: string;

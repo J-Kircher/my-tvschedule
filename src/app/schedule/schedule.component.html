@@ -1,5 +1,6 @@
-<div id="scheduleTable" class="container well" style="float: left">
+<div id="scheduleTable" class="container well" style="padding: 10px; float: left">
   <p>My TV Schedule </p>
+
   <div class="row well" style="background-color: #9999FF;">
     <div class="day col-sm-1">Day</div>
     <div class="container col-sm-11">
@@ -8,224 +9,30 @@
       <div class="timeslot-header col-md-4">10:00 pm</div>
     </div>
   </div>
-  <div class="row well">
-    <div class="col-sm-1">Sunday</div>
+
+  <div class="row well" *ngFor="let day of schedule">
+    <div class="col-sm-1">{{ day.name }}</div>
     <div class="container col-sm-11">
-      <div id="S8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'S8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('S8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="S9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'S9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('S9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="SX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'SX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('SX')]?.shows"
+      <div [id]="time.slot" *ngFor="let time of day.time"
+        class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
+        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, time.slot)">
+        <li class="show" *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
           [draggable] [dragClass]="'active'" [dragData]="show">
           <app-show [show]="show"></app-show>
         </li>
       </div>
     </div>
   </div>
-  <div class="row well">
-    <div class="col-sm-1">Monday</div>
-    <div class="container col-sm-11">
-      <div id="M8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'M8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('M8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="M9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'M9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('M9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="MX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'MX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('MX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
-  <div class="row well">
-    <div class="col-sm-1">Tuesday</div>
-    <div class="container col-sm-11">
-      <div id="T8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'T8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('T8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="T9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'T9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('T9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="TX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'TX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('TX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
-  <div class="row well">
-    <div class="col-sm-1">Wednesday</div>
-    <div class="container col-sm-11">
-      <div id="W8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'W8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('W8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="W9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'W9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('W9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="WX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'WX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('WX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
-  <div class="row well">
-    <div class="col-sm-1">Thursday</div>
-    <div class="container col-sm-11">
-      <div id="R8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'R8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('R8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="R9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'R9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('R9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="RX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'RX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('RX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
-  <div class="row well">
-    <div class="col-sm-1">Friday</div>
-    <div class="container col-sm-11">
-      <div id="F8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'F8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('F8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="F9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'F9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('F9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="FX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'FX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('FX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
-  <div class="row well">
-    <div class="col-sm-1">Saturday</div>
-    <div class="container col-sm-11">
-      <div id="A8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'A8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('A8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="A9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'A9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('A9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="AX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'AX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('AX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
-  <div class="row well">
-    <div class="col-sm-1">Streaming</div>
-    <div class="container col-sm-11">
-      <div id="N8" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'N8')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('N8')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="N9" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'N9')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('N9')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-      <div id="NX" class="timeslot col-md-4" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'NX')">
-        <li class="show" *ngFor="let show of timeSlots[getTSIdx('NX')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
-        </li>
-      </div>
-    </div>
-  </div>
+
 </div>
 
-<div style="float: left">
+<div class="well" style="padding: 10px; float: left">
   <p>Shows Between Seasons</p>
-  <div id="SBS" class="list-group">
+  <div id="SBS" class="list-group" droppable [dragOverClass]="'drag-target-border'"
+    [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'SBS')">
     <li class="show list-group-item list-group-item-action"
       *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
-      [draggable] [dragClass]="'active'" [dragData]="show"
-      droppable [dragOverClass]="'drag-target-border'" [dragHintClass]="'drag-hint'"
-      (onDrop)="onAnyDrop($event, 'SBS')">
+      [draggable] [dragClass]="'active'" [dragData]="show">
       <app-show [show]="show"></app-show>
     </li>
   </div>

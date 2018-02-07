@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
-import { IShow, ITimeSlot } from '../model/shows.model';
+import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
 
 @Component({
   selector: 'app-schedule',
@@ -12,14 +12,16 @@ import { IShow, ITimeSlot } from '../model/shows.model';
 
 export class ScheduleComponent implements OnInit {
   private postseason = false;
+  private schedule: ISchedule[] = [];
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
 
   constructor(private showsService: ShowsService, private storageService: StorageService) { }
 
   ngOnInit() {
-    // console.table(this.shows);
+    this.schedule = this.showsService.getSchedule();
     this.timeSlots = this.storageService.loadLocalStorage();
+
     // Check for changes to SHOWS
     this.checkShows();
   }

@@ -1,5 +1,16 @@
 import { Injectable } from '@angular/core';
-import { IShow, ITimeSlot } from '../model/shows.model';
+import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
+
+const SCHEDULE: ISchedule[] = [
+  { 'name': 'Sunday', 'time': [ { 'slot': 'S8' }, { 'slot': 'S9' }, { 'slot': 'SX' } ] },
+  { 'name': 'Monday', 'time': [ { 'slot': 'M8' }, { 'slot': 'M9' }, { 'slot': 'MX' } ] },
+  { 'name': 'Tuesday', 'time': [ { 'slot': 'T8' }, { 'slot': 'T9' }, { 'slot': 'TX' } ] },
+  { 'name': 'Wednesday', 'time': [ { 'slot': 'W8' }, { 'slot': 'W9' }, { 'slot': 'WX' } ] },
+  { 'name': 'Thursday', 'time': [ { 'slot': 'R8' }, { 'slot': 'R9' }, { 'slot': 'RX' } ] },
+  { 'name': 'Friday', 'time': [ { 'slot': 'F8' }, { 'slot': 'F9' }, { 'slot': 'FX' } ] },
+  { 'name': 'Saturday', 'time': [ { 'slot': 'A8' }, { 'slot': 'A9' }, { 'slot': 'AX' } ] },
+  { 'name': 'Streaming', 'time': [ { 'slot': 'N8' }, { 'slot': 'N9' }, { 'slot': 'NX' } ] }
+];
 
 const SHOWS: IShow[] = [
   { 'name': 'Gotham', 'network': 'FOX', 'link': 'http://www.fox.com/gotham/', 'image': 'Gotham2.gif', 'info': 'Thursdays 8:00PM (Thursday, September 21)', 'slot': 'SBS' },
@@ -54,6 +65,10 @@ const TIMESLOTS: ITimeSlot[] = [
 @Injectable()
 export class ShowsService {
 
+  getSchedule(): ISchedule[] {
+    return SCHEDULE;
+  }
+
   getShows(): IShow[] {
     return SHOWS;
   }
@@ -61,23 +76,6 @@ export class ShowsService {
   getShow(name: string): IShow {
     return SHOWS.find(s => s.name === name);
   }
-
-  // getShowIndex(name: string): number {
-  //   let counter = 0;
-  //   let index = -1;
-  //   SHOWS.forEach(s => {
-  //     if (s.name === name) {
-  //       index = counter;
-  //     } else {
-  //       counter++;
-  //     }
-  //   });
-  //   return index;
-  // }
-
-  // getShowByIndex(index: number): IShow {
-  //   return SHOWS[index];
-  // }
 
   getTimeSlots(): ITimeSlot[] {
     return TIMESLOTS;
