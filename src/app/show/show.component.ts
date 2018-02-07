@@ -1,22 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IShow } from '../model/shows.model';
 
 @Component({
   selector: 'app-show',
   template: `
-      <a href="{{ show.link }}">
-        <img src="/assets/images/Networks/{{ show.network }}.gif" alt="{{ show.network }}"
-        title="{{ show.network }}" border="0"><img src="/assets/images/Shows/{{ show.image }}"
-        alt="{{ show.name }}" title="{{ show.info }}" border="0">
-      </a>
-`,
-  styles: []
+    <div class="slot" title="{{ show.name }} / {{ show.info }}">
+      <div class="network" [style.background-image]="'url(/assets/images/Networks/' + show.network + '.gif)'">
+        <a href="{{ show.link }}"></a>
+      </div>
+      <div class="myShow" [style.background-image]="'url(/assets/images/Shows/' + show.image + ')'">
+        <a href="{{ show.link }}"></a>
+      </div>
+    </div>
+  `,
+  styles: [`
+    .slot { display: flex; min-height: 50px; min-width: 300px; }
+    .network { min-height: 50px; min-width: 50px; }
+    .myShow { min-height: 50px; min-width: 250px; }
+  `]
 })
-export class ShowComponent implements OnInit {
+
+export class ShowComponent {
   @Input() show: IShow;
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
