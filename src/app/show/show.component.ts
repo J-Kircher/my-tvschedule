@@ -4,12 +4,11 @@ import { IShow } from '../model/shows.model';
 @Component({
   selector: 'app-show',
   template: `
-    <div class="slot" title="{{ show.name }} / {{ show.info }} / Started on {{ show.start }}">
+    <div class="slot" title="{{ show.name }} / {{ show.info }} / {{ show.slot === 'SBS' ? 'Starts on' : 'Started on' }} {{ show.start }}">
       <div class="network" [style.background-image]="'url(/assets/images/Networks/' + show.network + '.gif)'">
-        <a href="{{ show.link }}"></a>
       </div>
       <div class="myShow" [style.background-image]="'url(/assets/images/Shows/' + show.image + ')'">
-        <a href="{{ show.link }}"></a>
+        <a href="{{ show.link }}"><img src="/assets/images/blank.gif" height="15px" width="250px"></a>
       </div>
     </div>
   `,
