@@ -13,6 +13,7 @@ export interface IShow {
   link: string;
   image: string;
   info: string;
+  start: string;
   slot: string;
 }
 
