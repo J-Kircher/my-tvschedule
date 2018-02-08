@@ -85,6 +85,15 @@ export class ScheduleComponent implements OnInit {
 
   sortShowsBetweenSeasons() {
     console.log('sortShowsBetweenSeasons');
+
+    // Remove blank rows
+    let blankIdx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(s => s.name === '');
+    while (blankIdx > -1) {
+      this.removeItem(this.timeSlots[this.getTSIdx('SBS')].shows[blankIdx], this.timeSlots[this.getTSIdx('SBS')].shows)
+      blankIdx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(s => s.name === '');
+    }
+
+    // Sort SBS shows by start date
     this.timeSlots[this.getTSIdx('SBS')].shows.sort(sortShowByDate);
 
     // Rearrange Shows Between Seasons
@@ -95,8 +104,16 @@ export class ScheduleComponent implements OnInit {
     const arr1 = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idx);
     const arr2 = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idx);
 
+    // Add spacer to start for 'Starting soon'
+    const startArr: IShow[] = [];
+    startArr.push({ name: '', network: '', link: '', image: '', info: 'Season starting soon', start: '', slot: 'SBS' });
+
+    // Add spacer to middle for 'Recently ended'
+    const midArr: IShow[] = [];
+    midArr.push({ name: '', network: '', link: '', image: '', info: 'Season recently ended', start: '', slot: 'SBS' });
+
     // Combine the two parts so that the first item is the next show to start
-    this.timeSlots[this.getTSIdx('SBS')].shows = arr2.concat(arr1);
+    this.timeSlots[this.getTSIdx('SBS')].shows = startArr.concat(arr2).concat(midArr).concat(arr1);
   }
 
   getTS(name): ITimeSlot {
@@ -139,7 +156,7 @@ function sortShowByDate(s1, s2) {
 }
 
 function findAfterToday(element) {
-  const date1 = new Date(element.start);
+  const startDate = new Date(element.start);
   const today = new Date();
-  return date1 > today;
+  return startDate > today;
 }

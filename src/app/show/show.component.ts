@@ -1,25 +1,54 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IShow } from '../model/shows.model';
 
 @Component({
   selector: 'app-show',
   template: `
-    <div class="slot" title="{{ show.name }} / {{ show.info }} / {{ show.slot === 'SBS' ? 'Starts on' : 'Started on' }} {{ show.start }}">
-      <div class="network" [style.background-image]="'url(/assets/images/Networks/' + show.network + '.gif)'">
+    <div class="slot" [title]="getTitleText(show)">
+      <div [ngClass]="{ 'network': displayShow }"
+        [style.background-image]="displayShow ? 'url(/assets/images/Networks/' + show.network + '.gif)' : null">
       </div>
-      <div class="myShow" [style.background-image]="'url(/assets/images/Shows/' + show.image + ')'">
-        <a href="{{ show.link }}"><img src="/assets/images/blank.gif" height="15px" width="250px"></a>
+      <div [ngClass]="{ 'myShow': displayShow }"
+        [style.background-image]="displayShow ? 'url(/assets/images/Shows/' + show.image + ')' : null">
+        <a *ngIf="displayShow" href="{{ show.link }}"><img src="/assets/images/blank.gif" height="15px" width="250px"></a>
+        <h4 *ngIf="!displayShow" class="text-primary show-info">{{ show.info }}</h4>
       </div>
     </div>
   `,
   styles: [`
-    .slot { display: flex; min-height: 50px; min-width: 300px; }
+    .slot { display: flex; min-height: 10px; min-width: 300px; }
     .network { min-height: 50px; min-width: 50px; }
     .myShow { min-height: 50px; min-width: 250px; }
+    .show-info { margin: 2px 7px; }
   `]
 })
 
-export class ShowComponent {
+export class ShowComponent implements OnInit {
   @Input() show: IShow;
+  private displayShow = true;
+
   constructor() { }
+
+  ngOnInit() {
+    if (this.show.image === '') {
+      this.displayShow = false;
+    }
+  }
+
+  getTitleText(show: IShow): string {
+    let titleTxt = '';
+    const startDate = new Date(show.start);
+    const today = new Date();
+    if (show.name !== '') {
+      titleTxt = titleTxt.concat(show.name + ' / ' + show.info);
+      if (show.slot === 'SBS' && startDate > today) {
+        titleTxt = titleTxt.concat(' / Starts on ' + show.start);
+      } else {
+        titleTxt = titleTxt.concat(' / Started on ' + show.start);
+      }
+    } else {
+      titleTxt = titleTxt.concat(show.info);
+    }
+    return titleTxt;
+  }
 }
