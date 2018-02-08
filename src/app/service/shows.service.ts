@@ -29,6 +29,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/sho/homeland/home', 'image': 'Homeland.gif', 'info': 'Sundays 9:00PM', 'start': 'February 11, 2018', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBO', 'link': 'http://www.hbo.com/last-week-tonight-with-john-oliver/', 'image': 'LastWeekTonight2.gif', 'info': 'Sundays 11:00PM', 'start': 'February 18, 2018', 'slot': 'SBS' },
   { 'name': 'Ash vs Evil Dead', 'network': 'Starz', 'link': 'https://www.starz.com/series/ashvsevildead', 'image': 'AshVsEvilDead.gif', 'info': 'Sundays 9:00PM', 'start': 'February 25, 2018', 'slot': 'SBS' },
+  { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor.gif', 'info': 'Wednesdays 8:00PM', 'start': 'February 28, 2018', 'slot': 'SBS' },
   { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones.gif', 'info': 'Streaming', 'start': 'March 8, 2018', 'slot': 'SBS' },
   { 'name': 'Krypton', 'network': 'Syfy', 'link': 'http://www.syfy.com/krypton/', 'image': 'Krypton.gif', 'info': 'Wednesdays', 'start': 'March 21, 2018', 'slot': 'SBS' },
   { 'name': 'Silicon Valley', 'network': 'HBO', 'link': 'http://www.hbo.com/silicon-valley/', 'image': 'SiliconValley.gif', 'info': 'Sundays 10:00PM', 'start': 'March 25, 2018', 'slot': 'SBS' },
@@ -57,7 +58,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Real Housewives of Orange County', 'network': 'Bravo', 'link': 'http://www.bravotv.com/the-real-housewives-of-orange-county', 'image': 'RealHousewivesOrangeCounty.gif', 'info': 'Mondays 9:00PM', 'start': 'July 10, 2017', 'slot': 'SBS' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory.gif', 'info': 'Tuesdays 10:00PM', 'start': 'September 5, 2017', 'slot': 'SBS' },
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville.gif', 'info': 'Thursdays 9:00PM', 'start': 'September 10, 2017', 'slot': 'SBS' },
-  { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor.gif', 'info': 'Wednesdays 8:00PM', 'start': 'September 27, 2017', 'slot': 'SBS' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
