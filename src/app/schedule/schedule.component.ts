@@ -24,6 +24,7 @@ export class ScheduleComponent implements OnInit {
 
     // Check for changes to SHOWS
     this.checkShows();
+    this.sortShowsBetweenSeasons();
   }
 
   checkShows(): void {
@@ -57,10 +58,15 @@ export class ScheduleComponent implements OnInit {
       if (slotName !== fromSlot) {
         e.dragData.slot = slotName;
         this.timeSlots[this.getTSIdx(slotName)].shows.push(e.dragData);
-        this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShow);
+        this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShowByName);
+
         this.removeItem(e.dragData, this.timeSlots[this.getTSIdx(fromSlot)].shows);
         this.storageService.storeLocalStorage(this.timeSlots);
         console.log('Moving [' + e.dragData.name + '] from ' + fromSlot + ' to ' + slotName);
+
+        if (slotName === 'SBS') {
+          this.sortShowsBetweenSeasons();
+        }
       } else {
         console.warn('NOT Moving [' + e.dragData.name + '], same slot');
       }
@@ -77,6 +83,22 @@ export class ScheduleComponent implements OnInit {
     list.splice(index, 1);
   }
 
+  sortShowsBetweenSeasons() {
+    console.log('sortShowsBetweenSeasons');
+    this.timeSlots[this.getTSIdx('SBS')].shows.sort(sortShowByDate);
+
+    // Rearrange Shows Between Seasons
+    // Find first show after today
+    const idx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(findAfterToday);
+
+    // Split the array into shows that have not started yet and shows that are over
+    const arr1 = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idx);
+    const arr2 = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idx);
+
+    // Combine the two parts so that the first item is the next show to start
+    this.timeSlots[this.getTSIdx('SBS')].shows = arr2.concat(arr1);
+  }
+
   getTS(name): ITimeSlot {
     return this.showsService.getTimeSlot(name);
   }
@@ -86,7 +108,7 @@ export class ScheduleComponent implements OnInit {
   }
 }
 
-function sortShow(s1, s2) {
+function sortShowByName(s1, s2) {
   if (strip(s1.name) < strip(s2.name)) {
     return -1;
   } else {
@@ -100,4 +122,24 @@ function sortShow(s1, s2) {
 
 function strip(name) {
   return name.replace(/^(a |an |the )/i, '').trim();
+}
+
+function sortShowByDate(s1, s2) {
+  const date1 = new Date(s1.start);
+  const date2 = new Date(s2.start);
+  if (date1 < date2) {
+    return -1;
+  } else {
+    if (date1 > date2) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+}
+
+function findAfterToday(element) {
+  const date1 = new Date(element.start);
+  const today = new Date();
+  return date1 > today;
 }
