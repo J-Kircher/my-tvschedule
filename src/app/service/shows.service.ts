@@ -19,7 +19,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'info': 'Mondays 8:00PM', 'start': 'October 9, 2017', 'slot': 'SBS' },
   { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'info': 'Tuesdays 8:00PM', 'start': 'October 10, 2017', 'slot': 'SBS' },
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'info': 'Tuesdays 9:00PM', 'start': 'October 10, 2017', 'slot': 'SBS' },
-  { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural11', 'info': 'Thursdays 8:00PM', 'start': 'October 12, 2017', 'slot': 'SBS' },
+  { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural13', 'info': 'Thursdays 8:00PM', 'start': 'October 12, 2017', 'slot': 'SBS' },
   { 'name': 'Arrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/arrow/', 'image': 'Arrow', 'info': 'Thursdays 9:00PM', 'start': 'October 12, 2017', 'slot': 'SBS' },
   { 'name': 'Star Wars Rebels', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-rebels', 'image': 'Rebels', 'info': 'Mondays 9:00PM', 'start': 'October 16, 2017', 'slot': 'SBS' },
   { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead', 'info': 'Sundays 9:00PM', 'start': 'October 22, 2017', 'slot': 'SBS' },
