@@ -1,7 +1,7 @@
 <div id="scheduleTable" class="container well" style="padding: 10px; float: left">
   <p class="tv-title">My TV Schedule </p>
 
-  <div class="row well" style="background-color: #9999FF;">
+  <div class="row well show-well" style="background-color: #9999FF;">
     <div class="day col-sm-1">Day</div>
     <div class="container col-sm-11">
       <div class="timeslot-header col-lg-4">8:00 pm</div>
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div class="row well" *ngFor="let day of schedule">
+  <div class="row well show-well" *ngFor="let day of schedule">
     <div class="col-sm-1">{{ day.name }}</div>
     <div class="container col-sm-11">
       <div [id]="time.slot" *ngFor="let time of day.time"
