@@ -40,7 +40,8 @@ export class ScheduleComponent implements OnInit {
     // Remove deleted shows from timeSlot
     this.timeSlots.forEach(slot => {
       slot.shows.forEach(show => {
-        if (!this.showsService.getShow(show.name)) {
+        // console.log('[schedule] checkShows() show: ' + show.name + ' findShow(): ' + this.showsService.findShow(show.name));
+        if (!this.showsService.findShow(show.name)) {
           console.log('[schedule] checkShows() Removing: ' + show.name);
           this.removeItem(show, this.timeSlots[this.getTSIdx(slot.name)].shows);
           this.storageService.storeLocalStorage(this.timeSlots);
