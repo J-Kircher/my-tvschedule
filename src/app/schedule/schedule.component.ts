@@ -90,7 +90,7 @@ export class ScheduleComponent implements OnInit {
     // Remove blank rows
     let blankIdx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(s => s.name === '');
     while (blankIdx > -1) {
-      this.removeItem(this.timeSlots[this.getTSIdx('SBS')].shows[blankIdx], this.timeSlots[this.getTSIdx('SBS')].shows)
+      this.removeItem(this.timeSlots[this.getTSIdx('SBS')].shows[blankIdx], this.timeSlots[this.getTSIdx('SBS')].shows);
       blankIdx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(s => s.name === '');
     }
 
