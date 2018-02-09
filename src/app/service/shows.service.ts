@@ -48,6 +48,7 @@ const SHOWS: IShow[] = [
   { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods', 'info': 'Sundays 9:00PM', 'start': 'April 30, 2017', 'slot': 'SBS' },
   { 'name': 'Better Call Saul', 'network': 'AMC', 'link': 'http://www.amctv.com/shows/better-call-saul/', 'image': 'BetterCallSaul', 'info': 'Mondays 10:00PM', 'start': 'April 10, 2017', 'slot': 'SBS' },
   { 'name': 'House of Cards', 'network': 'Netflix', 'link': 'http://www.netflix.com/houseofcards', 'image': 'HouseOfCards', 'info': 'Streaming', 'start': 'May 30, 2017', 'slot': 'SBS' },
+  { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'info': 'Streaming', 'start': 'May 30, 2017', 'slot': 'SBS' },
   { 'name': 'Orange is the New Black', 'network': 'Netflix', 'link': 'http://www.netflix.com/orangeisthenewblack', 'image': 'OrangeIsTheNewBlack', 'info': 'Streaming', 'start': 'June 9, 2017', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'BBC', 'link': 'http://www.bbcamerica.com/doctor-who/', 'image': 'DoctorWho', 'info': 'Saturdays 9:00PM', 'start': 'April 15, 2017', 'slot': 'SBS' },
   { 'name': 'The Defenders', 'network': 'Netflix', 'link': 'http://www.netflix.com/defenders', 'image': 'Defenders', 'info': 'Streaming', 'start': 'August 18, 2017', 'slot': 'SBS' },
@@ -101,6 +102,16 @@ export class ShowsService {
 
   getShow(name: string): IShow {
     return SHOWS.find(s => s.name === name);
+  }
+
+  findShow(showName: string): boolean {
+    let found = false;
+    SHOWS.forEach(show => {
+      if (show.name === showName) {
+        found = true;
+      }
+    });
+    return found;
   }
 
   getTimeSlots(): ITimeSlot[] {
