@@ -24,19 +24,15 @@ div.scroll-list {
   font-weight: bold;
 }
 .day {
+  width: 100px;
   vertical-align: middle;
-}
-.day-row {
-  min-width: 1015px;
 }
 .row {
   margin: 0px;
 }
 .show-well {
-  padding: 5px;
-}
-.flex-container {
   display: flex;
+  padding: 5px;
 }
 .show {
   margin: 0px;
@@ -51,7 +47,7 @@ div.scroll-list {
   font-weight: bold;
 }
 .timeslot {
-  margin: 2px;
+  margin: 3px;
   padding: 0px;
   min-height: 52px;
   width: 302px;

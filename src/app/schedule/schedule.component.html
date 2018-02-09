@@ -1,9 +1,9 @@
-<div id="scheduleTable" class="container well" style="padding: 10px; float: left">
+<div id="tv-schedule" class="well" style="padding: 10px; float: left">
   <p class="tv-title">My TV Schedule </p>
 
   <div class="row well show-well" style="background-color: #9999FF;">
-    <div class="day col-sm-1">Day</div>
-    <div class="container col-sm-11">
+    <div class="day">Day</div>
+    <div class="row">
       <div class="timeslot-header col-lg-4">8:00 pm</div>
       <div class="timeslot-header col-lg-4">9:00 pm</div>
       <div class="timeslot-header col-lg-4">10:00 pm</div>
@@ -11,8 +11,8 @@
   </div>
 
   <div class="row well show-well" *ngFor="let day of schedule">
-    <div class="col-sm-1">{{ day.name }}</div>
-    <div class="container col-sm-11">
+    <div class="day">{{ day.name }}</div>
+    <div class="row">
       <div [id]="time.slot" *ngFor="let time of day.time"
         class="timeslot col-lg-4" droppable [dragOverClass]="'drag-target-border'"
         [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, time.slot)">
