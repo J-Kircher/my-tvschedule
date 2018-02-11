@@ -59,6 +59,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Real Housewives of Orange County', 'network': 'Bravo', 'link': 'http://www.bravotv.com/the-real-housewives-of-orange-county', 'image': 'RealHousewivesOrangeCounty', 'info': 'Mondays 9:00PM', 'start': 'July 10, 2017', 'slot': 'SBS' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'info': 'Tuesdays 10:00PM', 'start': 'September 5, 2017', 'slot': 'SBS' },
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville', 'info': 'Thursdays 9:00PM', 'start': 'September 10, 2017', 'slot': 'SBS' },
+  { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'info': 'Streaming', 'start': 'December 29, 2017', 'slot': 'SBS' },
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
