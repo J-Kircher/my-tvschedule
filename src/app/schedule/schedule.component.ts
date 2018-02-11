@@ -22,6 +22,11 @@ export class ScheduleComponent implements OnInit {
     this.schedule = this.showsService.getSchedule();
     this.timeSlots = this.storageService.loadLocalStorage();
 
+    // Cleanup SBS
+    // console.log('Resetting SBS to 0');
+    // this.timeSlots[this.getTSIdx('SBS')].shows = [];
+    // this.storageService.storeLocalStorage(this.timeSlots);
+
     // Check for changes to SHOWS
     this.checkShows();
     this.sortShowsBetweenSeasons();
@@ -29,25 +34,34 @@ export class ScheduleComponent implements OnInit {
 
   checkShows(): void {
     this.shows = this.showsService.getShows();
+
     // Add new shows to SBS (Shows Between Seasons)
     this.shows.forEach(s => {
-      if (!this.showsService.findShowInTimeSlots(s.name)) {
+      if (!this.findShowInSavedTimeSlots(s.name)) {
         console.log('[schedule] checkShows() Adding: ' + s.name);
         this.timeSlots[this.showsService.getTimeSlotIndex('SBS')].shows.push(s);
         this.storageService.storeLocalStorage(this.timeSlots);
       }
     });
+
     // Remove deleted shows from timeSlot
     this.timeSlots.forEach(slot => {
       slot.shows.forEach(show => {
         // console.log('[schedule] checkShows() show: ' + show.name + ' findShow(): ' + this.showsService.findShow(show.name));
-        if (!this.showsService.findShow(show.name)) {
+        if (this.showsService.findShow(show.name)) {
+          const savedShow = this.showsService.getShow(show.name);
+          if (!this.showsAreEqual(savedShow, show)) {
+            console.log('[schedule] checkShows() Updating: ' + show.name);
+            this.copyShow(savedShow, show);
+          }
+        } else {
           console.log('[schedule] checkShows() Removing: ' + show.name);
           this.removeItem(show, this.timeSlots[this.getTSIdx(slot.name)].shows);
           this.storageService.storeLocalStorage(this.timeSlots);
         }
       });
     });
+
   }
 
   onAnyDrop(e: any, slotName: string) {
@@ -82,6 +96,47 @@ export class ScheduleComponent implements OnInit {
       return e.name;
     }).indexOf(item.name);
     list.splice(index, 1);
+  }
+
+  showsAreEqual(s1: IShow, s2: IShow): boolean {
+    if ( (s1.network !== s2.network)
+      || (s1.link !== s2.link)
+      || (s1.image !== s2.image)
+      || (s1.info !== s2.info)
+      || (s1.start !== s2.start) ) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  copyShow(source: IShow, dest: IShow): void {
+    dest.network = source.network;
+    dest.link = source.link;
+    dest.image = source.image;
+    dest.info = source.info;
+    dest.start = source.start;
+  }
+
+
+  findShowInSavedTimeSlots(showName): boolean {
+    let found = false;
+    let storedTimeSlots: ITimeSlot[] = [];
+
+    const storedConfigText = localStorage.getItem('timeSlots');
+    if (storedConfigText) {
+      storedTimeSlots = JSON.parse(storedConfigText);
+    }
+
+    storedTimeSlots.forEach(slot => {
+      slot.shows.forEach(show => {
+        if (show.name === showName) {
+          found = true;
+        }
+      });
+    });
+
+    return found;
   }
 
   sortShowsBetweenSeasons() {

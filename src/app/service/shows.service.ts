@@ -105,13 +105,7 @@ export class ShowsService {
   }
 
   findShow(showName: string): boolean {
-    let found = false;
-    SHOWS.forEach(show => {
-      if (show.name === showName) {
-        found = true;
-      }
-    });
-    return found;
+    return (SHOWS.findIndex(s => s.name === showName) >= 0) ? true : false;
   }
 
   getTimeSlots(): ITimeSlot[] {
@@ -137,25 +131,5 @@ export class ShowsService {
 
   getTimeSlotByIndex(index: number): ITimeSlot {
     return TIMESLOTS[index];
-  }
-
-  findShowInTimeSlots(showName): boolean {
-    let found = false;
-    let storedTimeSlots: ITimeSlot[] = [];
-
-    const storedConfigText = localStorage.getItem('timeSlots');
-    if (storedConfigText) {
-      storedTimeSlots = JSON.parse(storedConfigText);
-    }
-
-    storedTimeSlots.forEach(slot => {
-      slot.shows.forEach(show => {
-        if (show.name === showName) {
-          found = true;
-        }
-      });
-    });
-
-    return found;
   }
 }
