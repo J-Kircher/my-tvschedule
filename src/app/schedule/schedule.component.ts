@@ -40,11 +40,10 @@ export class ScheduleComponent implements OnInit {
       if (!this.findShowInSavedTimeSlots(s.name)) {
         console.log('[schedule] checkShows() Adding: ' + s.name);
         this.timeSlots[this.showsService.getTimeSlotIndex('SBS')].shows.push(s);
-        this.storageService.storeLocalStorage(this.timeSlots);
       }
     });
 
-    // Remove deleted shows from timeSlot
+    // Update changed shows and remove deleted shows from timeSlot
     this.timeSlots.forEach(slot => {
       slot.shows.forEach(show => {
         // console.log('[schedule] checkShows() show: ' + show.name + ' findShow(): ' + this.showsService.findShow(show.name));
@@ -57,11 +56,12 @@ export class ScheduleComponent implements OnInit {
         } else {
           console.log('[schedule] checkShows() Removing: ' + show.name);
           this.removeItem(show, this.timeSlots[this.getTSIdx(slot.name)].shows);
-          this.storageService.storeLocalStorage(this.timeSlots);
         }
       });
     });
 
+    // Update local storage
+    this.storageService.storeLocalStorage(this.timeSlots);
   }
 
   onAnyDrop(e: any, slotName: string) {
