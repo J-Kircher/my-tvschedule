@@ -60,6 +60,7 @@ const SHOWS: IShow[] = [
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'info': 'Tuesdays 10:00PM', 'start': 'September 5, 2017', 'slot': 'SBS' },
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville', 'info': 'Thursdays 9:00PM', 'start': 'September 10, 2017', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'info': 'Streaming', 'start': 'December 29, 2017', 'slot': 'SBS' },
+  { 'name': 'Altered Carbon', 'network': 'Netflix', 'link': 'http://www.netflix.com/alteredcarbon', 'image': 'AlteredCarbon', 'info': 'Streaming', 'start': 'February 2, 2018', 'slot': 'SBS' },
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
