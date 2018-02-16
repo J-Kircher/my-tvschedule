@@ -16,6 +16,8 @@ export class ScheduleComponent implements OnInit {
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
 
+  private networkStats: any[] = [];
+
   constructor(private showsService: ShowsService, private storageService: StorageService) { }
 
   ngOnInit() {
@@ -34,6 +36,18 @@ export class ScheduleComponent implements OnInit {
 
   checkShows(): void {
     this.shows = this.showsService.getShows();
+
+    this.shows.forEach(s => {
+      let idx = 0;
+      idx = this.networkStats.findIndex(e => e.network === s.network);
+      if (idx !== -1) {
+        this.networkStats[idx].count++;
+      } else {
+        this.networkStats.push({ 'network': s.network, 'count': 1});
+      }
+    });
+    this.networkStats.sort((a, b) => (b.count - a.count === 0 ? a.network.localeCompare(b.network) : b.count - a.count));
+    console.table(this.networkStats);
 
     // Add new shows to SBS (Shows Between Seasons)
     this.shows.forEach(s => {
