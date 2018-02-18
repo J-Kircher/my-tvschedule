@@ -9,6 +9,8 @@ import { ShowsService } from './service/shows.service';
 import { ShowComponent } from './show/show.component';
 import { StorageService } from './service/storage.service';
 import { SimpleModalComponent } from './common/simple-modal.component';
+import { ChartComponent } from './chart/chart.component';
+export declare var Chart: any;
 
 @NgModule({
   imports: [
@@ -20,7 +22,8 @@ import { SimpleModalComponent } from './common/simple-modal.component';
     AppComponent,
     ScheduleComponent,
     ShowComponent,
-    SimpleModalComponent
+    SimpleModalComponent,
+    ChartComponent
   ],
   providers: [
     ShowsService,
