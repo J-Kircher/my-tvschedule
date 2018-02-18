@@ -28,7 +28,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The X-Files', 'network': 'FOX', 'link': 'http://www.fox.com/the-x-files/', 'image': 'XFiles2016', 'info': 'Wednesdays 8:00PM', 'start': 'January 3, 2018', 'slot': 'SBS' },
   { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/sho/homeland/home', 'image': 'Homeland', 'info': 'Sundays 9:00PM', 'start': 'February 11, 2018', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBO', 'link': 'http://www.hbo.com/last-week-tonight-with-john-oliver/', 'image': 'LastWeekTonight2', 'info': 'Sundays 11:00PM', 'start': 'February 18, 2018', 'slot': 'SBS' },
-  { 'name': 'Ash vs Evil Dead', 'network': 'Starz', 'link': 'https://www.starz.com/series/ashvsevildead', 'image': 'AshVsEvilDead', 'info': 'Sundays 9:00PM', 'start': 'February 25, 2018', 'slot': 'SBS' },
+  { 'name': 'Ash vs Evil Dead', 'network': 'Starz', 'link': 'https://www.starz.com/series/ashvsevildead', 'image': 'AshVsEvilDead3', 'info': 'Sundays 9:00PM', 'start': 'February 25, 2018', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor', 'info': 'Wednesdays 8:00PM', 'start': 'February 28, 2018', 'slot': 'SBS' },
   { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones', 'info': 'Streaming', 'start': 'March 8, 2018', 'slot': 'SBS' },
   { 'name': 'Krypton', 'network': 'Syfy', 'link': 'http://www.syfy.com/krypton/', 'image': 'Krypton', 'info': 'Wednesdays', 'start': 'March 21, 2018', 'slot': 'SBS' },
