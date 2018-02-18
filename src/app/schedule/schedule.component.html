@@ -1,5 +1,8 @@
 <div id="tv-schedule" class="well" style="padding: 5px; float: left">
-  <p class="tv-title">My TV Schedule </p>
+  <div class="flex-container">
+    <div><p class="tv-title">My TV Schedule</p></div>
+    <div><button type="button" class="btn" (click)="openStatsModel()">Open Stats Modal</button></div>
+  </div>
 
   <div class="row well show-well" style="background-color: #9999FF;">
     <div class="day">Day</div>
@@ -37,3 +40,9 @@
     </li>
   </div>
 </div>
+
+<simple-modal #childModal modalTitle="Statistics" elementId="showStats">
+  <div class="well">
+    Some item here
+  </div>
+</simple-modal>

@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
 import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
+import { SimpleModalComponent } from '../common/simple-modal.component';
 
 @Component({
   selector: 'app-schedule',
@@ -15,6 +15,7 @@ export class ScheduleComponent implements OnInit {
   private schedule: ISchedule[] = [];
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
+  @ViewChild('childModal') childModal: SimpleModalComponent;
 
   private networkStats: any[] = [];
 
@@ -192,6 +193,10 @@ export class ScheduleComponent implements OnInit {
 
   getTSIdx(name): number {
     return this.showsService.getTimeSlotIndex(name);
+  }
+
+  openStatsModel() {
+    this.childModal.show();
   }
 }
 
