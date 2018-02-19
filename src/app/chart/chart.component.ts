@@ -27,13 +27,14 @@ export class ChartComponent implements OnInit {
 
   ngOnInit() {
     // console.log('[chart] ngOnInit()');
-    this.shows = this.showsService.getShows();
-    this.timeSlots = this.storageService.loadLocalStorage();
     this.createChartObject('all');
   }
 
   createChartObject(chartContent: string): void {
     // console.log('[chart] createChartObject()');
+    this.shows = this.showsService.getShows();
+    this.timeSlots = this.storageService.loadLocalStorage();
+
     // Create networkStats object
     this.networkStats = [];
     if (typeof this.myChart.chart !== 'undefined') {
@@ -68,6 +69,9 @@ export class ChartComponent implements OnInit {
         'animation': {
           'animateScale': true,
           'animateRotate': false
+        },
+        'legend': {
+          'position': 'right'
         }
       }
     });
