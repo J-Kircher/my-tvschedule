@@ -57,3 +57,8 @@ div.scroll-list {
   width: 302px;
   background-color: #E0E0E0;
 }
+@media (max-width: 1045px) {
+  #tv-schedule {
+    width: 412px;
+  }
+}
