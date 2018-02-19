@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShowsService } from '../service/shows.service';
-import { IShow } from '../model/shows.model';
+import { StorageService } from '../service/storage.service';
+import { IShow, ITimeSlot } from '../model/shows.model';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -10,9 +11,11 @@ import { Chart } from 'chart.js';
 })
 
 export class ChartComponent implements OnInit {
-  chart = []; // This will hold our chart info
+  private myChart: Chart = []; // This will hold our chart info
   private shows: IShow[] = [];
+  private timeSlots: ITimeSlot[] = [];
   private networkStats: any[] = [];
+
   private _label: string[] = [];
   private _data: string[] = [];
   private _graphColors: string[] = [];
@@ -20,30 +23,43 @@ export class ChartComponent implements OnInit {
   private _hoverColors: string[] = [];
   private _chartData: any;
 
-  constructor(private showsService: ShowsService) { }
+  constructor(private showsService: ShowsService, private storageService: StorageService) { }
 
   ngOnInit() {
-    console.log('[chart] ngOnInit()');
+    // console.log('[chart] ngOnInit()');
     this.shows = this.showsService.getShows();
+    this.timeSlots = this.storageService.loadLocalStorage();
+    this.createChartObject('all');
+  }
 
+  createChartObject(chartContent: string): void {
+    // console.log('[chart] createChartObject()');
     // Create networkStats object
+    this.networkStats = [];
+    if (typeof this.myChart.chart !== 'undefined') {
+      this.myChart.chart.destroy();
+    }
+
     this.shows.forEach(s => {
       let idx = 0;
-      idx = this.networkStats.findIndex(e => e.network === s.network);
-      if (idx !== -1) {
-        this.networkStats[idx].count++;
-      } else {
-        this.networkStats.push({ 'network': s.network, 'count': 1 });
+      const savedShow = this.getShowInSavedTimeSlots(s.name);
+      if ( (chartContent === 'all') || ( (chartContent === 'scheduled') && (savedShow.slot !== 'SBS') ) ) {
+        idx = this.networkStats.findIndex(e => e.network === s.network);
+        if (idx !== -1) {
+          this.networkStats[idx].count++;
+        } else {
+          this.networkStats.push({ 'network': s.network, 'count': 1 });
+        }
       }
     });
     this.networkStats.sort((a, b) => (b.count - a.count === 0 ? a.network.localeCompare(b.network) : b.count - a.count));
 
     this.getChartDataObject();
 
-    console.log('[chart] ngOnInit() Create chart object');
     // Create chart object
-    const ctx = document.getElementById('myCanvas');
-    this.chart = new Chart(ctx, {
+    const canvas = <HTMLCanvasElement>document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    this.myChart = new Chart(ctx, {
       'type': 'doughnut',
       'data': this._chartData,
       'options': {
@@ -58,7 +74,7 @@ export class ChartComponent implements OnInit {
   }
 
   getChartLabelArray(): void {
-    console.log('[chart] getChartLabelArray()');
+    // console.log('[chart] getChartLabelArray()');
     // Create array of labels for chart
     this._label = [];
     this.networkStats.forEach(n => {
@@ -67,7 +83,7 @@ export class ChartComponent implements OnInit {
   }
 
   getChartDataArray(): void {
-    console.log('[chart] getChartDataArray()');
+    // console.log('[chart] getChartDataArray()');
     // Create array of labels for chart
     this._data = [];
     this.networkStats.forEach(n => {
@@ -76,7 +92,7 @@ export class ChartComponent implements OnInit {
   }
 
   getChartColorArrays(dataLength: number): void {
-    console.log('[chart] getChartColorArrays()');
+    // console.log('[chart] getChartColorArrays()');
     // Create random color arrays for chart
 
     this._graphColors = [];
@@ -110,12 +126,10 @@ export class ChartComponent implements OnInit {
 
       i++;
     }
-    console.log('[chart] getChartColorArrays() _hoverColors:');
-    console.table(this._hoverColors);
   }
 
   getChartDataObject(): void {
-    console.log('[chart] getChartDataObject()');
+    // console.log('[chart] getChartDataObject()');
     // Create data object for chart with arrays created above
     this.getChartLabelArray();
     this.getChartDataArray();
@@ -130,5 +144,17 @@ export class ChartComponent implements OnInit {
         'borderColor': this._graphOutlines
       }]
     };
+  }
+
+  getShowInSavedTimeSlots(showName: string): IShow {
+    let myShow: IShow = null;
+    this.timeSlots.forEach(slot => {
+      slot.shows.forEach(show => {
+        if (show.name === showName) {
+          myShow = show;
+        }
+      });
+    });
+    return myShow;
   }
 }
