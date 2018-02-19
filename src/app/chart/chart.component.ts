@@ -13,11 +13,17 @@ export class ChartComponent implements OnInit {
   chart = []; // This will hold our chart info
   private shows: IShow[] = [];
   private networkStats: any[] = [];
+  private _label: string[] = [];
+  private _data: string[] = [];
+  private _graphColors: string[] = [];
+  private _graphOutlines: string[] = [];
+  private _hoverColors: string[] = [];
+  private _chartData: any;
 
   constructor(private showsService: ShowsService) { }
 
   ngOnInit() {
-
+    console.log('[chart] ngOnInit()');
     this.shows = this.showsService.getShows();
 
     // Create networkStats object
@@ -27,72 +33,19 @@ export class ChartComponent implements OnInit {
       if (idx !== -1) {
         this.networkStats[idx].count++;
       } else {
-        this.networkStats.push({ 'network': s.network, 'count': 1});
+        this.networkStats.push({ 'network': s.network, 'count': 1 });
       }
     });
     this.networkStats.sort((a, b) => (b.count - a.count === 0 ? a.network.localeCompare(b.network) : b.count - a.count));
 
-    // Create array of labels for chart
-    const lblArr: string[] = [];
-    this.networkStats.forEach(n => {
-      lblArr.push(n.network);
-    });
+    this.getChartDataObject();
 
-    // Create array of data for chart
-    const dataArr: string[] = [];
-    this.networkStats.forEach(n => {
-      dataArr.push(n.count);
-    });
-
-    // Create random color arrays for chart
-    const graphColors = [];
-    const graphOutlines = [];
-    const hoverColor = [];
-
-    const internalDataLength = dataArr.length;
-    let i = 0;
-    while (i <= internalDataLength) {
-      const randomR = Math.floor((Math.random() * 130) + 100);
-      const randomG = Math.floor((Math.random() * 130) + 100);
-      const randomB = Math.floor((Math.random() * 130) + 100);
-
-      const graphBackground = 'rgb('
-                + randomR + ', '
-                + randomG + ', '
-                + randomB + ')';
-        graphColors.push(graphBackground);
-
-        const graphOutline = 'rgb('
-                + (randomR - 80) + ', '
-                + (randomG - 80) + ', '
-                + (randomB - 80) + ')';
-        graphOutlines.push(graphOutline);
-
-        const hoverColors = 'rgb('
-                + (randomR + 25) + ', '
-                + (randomG + 25) + ', '
-                + (randomB + 25) + ')';
-        hoverColor.push(hoverColors);
-
-      i++;
-    }
-
-    // Create data object for chart with arrays created above
-    const data = {
-      labels: lblArr,
-      datasets: [{
-        'data': dataArr,
-        'backgroundColor': graphColors,
-        'hoverBackgroundColor': hoverColor,
-        'borderColor': graphOutlines
-      }]
-    };
-
+    console.log('[chart] ngOnInit() Create chart object');
     // Create chart object
     const ctx = document.getElementById('myCanvas');
     this.chart = new Chart(ctx, {
       'type': 'doughnut',
-      'data': data,
+      'data': this._chartData,
       'options': {
         'cutoutPercentage': 25,
         'responsive': true,
@@ -102,5 +55,80 @@ export class ChartComponent implements OnInit {
         }
       }
     });
+  }
+
+  getChartLabelArray(): void {
+    console.log('[chart] getChartLabelArray()');
+    // Create array of labels for chart
+    this._label = [];
+    this.networkStats.forEach(n => {
+      this._label.push(n.network);
+    });
+  }
+
+  getChartDataArray(): void {
+    console.log('[chart] getChartDataArray()');
+    // Create array of labels for chart
+    this._data = [];
+    this.networkStats.forEach(n => {
+      this._data.push(n.count);
+    });
+  }
+
+  getChartColorArrays(dataLength: number): void {
+    console.log('[chart] getChartColorArrays()');
+    // Create random color arrays for chart
+
+    this._graphColors = [];
+    this._graphOutlines = [];
+    this._hoverColors = [];
+
+    const internalDataLength = dataLength;
+    let i = 0;
+    while (i <= internalDataLength) {
+      const randomR = Math.floor((Math.random() * 130) + 100);
+      const randomG = Math.floor((Math.random() * 130) + 100);
+      const randomB = Math.floor((Math.random() * 130) + 100);
+
+      const graphBackground = 'rgb('
+        + randomR + ', '
+        + randomG + ', '
+        + randomB + ')';
+      this._graphColors.push(graphBackground);
+
+      const graphOutline = 'rgb('
+        + (randomR - 80) + ', '
+        + (randomG - 80) + ', '
+        + (randomB - 80) + ')';
+      this._graphOutlines.push(graphOutline);
+
+      const hoverColors = 'rgb('
+        + (randomR + 25) + ', '
+        + (randomG + 25) + ', '
+        + (randomB + 25) + ')';
+      this._hoverColors.push(hoverColors);
+
+      i++;
+    }
+    console.log('[chart] getChartColorArrays() _hoverColors:');
+    console.table(this._hoverColors);
+  }
+
+  getChartDataObject(): void {
+    console.log('[chart] getChartDataObject()');
+    // Create data object for chart with arrays created above
+    this.getChartLabelArray();
+    this.getChartDataArray();
+    this.getChartColorArrays(this._data.length);
+
+    this._chartData = {
+      labels: this._label,
+      datasets: [{
+        'data': this._data,
+        'backgroundColor': this._graphColors,
+        'hoverBackgroundColor': this._hoverColors,
+        'borderColor': this._graphOutlines
+      }]
+    };
   }
 }
