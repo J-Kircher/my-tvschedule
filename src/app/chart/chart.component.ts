@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
-import { IShow, ITimeSlot } from '../model/shows.model';
+import { IShow, ITimeSlot, INetworkData } from '../model/shows.model';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -14,14 +14,7 @@ export class ChartComponent implements OnInit {
   private myChart: Chart = []; // This will hold our chart info
   private shows: IShow[] = [];
   private timeSlots: ITimeSlot[] = [];
-  private networkStats: any[] = [];
-
-  private _label: string[] = [];
-  private _data: string[] = [];
-  private _graphColors: string[] = [];
-  private _graphOutlines: string[] = [];
-  private _hoverColors: string[] = [];
-  private _chartData: any;
+  private networkStats: INetworkData[] = []; // This will contain the labels and data for the chart
 
   constructor(private showsService: ShowsService, private storageService: StorageService) { }
 
@@ -55,14 +48,12 @@ export class ChartComponent implements OnInit {
     });
     this.networkStats.sort((a, b) => (b.count - a.count === 0 ? a.network.localeCompare(b.network) : b.count - a.count));
 
-    this.getChartDataObject();
-
     // Create chart object
     const canvas = <HTMLCanvasElement>document.getElementById('myCanvas');
     const ctx = canvas.getContext('2d');
     this.myChart = new Chart(ctx, {
       'type': 'doughnut',
-      'data': this._chartData,
+      'data': this.getChartDataObject(),
       'options': {
         'cutoutPercentage': 25,
         'responsive': true,
@@ -77,31 +68,12 @@ export class ChartComponent implements OnInit {
     });
   }
 
-  getChartLabelArray(): void {
-    // console.log('[chart] getChartLabelArray()');
-    // Create array of labels for chart
-    this._label = [];
-    this.networkStats.forEach(n => {
-      this._label.push(n.network);
-    });
-  }
-
-  getChartDataArray(): void {
-    // console.log('[chart] getChartDataArray()');
-    // Create array of labels for chart
-    this._data = [];
-    this.networkStats.forEach(n => {
-      this._data.push(n.count);
-    });
-  }
-
-  getChartColorArrays(dataLength: number): void {
+  getChartColorArrays(dataLength: number): any {
     // console.log('[chart] getChartColorArrays()');
     // Create random color arrays for chart
-
-    this._graphColors = [];
-    this._graphOutlines = [];
-    this._hoverColors = [];
+    const _graphColors: string[] = [];
+    const _graphOutlines: string[] = [];
+    const _hoverColors: string[] = [];
 
     const internalDataLength = dataLength;
     let i = 0;
@@ -114,38 +86,44 @@ export class ChartComponent implements OnInit {
         + randomR + ', '
         + randomG + ', '
         + randomB + ')';
-      this._graphColors.push(graphBackground);
+      _graphColors.push(graphBackground);
 
       const graphOutline = 'rgb('
         + (randomR - 80) + ', '
         + (randomG - 80) + ', '
         + (randomB - 80) + ')';
-      this._graphOutlines.push(graphOutline);
+      _graphOutlines.push(graphOutline);
 
       const hoverColors = 'rgb('
         + (randomR + 25) + ', '
         + (randomG + 25) + ', '
         + (randomB + 25) + ')';
-      this._hoverColors.push(hoverColors);
+      _hoverColors.push(hoverColors);
 
       i++;
     }
+
+    return {
+      'graphColors': _graphColors,
+      'graphOutlines': _graphOutlines,
+      'hoverColors': _hoverColors
+    };
   }
 
-  getChartDataObject(): void {
+  getChartDataObject(): any {
     // console.log('[chart] getChartDataObject()');
     // Create data object for chart with arrays created above
-    this.getChartLabelArray();
-    this.getChartDataArray();
-    this.getChartColorArrays(this._data.length);
+    const _label: string[] = this.networkStats.map(n => n.network);
+    const _data: string[] = this.networkStats.map(n => n.count.toString());
+    const _colorArrays: any = this.getChartColorArrays(_data.length);
 
-    this._chartData = {
-      labels: this._label,
+    return {
+      labels: _label,
       datasets: [{
-        'data': this._data,
-        'backgroundColor': this._graphColors,
-        'hoverBackgroundColor': this._hoverColors,
-        'borderColor': this._graphOutlines
+        'data': _data,
+        'backgroundColor': _colorArrays.graphColors,
+        'hoverBackgroundColor': _colorArrays.hoverColors,
+        'borderColor': _colorArrays.graphOutlines
       }]
     };
   }

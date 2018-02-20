@@ -21,3 +21,8 @@ export interface ITimeSlot {
   name: string;
   shows: IShow[];
 }
+
+export interface INetworkData {
+  network: string;
+  count: number;
+}
