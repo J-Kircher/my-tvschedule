@@ -11,6 +11,7 @@ import { Chart } from 'chart.js';
 })
 
 export class ChartComponent implements OnInit {
+  private chartView: string;
   private myChart: Chart = []; // This will hold our chart info
   private shows: IShow[] = [];
   private timeSlots: ITimeSlot[] = [];
@@ -25,6 +26,7 @@ export class ChartComponent implements OnInit {
 
   createChartObject(chartContent: string): void {
     // console.log('[chart] createChartObject()');
+    this.chartView = chartContent;
     this.shows = this.showsService.getShows();
     this.timeSlots = this.storageService.loadLocalStorage();
 
