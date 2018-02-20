@@ -10,6 +10,7 @@ import { ShowComponent } from './show/show.component';
 import { StorageService } from './service/storage.service';
 import { SimpleModalComponent } from './common/simple-modal.component';
 import { ChartComponent } from './chart/chart.component';
+import { CapitalizePipe } from './common/capitalize.pipe';
 export declare var Chart: any;
 
 @NgModule({
@@ -23,7 +24,8 @@ export declare var Chart: any;
     ScheduleComponent,
     ShowComponent,
     SimpleModalComponent,
-    ChartComponent
+    ChartComponent,
+    CapitalizePipe
   ],
   providers: [
     ShowsService,
