@@ -9,7 +9,8 @@ const SCHEDULE: ISchedule[] = [
   { 'name': 'Thursday', 'time': [ { 'slot': 'R8' }, { 'slot': 'R9' }, { 'slot': 'RX' } ] },
   { 'name': 'Friday', 'time': [ { 'slot': 'F8' }, { 'slot': 'F9' }, { 'slot': 'FX' } ] },
   { 'name': 'Saturday', 'time': [ { 'slot': 'A8' }, { 'slot': 'A9' }, { 'slot': 'AX' } ] },
-  { 'name': 'Streaming', 'time': [ { 'slot': 'N8' }, { 'slot': 'N9' }, { 'slot': 'NX' } ] }
+  { 'name': 'Streaming', 'time': [ { 'slot': 'N8' }, { 'slot': 'N9' }, { 'slot': 'NX' } ] },
+  { 'name': 'Hiatus', 'time': [ { 'slot': 'H8' }, { 'slot': 'H9' }, { 'slot': 'HX' } ] }
 ];
 
 const SHOWS: IShow[] = [
@@ -90,6 +91,9 @@ const TIMESLOTS: ITimeSlot[] = [
   { 'name': 'N8', 'shows': [] },
   { 'name': 'N9', 'shows': [] },
   { 'name': 'NX', 'shows': [] },
+  { 'name': 'H8', 'shows': [] },
+  { 'name': 'H9', 'shows': [] },
+  { 'name': 'HX', 'shows': [] },
   { 'name': 'SBS', 'shows': SHOWS }
 ];
 

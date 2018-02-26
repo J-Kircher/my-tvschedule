@@ -39,7 +39,7 @@ export class ChartComponent implements OnInit {
     this.shows.forEach(s => {
       let idx = 0;
       const savedShow = this.getShowInSavedTimeSlots(s.name);
-      if ( (chartContent === 'all') || ( (chartContent === 'scheduled') && (savedShow.slot !== 'SBS') ) ) {
+      if ( (chartContent === 'all') || ( (chartContent === 'scheduled') && (savedShow.slot !== 'SBS') && (savedShow.slot.charAt(0) !== 'H') ) ) {
         idx = this.networkStats.findIndex(e => e.network === s.network);
         if (idx !== -1) {
           this.networkStats[idx].count++;
