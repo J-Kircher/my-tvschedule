@@ -42,7 +42,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'info': 'Streaming', 'start': 'October 28, 2017', 'slot': 'SBS' },
   { 'name': 'Luke Cage', 'network': 'Netflix', 'link': 'http://www.netflix.com/lukecage', 'image': 'LukeCage', 'info': 'Streaming', 'start': 'September 30, 2017', 'slot': 'SBS' },
   { 'name': 'Taboo', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/taboo/', 'image': 'Taboo', 'info': 'Tuesdays 10:00PM', 'start': 'January 10, 2017', 'slot': 'SBS' },
-  { 'name': 'The Expanse', 'network': 'Syfy', 'link': 'http://www.syfy.com/expanse/', 'image': 'Expanse', 'info': 'Fridays', 'start': 'March 1, 2017', 'slot': 'SBS' },
+  { 'name': 'The Expanse', 'network': 'Syfy', 'link': 'http://www.syfy.com/expanse/', 'image': 'Expanse', 'info': 'Fridays', 'start': 'April 11, 2018', 'slot': 'SBS' },
   { 'name': 'Iron Fist', 'network': 'Netflix', 'link': 'http://www.netflix.com/ironfist', 'image': 'IronFist', 'info': 'Streaming', 'start': 'March 17, 2017', 'slot': 'SBS' },
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'info': 'Wednesday 10:00PM', 'start': 'April 5, 2017', 'slot': 'SBS' },
   { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods', 'info': 'Sundays 9:00PM', 'start': 'April 30, 2017', 'slot': 'SBS' },
