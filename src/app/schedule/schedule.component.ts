@@ -80,7 +80,7 @@ export class ScheduleComponent implements OnInit {
         this.storageService.storeLocalStorage(this.timeSlots);
         console.log('Moving [' + e.dragData.name + '] from ' + fromSlot + ' to ' + slotName);
 
-        if (slotName === 'SBS') {
+        if (slotName === 'SBS' || fromSlot === 'SBS') {
           this.sortShowsBetweenSeasons();
         }
       } else {
@@ -141,7 +141,7 @@ export class ScheduleComponent implements OnInit {
   }
 
   sortShowsBetweenSeasons() {
-    console.log('sortShowsBetweenSeasons');
+    // console.log('[schedule] sortShowsBetweenSeasons()');
 
     // Remove blank rows
     let blankIdx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(s => s.name === '');
@@ -154,23 +154,49 @@ export class ScheduleComponent implements OnInit {
     this.timeSlots[this.getTSIdx('SBS')].shows.sort(sortShowByDate);
 
     // Rearrange Shows Between Seasons
+    // Find show that started this week
+    const idxStarted = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(findThisPastWeek);
     // Find first show after today
-    const idx = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(findAfterToday);
+    const idxSoon = this.timeSlots[this.getTSIdx('SBS')].shows.findIndex(findAfterToday);
 
     // Split the array into shows that have not started yet and shows that are over
-    const arr1 = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idx);
-    const arr2 = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idx);
+    let arrEndedShows, arrStartedShows, arrSoonShows;
+    if (idxStarted > -1) {
+      arrEndedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idxStarted);
+      arrStartedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxStarted, idxSoon);
+      arrSoonShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxSoon);
+    } else {
+      arrStartedShows = [];
+      arrEndedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idxSoon);
+      arrSoonShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxSoon);
+    }
+
+    // Add spacer to start for 'Started this week'
+    const startedHeadingArr: IShow[] = [];
+    startedHeadingArr.push({ name: '', network: '', link: '', image: '', info: 'Season started this week', start: '', slot: 'SBS' });
 
     // Add spacer to start for 'Starting soon'
-    const startArr: IShow[] = [];
-    startArr.push({ name: '', network: '', link: '', image: '', info: 'Season starting soon', start: '', slot: 'SBS' });
+    const soonHeadingArr: IShow[] = [];
+    soonHeadingArr.push({ name: '', network: '', link: '', image: '', info: 'Season starting soon', start: '', slot: 'SBS' });
 
     // Add spacer to middle for 'Recently ended'
-    const midArr: IShow[] = [];
-    midArr.push({ name: '', network: '', link: '', image: '', info: 'Season recently ended', start: '', slot: 'SBS' });
+    const endedHeadingArr: IShow[] = [];
+    endedHeadingArr.push({ name: '', network: '', link: '', image: '', info: 'Season recently ended', start: '', slot: 'SBS' });
 
-    // Combine the two parts so that the first item is the next show to start
-    this.timeSlots[this.getTSIdx('SBS')].shows = startArr.concat(arr2).concat(midArr).concat(arr1);
+    // Combine the parts so that the first item is the next show to start
+    if (arrStartedShows.length > 0) {
+      this.timeSlots[this.getTSIdx('SBS')].shows = startedHeadingArr
+        .concat(arrStartedShows)
+        .concat(soonHeadingArr)
+        .concat(arrSoonShows)
+        .concat(endedHeadingArr)
+        .concat(arrEndedShows);
+    } else {
+      this.timeSlots[this.getTSIdx('SBS')].shows = soonHeadingArr
+        .concat(arrSoonShows)
+        .concat(endedHeadingArr)
+        .concat(arrEndedShows);
+    }
   }
 
   getTS(name): ITimeSlot {
@@ -220,4 +246,12 @@ function findAfterToday(element) {
   const startDate = new Date(element.start);
   const today = new Date();
   return startDate > today;
+}
+
+function findThisPastWeek(element) {
+  const startDate = new Date(element.start);
+  const today = new Date();
+  const lastWeek = new Date();
+  lastWeek.setDate(lastWeek.getDate() - 7);
+  return (lastWeek < startDate) && (startDate < today);
 }
