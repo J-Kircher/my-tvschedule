@@ -21,6 +21,8 @@ import { IShow } from '../model/shows.model';
     .slot { display: flex; min-height: 10px; min-width: 300px; }
     .network { min-height: 50px; min-width: 50px; }
     .myShow { min-height: 50px; min-width: 250px; }
+    .myShow a { opacity: 0; transition: 1s; }
+    .myShow:hover a { opacity: 1; }
     .show-info { margin: 2px 7px; }
     .link-icon { color: grey; text-shadow: 1px 1px black; margin: 30px 2px 1px; }
   `]
