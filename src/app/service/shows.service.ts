@@ -43,7 +43,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Luke Cage', 'network': 'Netflix', 'link': 'http://www.netflix.com/lukecage', 'image': 'LukeCage', 'info': 'Streaming', 'start': 'June 22, 2018', 'slot': 'SBS' },
   { 'name': 'Mindhunter', 'network': 'Netflix', 'link': 'http://www.netflix.com/mindhunter', 'image': 'Mindhunter', 'info': 'Streaming', 'start': 'October 13, 2017', 'slot': 'SBS' },
   { 'name': 'Narcos', 'network': 'Netflix', 'link': 'http://www.netflix.com/narcos', 'image': 'Narcos', 'info': 'Streaming', 'start': 'September 1, 2017', 'slot': 'SBS' },
-  { 'name': 'Orange is the New Black', 'network': 'Netflix', 'link': 'http://www.netflix.com/orangeisthenewblack', 'image': 'OrangeIsTheNewBlack', 'info': 'Streaming', 'start': 'June 9, 2017', 'slot': 'SBS' },
+  { 'name': 'Orange is the New Black', 'network': 'Netflix', 'link': 'http://www.netflix.com/orangeisthenewblack', 'image': 'OrangeIsTheNewBlack', 'info': 'Streaming', 'start': 'July 27, 2018', 'slot': 'SBS' },
   { 'name': 'Real Housewives of Orange County', 'network': 'Bravo', 'link': 'http://www.bravotv.com/the-real-housewives-of-orange-county', 'image': 'RealHousewivesOrangeCounty', 'info': 'Mondays 9:00PM', 'start': 'July 10, 2017', 'slot': 'SBS' },
   { 'name': 'Real Time with Bill Maher', 'network': 'HBO', 'link': 'http://www.hbo.com/real-time-with-bill-maher/', 'image': 'RealTime', 'info': 'Fridays 10:00PM', 'start': 'January 19, 2018', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'http://www.adultswim.com/RickAndMorty', 'image': 'RickAndMorty', 'info': 'Sundays', 'start': 'July 30, 2017', 'slot': 'SBS' },
