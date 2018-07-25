@@ -34,7 +34,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Gotham', 'network': 'FOX', 'link': 'http://www.fox.com/gotham/', 'image': 'Gotham2', 'info': 'Thursdays 8:00PM', 'start': 'September 21, 2017', 'slot': 'SBS' },
   { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/sho/homeland/home', 'image': 'Homeland', 'info': 'Sundays 9:00PM', 'start': 'February 11, 2018', 'slot': 'SBS' },
   { 'name': 'House of Cards', 'network': 'Netflix', 'link': 'http://www.netflix.com/houseofcards', 'image': 'HouseOfCards', 'info': 'Streaming', 'start': 'May 30, 2017', 'slot': 'SBS' },
-  { 'name': 'Iron Fist', 'network': 'Netflix', 'link': 'http://www.netflix.com/ironfist', 'image': 'IronFist', 'info': 'Streaming', 'start': 'March 17, 2017', 'slot': 'SBS' },
+  { 'name': 'Iron Fist', 'network': 'Netflix', 'link': 'http://www.netflix.com/ironfist', 'image': 'IronFist', 'info': 'Streaming', 'start': 'September 7, 2018', 'slot': 'SBS' },
   { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones', 'info': 'Streaming', 'start': 'March 8, 2018', 'slot': 'SBS' },
   { 'name': 'Krypton', 'network': 'Syfy', 'link': 'http://www.syfy.com/krypton/', 'image': 'Krypton', 'info': 'Wednesdays 10:00PM', 'start': 'March 21, 2018', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBO', 'link': 'http://www.hbo.com/last-week-tonight-with-john-oliver/', 'image': 'LastWeekTonight', 'info': 'Sundays 11:00PM', 'start': 'February 18, 2018', 'slot': 'SBS' },
@@ -62,9 +62,10 @@ const SHOWS: IShow[] = [
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'info': 'Streaming', 'start': 'April 25, 2018', 'slot': 'SBS' },
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville', 'info': 'Thursdays 9:00PM', 'start': 'December 30, 2018', 'slot': 'SBS' },
   { 'name': 'The Punisher', 'network': 'Netflix', 'link': 'http://www.netflix.com/punisher', 'image': 'Punisher', 'info': 'Streaming', 'start': 'November 17, 2017', 'slot': 'SBS' },
-  { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead', 'info': 'Sundays 9:00PM', 'start': 'October 22, 2017', 'slot': 'SBS' },
+  { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/therookie/', 'image': 'TheRookie', 'info': 'Tuesdays 10:00PM', 'start': 'October 16, 2018', 'slot': 'SBS' },
+  { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead', 'info': 'Sundays 9:00PM', 'start': 'October 7, 2018', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBO', 'link': 'http://www.hbo.com/true-detective/', 'image': 'TrueDetective', 'info': 'Sundays 9:00PM', 'start': 'June 21, 2017', 'slot': 'SBS' },
-  { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings', 'info': 'Wednesdays 9:00PM', 'start': 'November 29, 2017', 'slot': 'SBS' },
+  { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings', 'info': 'Wednesdays 9:00PM', 'start': 'November 28, 2018', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBO', 'link': 'http://www.hbo.com/westworld/', 'image': 'Westworld', 'info': 'Sundays 9:00PM', 'start': 'April 22, 2018', 'slot': 'SBS' },
 ];
 
