@@ -34,7 +34,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Game of Thrones', 'network': 'HBO', 'link': 'http://www.hbo.com/game-of-thrones/', 'image': 'GameOfThrones', 'info': 'Sundays 9:00PM', 'start': 'July 16, 2017', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'http://www.amazon.com/goodomens/', 'image': 'GoodOmens', 'info': 'Streaming', 'start': 'February 29, 2019', 'slot': 'SBS' },
   { 'name': 'Gotham', 'network': 'FOX', 'link': 'http://www.fox.com/gotham/', 'image': 'Gotham2', 'info': 'Thursdays 8:00PM', 'start': 'September 21, 2017', 'slot': 'SBS' },
-  { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/sho/homeland/home', 'image': 'Homeland', 'info': 'Sundays 9:00PM', 'start': 'February 11, 2018', 'slot': 'SBS' },
+  { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/homeland', 'image': 'Homeland', 'info': 'Sundays 9:00PM', 'start': 'February 11, 2018', 'slot': 'SBS' },
   { 'name': 'House of Cards', 'network': 'Netflix', 'link': 'http://www.netflix.com/houseofcards', 'image': 'HouseOfCards', 'info': 'Streaming', 'start': 'May 30, 2017', 'slot': 'SBS' },
   { 'name': 'Iron Fist', 'network': 'Netflix', 'link': 'http://www.netflix.com/ironfist', 'image': 'IronFist', 'info': 'Streaming', 'start': 'September 7, 2018', 'slot': 'SBS' },
   { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones', 'info': 'Streaming', 'start': 'March 8, 2018', 'slot': 'SBS' },
@@ -69,6 +69,7 @@ const SHOWS: IShow[] = [
   { 'name': 'True Detective', 'network': 'HBO', 'link': 'http://www.hbo.com/true-detective/', 'image': 'TrueDetective', 'info': 'Sundays 9:00PM', 'start': 'June 21, 2017', 'slot': 'SBS' },
   { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings', 'info': 'Wednesdays 9:00PM', 'start': 'November 28, 2018', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBO', 'link': 'http://www.hbo.com/westworld/', 'image': 'Westworld', 'info': 'Sundays 9:00PM', 'start': 'April 22, 2018', 'slot': 'SBS' },
+  { 'name': 'Who Is America', 'network': 'Showtime', 'link': 'http://www.sho.com/who-is-america', 'image': 'WhoIsAmerica', 'info': 'Sundays 10:00PM', 'start': 'July 15, 2018', 'slot': 'SBS' },
 ];
 
 const SHOWS_ENDED: IShow[] = [
