@@ -51,7 +51,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Real Housewives of Orange County', 'network': 'Bravo', 'link': 'http://www.bravotv.com/the-real-housewives-of-orange-county', 'image': 'RealHousewivesOrangeCounty', 'info': 'Mondays 9:00PM', 'start': 'July 16, 2018', 'slot': 'SBS' },
   { 'name': 'Real Time with Bill Maher', 'network': 'HBO', 'link': 'http://www.hbo.com/real-time-with-bill-maher/', 'image': 'RealTime', 'info': 'Fridays 10:00PM', 'start': 'January 19, 2018', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'http://www.adultswim.com/RickAndMorty', 'image': 'RickAndMorty', 'info': 'Sundays', 'start': 'July 30, 2017', 'slot': 'SBS' },
-  { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive41', 'info': 'Saturdays 11:30PM', 'start': 'September 30, 2017', 'slot': 'SBS' },
+  { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive41', 'info': 'Saturdays 11:30PM', 'start': 'September 29, 2018', 'slot': 'SBS' },
   { 'name': 'Silicon Valley', 'network': 'HBO', 'link': 'http://www.hbo.com/silicon-valley/', 'image': 'SiliconValley', 'info': 'Sundays 10:00PM', 'start': 'March 25, 2018', 'slot': 'SBS' },
   { 'name': 'Star Wars Resistance', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-resistance', 'image': 'Resistance', 'info': 'Mondays 9:00PM', 'start': 'October 16, 2018', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'info': 'Streaming', 'start': 'October 31, 2017', 'slot': 'SBS' },
