@@ -1,31 +1,38 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgDragDropModule } from 'ng-drag-drop';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
+import { MaterialModule } from './shared/material.module';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ShowsService } from './service/shows.service';
 import { ShowComponent } from './show/show.component';
 import { StorageService } from './service/storage.service';
-import { SimpleModalComponent } from './common/simple-modal.component';
+// import { SimpleModalComponent } from './common/simple-modal.component';
 import { ChartComponent } from './chart/chart.component';
 import { CapitalizePipe } from './common/capitalize.pipe';
+import { ShowStatsDialogComponent } from './dialog/show-stats-dialog/show-stats-dialog.component';
 export declare var Chart: any;
 
 @NgModule({
   imports: [
     BrowserModule,
-    NgDragDropModule.forRoot(),
-    ModalModule.forRoot()
+    BrowserAnimationsModule,
+    MaterialModule,
+    NgDragDropModule.forRoot()
+  ],
+  entryComponents: [
+    ShowStatsDialogComponent
   ],
   declarations: [
     AppComponent,
     ScheduleComponent,
     ShowComponent,
-    SimpleModalComponent,
+    // SimpleModalComponent,
     ChartComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    ShowStatsDialogComponent
   ],
   providers: [
     ShowsService,

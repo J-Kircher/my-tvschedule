@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
 import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
-import { SimpleModalComponent } from '../common/simple-modal.component';
+// import { SimpleModalComponent } from '../common/simple-modal.component';
+import { ShowStatsDialogComponent } from '../dialog/show-stats-dialog/show-stats-dialog.component';
 
 @Component({
   selector: 'app-schedule',
@@ -15,9 +17,15 @@ export class ScheduleComponent implements OnInit {
   private schedule: ISchedule[] = [];
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
-  @ViewChild('childModal') childModal: SimpleModalComponent;
+  // @ViewChild('childModal') childModal: SimpleModalComponent;
 
-  constructor(private showsService: ShowsService, private storageService: StorageService) { }
+  dialogReturn: any;
+
+  constructor(
+    private showsService: ShowsService,
+    private storageService: StorageService,
+    public dialog: MatDialog
+    ) { }
 
   ngOnInit() {
     this.schedule = this.showsService.getSchedule();
@@ -207,8 +215,20 @@ export class ScheduleComponent implements OnInit {
     return this.showsService.getTimeSlotIndex(name);
   }
 
-  openStatsModel() {
-    this.childModal.show();
+  openStatsDialog(): void {
+    const dialogRef = this.dialog.open(ShowStatsDialogComponent, {
+      data: {}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log('The dialog was closed');
+      this.dialogReturn = result;
+    });
+  }
+
+  openStats() {
+    // this.childModal.show();
+    this.openStatsDialog();
   }
 }
 

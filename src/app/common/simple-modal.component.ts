@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild  } from '@angular/core';
-import { ModalDirective } from 'ngx-bootstrap';
+// import { ModalDirective } from 'ngx-bootstrap';
 
 @Component({
   selector: 'simple-modal',
@@ -28,15 +28,15 @@ import { ModalDirective } from 'ngx-bootstrap';
 export class SimpleModalComponent {
   @Input() modalTitle: string;
   @Input() elementId: string;
-  @ViewChild('childModal') public childModal: ModalDirective;
+  // @ViewChild('childModal') public childModal: ModalDirective;
 
   constructor() { }
 
   show() {
-    this.childModal.show();
+    // this.childModal.show();
   }
 
   hide() {
-    this.childModal.hide();
+    // this.childModal.hide();
   }
 }
