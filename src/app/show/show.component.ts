@@ -13,7 +13,7 @@ import { IShow } from '../model/shows.model';
         <a *ngIf="displayShow" href="{{ show.link }}" target="{{ '_' + show.image }}">
           <span class="glyphicon glyphicon-new-window link-icon"></span>
         </a>
-        <h4 *ngIf="!displayShow" class="text-primary show-info">{{ show.info }}</h4>
+        <h4 *ngIf="!displayShow" class="show-info">{{ show.info }}</h4>
       </div>
     </div>
   `,
@@ -23,7 +23,7 @@ import { IShow } from '../model/shows.model';
     .myShow { min-height: 50px; min-width: 250px; }
     .myShow a { opacity: 0; transition: 1s; }
     .myShow:hover a { opacity: 1; }
-    .show-info { margin: 2px 7px; }
+    .show-info { margin: 2px 7px; color: #337ab7; }
     .link-icon { color: grey; text-shadow: 1px 1px black; margin: 30px 2px 1px; }
   `]
 })

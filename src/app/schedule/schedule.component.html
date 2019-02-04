@@ -3,39 +3,45 @@
   <div><button mat-button type="button" (click)="openStats()">Stats Chart</button></div>
 </mat-toolbar>
 
-<div fxLayout="row">
+<div fxLayout="row" fxLayout.lt-lg="column">
   <div id="tv-schedule">
 
-    <div fxLayout="row" class="show-well" style="background-color: #9999FF;">
-      <div class="day">Day</div>
-      <div class="timeslot-header">8:00 pm</div>
-      <div class="timeslot-header">9:00 pm</div>
-      <div class="timeslot-header">10:00 pm</div>
-    </div>
+    <mat-card>
+      <div fxLayout="row" class="show-well" style="background-color: #9999FF;">
+        <div class="day">Day</div>
+        <div class="timeslot-header">8:00 pm</div>
+        <div class="timeslot-header">9:00 pm</div>
+        <div class="timeslot-header">10:00 pm</div>
+      </div>
+    </mat-card>
 
-    <div fxLayout="row" class="show-well" *ngFor="let day of schedule">
-      <div class="day">{{ day.name }}</div>
-      <div class="row" [id]="time.slot" *ngFor="let time of day.time"
-        class="timeslot" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, time.slot)">
-        <div class="show" *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show">
-          <app-show [show]="show"></app-show>
+    <mat-card *ngFor="let day of schedule">
+      <div fxLayout="row" class="show-well">
+        <div class="day">{{ day.name }}</div>
+        <div class="row" [id]="time.slot" *ngFor="let time of day.time"
+          class="timeslot" droppable [dragOverClass]="'drag-target-border'"
+          [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, time.slot)">
+          <div class="show" *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
+            [draggable] [dragClass]="'active'" [dragData]="show">
+            <app-show [show]="show"></app-show>
+          </div>
         </div>
       </div>
-    </div>
+    </mat-card>
   </div>
 
   <div fxFlex="20%">
-    <p class="tv-title">Shows Between Seasons</p>
-    <div id="SBS"
-      class="timeslot list-group" droppable [dragOverClass]="'drag-target-border'"
-      [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'SBS')">
-      <div class="show" *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
-        [draggable] [dragClass]="'active'" [dragData]="show" [dragEnabled]="show.name !== ''">
-        <app-show [show]="show"></app-show>
+    <mat-card fxFlex>
+      <div class="tv-title">Shows Between Seasons</div>
+      <div id="SBS"
+        class="timeslot list-group" droppable [dragOverClass]="'drag-target-border'"
+        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'SBS')">
+        <div class="show" *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
+          [draggable] [dragClass]="'active'" [dragData]="show" [dragEnabled]="show.name !== ''">
+          <app-show [show]="show"></app-show>
+        </div>
       </div>
-    </div>
+    </mat-card>
   </div>
 </div>
 
