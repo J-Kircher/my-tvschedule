@@ -11,7 +11,7 @@ import { IShow } from '../model/shows.model';
       <div [ngClass]="{ 'myShow': displayShow }"
         [style.background-image]="displayShow ? 'url(/assets/images/Shows/' + show.image + '.gif)' : null">
         <a *ngIf="displayShow" href="{{ show.link }}" target="{{ '_' + show.image }}">
-          <span class="glyphicon glyphicon-new-window link-icon"></span>
+          <mat-icon class="link-icon">open_in_new</mat-icon>
         </a>
         <h4 *ngIf="!displayShow" class="show-info">{{ show.info }}</h4>
       </div>
@@ -24,7 +24,7 @@ import { IShow } from '../model/shows.model';
     .myShow a { opacity: 0; transition: 1s; }
     .myShow:hover a { opacity: 1; }
     .show-info { margin: 2px 7px; color: #337ab7; }
-    .link-icon { color: grey; text-shadow: 1px 1px black; margin: 30px 2px 1px; }
+    .link-icon { color: grey; text-shadow: 1px 1px black; margin: 23px 2px 3px; }
   `]
 })
 
