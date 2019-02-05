@@ -9,7 +9,6 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { ShowsService } from './service/shows.service';
 import { ShowComponent } from './show/show.component';
 import { StorageService } from './service/storage.service';
-// import { SimpleModalComponent } from './common/simple-modal.component';
 import { ChartComponent } from './chart/chart.component';
 import { CapitalizePipe } from './common/capitalize.pipe';
 import { ShowStatsDialogComponent } from './dialog/show-stats-dialog/show-stats-dialog.component';
@@ -29,7 +28,6 @@ export declare var Chart: any;
     AppComponent,
     ScheduleComponent,
     ShowComponent,
-    // SimpleModalComponent,
     ChartComponent,
     CapitalizePipe,
     ShowStatsDialogComponent

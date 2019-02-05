@@ -4,7 +4,6 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
 import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
-// import { SimpleModalComponent } from '../common/simple-modal.component';
 import { ShowStatsDialogComponent } from '../dialog/show-stats-dialog/show-stats-dialog.component';
 
 @Component({
@@ -18,7 +17,6 @@ export class ScheduleComponent implements OnInit {
   private schedule: ISchedule[] = [];
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
-  // @ViewChild('childModal') childModal: SimpleModalComponent;
 
   dialogReturn: any;
   dropListIdArray: string[];

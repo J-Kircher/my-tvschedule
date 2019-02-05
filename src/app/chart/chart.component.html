@@ -1,8 +1,10 @@
 <div class="chart-container" fxLayout="column">
   <div>{{ chartView | capitalize }} shows</div>
   <canvas id="myCanvas"></canvas>
-  <div class="btn-group btn-group-xs">
-    <button type="button" class="btn btn-primary" (click)="createChartObject('all')">All</button>
-    <button type="button" class="btn btn-primary" (click)="createChartObject('scheduled')">Scheduled</button>
+  <div fxLayoutAlign="center">
+    <mat-button-toggle-group name="chartStyle" aria-label="Chart Style">
+      <mat-button-toggle value="All" (click)="createChartObject('all')">All</mat-button-toggle>
+      <mat-button-toggle value="Scheduled" (click)="createChartObject('scheduled')">Scheduled</mat-button-toggle>
+    </mat-button-toggle-group>
   </div>
 </div>
