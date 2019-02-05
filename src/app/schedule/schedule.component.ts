@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
 import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
@@ -20,6 +21,7 @@ export class ScheduleComponent implements OnInit {
   // @ViewChild('childModal') childModal: SimpleModalComponent;
 
   dialogReturn: any;
+  dropListIdArray: string[];
 
   constructor(
     private showsService: ShowsService,
@@ -39,6 +41,9 @@ export class ScheduleComponent implements OnInit {
     // Check for changes to SHOWS
     this.checkShows();
     this.sortShowsBetweenSeasons();
+
+    // Build time slot array
+    this.dropListIdArray = this.timeSlots.map(ts => ts.name);
   }
 
   checkShows(): void {
@@ -73,7 +78,35 @@ export class ScheduleComponent implements OnInit {
     this.storageService.storeLocalStorage(this.timeSlots);
   }
 
-  onAnyDrop(e: any, slotName: string) {
+  onAnyDrop(event: CdkDragDrop<string[]>) {
+    const slotName: string = event.container.id;
+    const fromSlot: string = event.previousContainer.id;
+    const dragData = event.item.data;
+    console.log('[schedule] onAnyDrop() target slot name: [' + slotName + ']');
+    // console.log(event);
+    if (slotName !== '') {
+      if (slotName !== fromSlot) {
+        dragData.slot = slotName;
+        this.timeSlots[this.getTSIdx(slotName)].shows.push(dragData);
+        this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShowByName);
+
+        this.removeItem(dragData, this.timeSlots[this.getTSIdx(fromSlot)].shows);
+        this.storageService.storeLocalStorage(this.timeSlots);
+        console.log('Moving [' + dragData.name + '] from ' + fromSlot + ' to ' + slotName);
+
+        if (slotName === 'SBS' || fromSlot === 'SBS') {
+          this.sortShowsBetweenSeasons();
+        }
+      } else {
+        console.warn('NOT Moving [' + dragData.name + '], same slot');
+      }
+    } else {
+      console.error('NOT moving [' + dragData.name + '], slotName is BAD');
+      console.error(event);
+    }
+  }
+
+  XonAnyDrop(e: any, slotName: string) {
     const fromSlot: string = e.dragData.slot;
     // const slotName = e.nativeEvent.srcElement.id;
     // console.log('[schedule] onAnyDrop() target: [' + e.nativeEvent.target.id + ']');

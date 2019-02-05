@@ -18,12 +18,13 @@
     <mat-card *ngFor="let day of schedule">
       <div fxLayout="row" class="show-well">
         <div class="day">{{ day.name }}</div>
-        <div class="row" [id]="time.slot" *ngFor="let time of day.time"
-          class="timeslot" droppable [dragOverClass]="'drag-target-border'"
-          [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, time.slot)">
-          <div class="show" *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
-            [draggable] [dragClass]="'active'" [dragData]="show">
+        <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
+          [id]="time.slot" class="row timeslot" *ngFor="let time of day.time"
+          [cdkDropListConnectedTo]="dropListIdArray">
+          <div *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
+            cdkDrag [cdkDragData]="show" class="show">
             <app-show [show]="show"></app-show>
+            <div class="show-placeholder" *cdkDragPlaceholder></div>
           </div>
         </div>
       </div>
@@ -33,12 +34,13 @@
   <div fxFlex="20%">
     <mat-card fxFlex>
       <div class="tv-title">Shows Between Seasons</div>
-      <div id="SBS"
-        class="timeslot list-group" droppable [dragOverClass]="'drag-target-border'"
-        [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event, 'SBS')">
-        <div class="show" *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
-          [draggable] [dragClass]="'active'" [dragData]="show" [dragEnabled]="show.name !== ''">
+      <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
+        id="SBS" class="timeslot list-group"
+        [cdkDropListConnectedTo]="dropListIdArray">
+        <div *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
+          cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''">
           <app-show [show]="show"></app-show>
+          <div class="show-placeholder" *cdkDragPlaceholder></div>
         </div>
       </div>
     </mat-card>

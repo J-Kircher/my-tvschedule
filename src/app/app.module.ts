@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgDragDropModule } from 'ng-drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
@@ -19,8 +19,8 @@ export declare var Chart: any;
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    NgDragDropModule.forRoot()
+    DragDropModule,
+    MaterialModule
   ],
   entryComponents: [
     ShowStatsDialogComponent
