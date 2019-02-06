@@ -4,13 +4,17 @@
 /* @import "~@angular/material/prebuilt-themes/pink-bluegrey.css"; */
 /* @import "~@angular/material/prebuilt-themes/purple-green.css"; */
 
-html {
+html, body {
   height: 100%;
 }
 
 body {
+  background-color: rgba(0,0,255,0.1);
+  // background-color: rgba(40,40,40,0.4);
   background-image: url('../src/assets/images/tv.gif');
   background-repeat: no-repeat;
-  min-width: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* min-width: 100%; */
+  /* width: 100%; */
 }

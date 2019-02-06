@@ -1,0 +1,22 @@
+.menu {
+  top: 0;
+  background-color: rgb(224,224,224);
+  // background-color: rgba(140,140,140,1.0);
+  z-index: 99;
+  font-size: 20px;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+.tv-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0px 10px 0px;
+  text-align: center;
+}
+.content-wrapper {
+  // margin: 12px;
+  // background-color: rgba(40,40,40,0.4);
+  border: 0;
+  border-radius: 10px;
+}
