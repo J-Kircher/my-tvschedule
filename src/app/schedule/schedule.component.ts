@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
 import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
-import { ShowStatsDialogComponent } from '../dialog/show-stats-dialog/show-stats-dialog.component';
 
 @Component({
   selector: 'app-schedule',
@@ -18,13 +16,11 @@ export class ScheduleComponent implements OnInit {
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
 
-  dialogReturn: any;
   dropListIdArray: string[];
 
   constructor(
     private showsService: ShowsService,
-    private storageService: StorageService,
-    public dialog: MatDialog
+    private storageService: StorageService
     ) { }
 
   ngOnInit() {
@@ -244,22 +240,6 @@ export class ScheduleComponent implements OnInit {
 
   getTSIdx(name): number {
     return this.showsService.getTimeSlotIndex(name);
-  }
-
-  openStatsDialog(): void {
-    const dialogRef = this.dialog.open(ShowStatsDialogComponent, {
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      // console.log('The dialog was closed');
-      this.dialogReturn = result;
-    });
-  }
-
-  openStats() {
-    // this.childModal.show();
-    this.openStatsDialog();
   }
 }
 

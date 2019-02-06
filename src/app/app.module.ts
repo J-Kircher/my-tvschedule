@@ -5,6 +5,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
+import { NavbarComponent } from './navbar/navbar.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ShowsService } from './service/shows.service';
 import { ShowComponent } from './show/show.component';
@@ -26,6 +27,7 @@ export declare var Chart: any;
   ],
   declarations: [
     AppComponent,
+    NavbarComponent,
     ScheduleComponent,
     ShowComponent,
     ChartComponent,
