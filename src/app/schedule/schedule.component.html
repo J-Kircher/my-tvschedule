@@ -13,7 +13,7 @@
         <div fxLayout="row" class="show-well">
           <div class="day">{{ day.name }}</div>
           <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
-            [id]="time.slot" class="row timeslot" *ngFor="let time of day.time"
+            [id]="time.slot" class="row timeslot width" *ngFor="let time of day.time"
             [cdkDropListConnectedTo]="dropListIdArray">
             <div *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
               cdkDrag [cdkDragData]="show" class="show">
@@ -26,15 +26,17 @@
     </div>
 
     <div id="shows-between" class="schedule-container">
-      <mat-card>
-        <div class="tv-title">Shows Between Seasons</div>
-        <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
-          id="SBS" class="timeslot list-group"
-          [cdkDropListConnectedTo]="dropListIdArray">
-          <div *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
-            cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''">
-            <app-show [show]="show"></app-show>
-            <div class="show-placeholder" *cdkDragPlaceholder></div>
+      <mat-card class="shows-between">
+        <div class="shows-container">
+          <div class="tv-title">Shows Between Seasons</div>
+          <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
+            id="SBS" class="timeslot div-scroll"
+            [cdkDropListConnectedTo]="dropListIdArray">
+            <div *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
+              cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''">
+              <app-show [show]="show"></app-show>
+              <div class="show-placeholder" *cdkDragPlaceholder></div>
+            </div>
           </div>
         </div>
       </mat-card>

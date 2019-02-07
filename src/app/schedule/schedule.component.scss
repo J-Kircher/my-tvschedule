@@ -1,39 +1,20 @@
-.cdk-drag-animating {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+#tv-schedule {
+  width: 1018px;
 }
-.timeslot.cdk-drop-list-dragging .show:not(.cdk-drag-placeholder) {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
-.show-placeholder {
-  background-color: #ccc;
-  border: dotted 3px #999;
-  min-height: 47px;
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+.schedule-container {
+  margin: 1px 1px 4px;
+  // background-color: rgba(40,40,40,0.4);
 }
 mat-card {
   padding: 0px;
-  margin: 2px;
-}
-.tv-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 4px 0px 10px 0px;
-  text-align: center;
-}
-.day {
-  width: 80px;
-}
-.row {
-  margin: 0px;
+  margin: 1px;
 }
 .show-well {
   font-size: 14px;
   padding: 5px;
 }
-.show {
-  margin: 0px;
-  border: 1px;
-  padding: 1px;
+.day {
+  width: 80px;
 }
 .timeslot-header {
   margin: 0px;
@@ -42,26 +23,54 @@ mat-card {
   text-align: center;
   font-weight: bold;
 }
+.row {
+  margin: 0px;
+}
 .timeslot {
   margin: 3px;
   padding: 0px;
   min-height: 52px;
-  width: 302px;
   background-color: #E0E0E0;
 }
-#tv-schedule {
-  width: 1018px;
+.timeslot.width {
+  width: 302px;
 }
-.schedule-container {
-  padding: 4px;
-  background-color: rgba(40,40,40,0.4);
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-#shows-between {
-  max-height: 820px;
+.timeslot.cdk-drop-list-dragging .show:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.show {
+  margin: 0px;
+  border: 1px;
+  padding: 1px;
+}
+.show-placeholder {
+  background-color: #ccc;
+  border: dotted 3px #999;
+  min-height: 47px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.shows-between {
+  margin-bottom: 12px;
+  padding: 8px;
+}
+.shows-container {
+  vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+}
+.tv-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 4px 0px 10px 0px;
+  text-align: center;
+}
+.div-scroll {
+  max-height: calc(100vh - 134px);
   overflow-y: scroll;
 }
-// @media (max-width: 1045px) {
-//   #tv-schedule {
-//     width: 412px;
-//   }
-// }
