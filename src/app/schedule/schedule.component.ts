@@ -100,33 +100,6 @@ export class ScheduleComponent implements OnInit {
     }
   }
 
-  XonAnyDrop(e: any, slotName: string) {
-    const fromSlot: string = e.dragData.slot;
-    // const slotName = e.nativeEvent.srcElement.id;
-    // console.log('[schedule] onAnyDrop() target: [' + e.nativeEvent.target.id + ']');
-    // console.log(e);
-    if (slotName !== '') {
-      if (slotName !== fromSlot) {
-        e.dragData.slot = slotName;
-        this.timeSlots[this.getTSIdx(slotName)].shows.push(e.dragData);
-        this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShowByName);
-
-        this.removeItem(e.dragData, this.timeSlots[this.getTSIdx(fromSlot)].shows);
-        this.storageService.storeLocalStorage(this.timeSlots);
-        console.log('Moving [' + e.dragData.name + '] from ' + fromSlot + ' to ' + slotName);
-
-        if (slotName === 'SBS' || fromSlot === 'SBS') {
-          this.sortShowsBetweenSeasons();
-        }
-      } else {
-        console.warn('NOT Moving [' + e.dragData.name + '], same slot');
-      }
-    } else {
-      console.error('NOT moving [' + e.dragData.name + '], slotName is BAD');
-      console.error(e);
-    }
-  }
-
   removeItem(item: any, list: Array<any>) {
     const index = list.map(function (e) {
       return e.name;
