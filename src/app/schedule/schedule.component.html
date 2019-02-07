@@ -13,7 +13,7 @@
         <div fxLayout="row" class="show-well">
           <div class="day">{{ day.name }}</div>
           <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
-            [id]="time.slot" class="row timeslot width" *ngFor="let time of day.time"
+            [id]="time.slot" class="timeslot width" *ngFor="let time of day.time"
             [cdkDropListConnectedTo]="dropListIdArray">
             <div *ngFor="let show of timeSlots[getTSIdx(time.slot)]?.shows"
               cdkDrag [cdkDragData]="show" class="show">
