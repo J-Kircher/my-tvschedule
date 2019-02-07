@@ -17,11 +17,15 @@
     padding: 0px;
     margin: 1px;
 
-    .show-well {
+    .schedule-card {
       font-size: 14px;
       padding: 5px;
 
-      .day {
+      &.header {
+        background-color: #9999FF;
+      }
+
+      .day-header {
         width: 80px;
       }
 
@@ -41,13 +45,13 @@
   }
 }
 
-.shows-container {
+.shows-card {
   vertical-align: middle;
   margin: 0px;
   padding: 0px;
   border-radius: 10px;
 
-  .tv-title {
+  .shows-header {
     font-size: 18px;
     font-weight: bold;
     margin: 4px 0px 10px 0px;

@@ -2,16 +2,16 @@
   <div fxLayout="row wrap">
     <div id="tv-schedule" class="schedule-container" fxLayout="column">
       <mat-card>
-        <div fxLayout="row" class="show-well" style="background-color: #9999FF;">
-          <div class="day">Day</div>
+        <div fxLayout="row" class="schedule-card header">
+          <div class="day-header">Day</div>
           <div class="timeslot-header">8:00 pm</div>
           <div class="timeslot-header">9:00 pm</div>
           <div class="timeslot-header">10:00 pm</div>
         </div>
       </mat-card>
       <mat-card *ngFor="let day of schedule">
-        <div fxLayout="row" class="show-well">
-          <div class="day">{{ day.name }}</div>
+        <div fxLayout="row" class="schedule-card">
+          <div class="day-header">{{ day.name }}</div>
           <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
             [id]="time.slot" class="timeslot width" *ngFor="let time of day.time"
             [cdkDropListConnectedTo]="dropListIdArray">
@@ -27,8 +27,8 @@
 
     <div id="shows-between" class="schedule-container">
       <mat-card class="shows-between">
-        <div class="shows-container">
-          <div class="tv-title">Shows Between Seasons</div>
+        <div class="shows-card">
+          <div class="shows-header">Shows Between Seasons</div>
           <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
             id="SBS" class="timeslot div-scroll"
             [cdkDropListConnectedTo]="dropListIdArray">
