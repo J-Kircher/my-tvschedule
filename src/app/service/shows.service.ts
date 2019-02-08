@@ -14,11 +14,10 @@ const SCHEDULE: ISchedule[] = [
 ];
 
 const SHOWS: IShow[] = [
-  { 'name': 'A Series of Unfortunate Events', 'network': 'Netflix', 'link': 'http://www.netflix.com/unfortunate', 'image': 'Unfortunate', 'info': 'Streaming', 'start': 'January 1, 2019', 'slot': 'SBS' },
   { 'name': 'Altered Carbon', 'network': 'Netflix', 'link': 'http://www.netflix.com/alteredcarbon', 'image': 'AlteredCarbon', 'info': 'Streaming', 'start': 'February 2, 2018', 'slot': 'SBS' },
   { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods', 'info': 'Sundays 9:00PM', 'start': 'March 10, 2019', 'slot': 'SBS' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'info': 'Wednesdays 10:00PM', 'start': 'September 12, 2018', 'slot': 'SBS' },
-  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'info': 'Wednesday 10:00PM', 'start': 'April 25, 2018', 'slot': 'SBS' },
+  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'info': 'Wednesday 10:00PM', 'start': 'April 24, 2019', 'slot': 'SBS' },
   { 'name': 'Arrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/arrow/', 'image': 'Arrow', 'info': 'Mondays 8:00PM', 'start': 'October 15, 2018', 'slot': 'SBS' },
   { 'name': 'Better Call Saul', 'network': 'AMC', 'link': 'http://www.amctv.com/shows/better-call-saul/', 'image': 'BetterCallSaul', 'info': 'Mondays 9:00PM', 'start': 'August 6, 2018', 'slot': 'SBS' },
   { 'name': 'Big Bang Theory', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/big_bang_theory/', 'image': 'BigBangTheory', 'info': 'Thursdays 8:00PM', 'start': 'September 24, 2018', 'slot': 'SBS' },
@@ -32,7 +31,7 @@ const SHOWS: IShow[] = [
   { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'info': 'Streaming', 'start': 'November 30, 2018', 'slot': 'SBS' },
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'info': 'Streaming', 'start': 'October 28, 2017', 'slot': 'SBS' },
   { 'name': 'Game of Thrones', 'network': 'HBO', 'link': 'http://www.hbo.com/game-of-thrones/', 'image': 'GameOfThrones', 'info': 'Sundays 9:00PM', 'start': 'April 14, 2019', 'slot': 'SBS' },
-  { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'http://www.amazon.com/goodomens/', 'image': 'GoodOmens', 'info': 'Streaming', 'start': 'February 29, 2019', 'slot': 'SBS' },
+  { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/Good-Omens-Season-1/dp/B07FMHTRFD', 'image': 'GoodOmens', 'info': 'Streaming', 'start': 'April 1, 2019', 'slot': 'SBS' },
   { 'name': 'Gotham', 'network': 'FOX', 'link': 'http://www.fox.com/gotham/', 'image': 'Gotham2', 'info': 'Thursdays 8:00PM', 'start': 'January 3, 2019', 'slot': 'SBS' },
   { 'name': 'Homeland', 'network': 'Showtime', 'link': 'http://www.sho.com/homeland', 'image': 'Homeland', 'info': 'Sundays 9:00PM', 'start': 'February 11, 2018', 'slot': 'SBS' },
   { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones', 'info': 'Streaming', 'start': 'March 8, 2018', 'slot': 'SBS' },
@@ -40,7 +39,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Last Week Tonight', 'network': 'HBO', 'link': 'http://www.hbo.com/last-week-tonight-with-john-oliver/', 'image': 'LastWeekTonight', 'info': 'Sundays 11:00PM', 'start': 'February 17, 2019', 'slot': 'SBS' },
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'info': 'Mondays 9:00PM', 'start': 'October 22, 2018', 'slot': 'SBS' },
   { 'name': 'Lost In Space', 'network': 'Netflix', 'link': 'http://www.netflix.com/lostinspace', 'image': 'LostInSpace', 'info': 'Streaming', 'start': 'April 13, 2018', 'slot': 'SBS' },
-  { 'name': 'Mindhunter', 'network': 'Netflix', 'link': 'http://www.netflix.com/mindhunter', 'image': 'Mindhunter', 'info': 'Streaming', 'start': 'October 13, 2017', 'slot': 'SBS' },
+  { 'name': 'Mindhunter', 'network': 'Netflix', 'link': 'http://www.netflix.com/mindhunter', 'image': 'Mindhunter', 'info': 'Streaming', 'start': 'October 11, 2019', 'slot': 'SBS' },
   { 'name': 'Mayans M.C.', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/mayans-mc', 'image': 'MayansMC', 'info': 'Tuesdays 10:00PM', 'start': 'September 4, 2018', 'slot': 'SBS' },
   { 'name': 'Narcos', 'network': 'Netflix', 'link': 'http://www.netflix.com/narcos', 'image': 'Narcos', 'info': 'Streaming', 'start': 'November 16, 2018', 'slot': 'SBS' },
   { 'name': 'Orange is the New Black', 'network': 'Netflix', 'link': 'http://www.netflix.com/orangeisthenewblack', 'image': 'OrangeIsTheNewBlack', 'info': 'Streaming', 'start': 'July 27, 2018', 'slot': 'SBS' },
@@ -56,7 +55,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural14', 'info': 'Thursdays 8:00PM', 'start': 'October 11, 2018', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor', 'info': 'Wednesdays 8:00PM', 'start': 'February 20, 2019', 'slot': 'SBS' },
   { 'name': 'Taboo', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/taboo/', 'image': 'Taboo', 'info': 'Tuesdays 10:00PM', 'start': 'January 10, 2017', 'slot': 'SBS' },
-  { 'name': 'The Expanse', 'network': 'Syfy', 'link': 'http://www.syfy.com/expanse/', 'image': 'Expanse', 'info': 'Wednesdays 9:00PM', 'start': 'April 11, 2018', 'slot': 'SBS' },
+  { 'name': 'The Expanse', 'network': 'Amazon', 'link': 'https://www.amazon.com/gp/video/detail/B018BZ3UWU/', 'image': 'Expanse', 'info': 'Wednesdays 9:00PM', 'start': 'April 11, 2018', 'slot': 'SBS' },
   { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'info': 'Tuesdays 8:00PM', 'start': 'October 9, 2018', 'slot': 'SBS' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'info': 'Streaming', 'start': 'April 25, 2018', 'slot': 'SBS' },
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville', 'info': 'Thursdays 9:00PM', 'start': 'December 30, 2018', 'slot': 'SBS' },
@@ -74,6 +73,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Luke Cage', 'network': 'Netflix', 'link': 'http://www.netflix.com/lukecage', 'image': 'LukeCage', 'info': 'Streaming', 'start': 'June 22, 2018', 'slot': 'END' },
   { 'name': 'Who Is America', 'network': 'Showtime', 'link': 'http://www.sho.com/who-is-america', 'image': 'WhoIsAmerica', 'info': 'Sundays 10:00PM', 'start': 'July 15, 2018', 'slot': 'END' },
   { 'name': 'House of Cards', 'network': 'Netflix', 'link': 'http://www.netflix.com/houseofcards', 'image': 'HouseOfCards', 'info': 'Streaming', 'start': 'November 2, 2018', 'slot': 'END' },
+  { 'name': 'A Series of Unfortunate Events', 'network': 'Netflix', 'link': 'http://www.netflix.com/unfortunate', 'image': 'Unfortunate', 'info': 'Streaming', 'start': 'January 1, 2019', 'slot': 'END' },
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
