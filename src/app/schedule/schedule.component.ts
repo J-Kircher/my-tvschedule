@@ -11,12 +11,12 @@ import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
 })
 
 export class ScheduleComponent implements OnInit {
-  private postseason = false;
   private schedule: ISchedule[] = [];
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
 
   dropListIdArray: string[];
+  showEndedShows = false;
   lockEndedShows = true;
 
   constructor(

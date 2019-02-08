@@ -42,7 +42,7 @@
       </mat-card>
     </div>
 
-    <div id="shows-ended" class="schedule-container">
+    <div id="shows-ended" class="schedule-container" [ngStyle]="{ 'display': (showEndedShows ? 'block' : 'none') }">
         <mat-card class="shows-ended">
           <div class="shows-card">
             <div class="shows-header" fxLayout="row" fxLayoutAlign="space-evenly center">
