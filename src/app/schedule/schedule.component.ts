@@ -111,7 +111,9 @@ export class ScheduleComponent implements OnInit, OnChanges {
       if (slotName !== fromSlot) {
         dragData.slot = slotName;
         this.timeSlots[this.getTSIdx(slotName)].shows.push(dragData);
-        this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShowByName);
+        if (slotName !== 'END') {
+          this.timeSlots[this.getTSIdx(slotName)].shows.sort(sortShowByName);
+        }
 
         this.removeItem(dragData, this.timeSlots[this.getTSIdx(fromSlot)].shows);
         this.storageService.storeLocalStorage(this.timeSlots);
