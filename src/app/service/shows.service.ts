@@ -66,17 +66,14 @@ const SHOWS: IShow[] = [
   { 'name': 'True Detective', 'network': 'HBO', 'link': 'http://www.hbo.com/true-detective/', 'image': 'TrueDetective', 'info': 'Sundays 9:00PM', 'start': 'January 13, 2019', 'slot': 'SBS' },
   { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings', 'info': 'Wednesdays 9:00PM', 'start': 'November 28, 2018', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBO', 'link': 'http://www.hbo.com/westworld/', 'image': 'Westworld', 'info': 'Sundays 9:00PM', 'start': 'April 22, 2018', 'slot': 'SBS' },
-];
-
-const SHOWS_ENDED: IShow[] = [
-  { 'name': 'Star Wars Rebels', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-rebels', 'image': 'Rebels', 'info': 'Mondays 9:00PM', 'start': 'October 16, 2017', 'slot': 'SBS' },
-  { 'name': 'The X-Files', 'network': 'FOX', 'link': 'http://www.fox.com/the-x-files/', 'image': 'XFiles2016', 'info': 'Wednesdays 8:00PM', 'start': 'January 3, 2018', 'slot': 'SBS' },
-  { 'name': 'Ash vs Evil Dead', 'network': 'Starz', 'link': 'https://www.starz.com/series/ashvsevildead', 'image': 'AshVsEvilDead3', 'info': 'Sundays 9:00PM', 'start': 'February 25, 2018', 'slot': 'SBS' },
-  { 'name': 'The Defenders', 'network': 'Netflix', 'link': 'http://www.netflix.com/defenders', 'image': 'Defenders', 'info': 'Streaming', 'start': 'August 18, 2017', 'slot': 'SBS' },
-  { 'name': 'Iron Fist', 'network': 'Netflix', 'link': 'http://www.netflix.com/ironfist', 'image': 'IronFist', 'info': 'Streaming', 'start': 'September 7, 2018', 'slot': 'SBS' },
-  { 'name': 'Luke Cage', 'network': 'Netflix', 'link': 'http://www.netflix.com/lukecage', 'image': 'LukeCage', 'info': 'Streaming', 'start': 'June 22, 2018', 'slot': 'SBS' },
-  { 'name': 'Who Is America', 'network': 'Showtime', 'link': 'http://www.sho.com/who-is-america', 'image': 'WhoIsAmerica', 'info': 'Sundays 10:00PM', 'start': 'July 15, 2018', 'slot': 'SBS' },
-  { 'name': 'House of Cards', 'network': 'Netflix', 'link': 'http://www.netflix.com/houseofcards', 'image': 'HouseOfCards', 'info': 'Streaming', 'start': 'November 2, 2018', 'slot': 'SBS' },
+  { 'name': 'Star Wars Rebels', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-rebels', 'image': 'Rebels', 'info': 'Mondays 9:00PM', 'start': 'October 16, 2017', 'slot': 'END' },
+  { 'name': 'The X-Files', 'network': 'FOX', 'link': 'http://www.fox.com/the-x-files/', 'image': 'XFiles2016', 'info': 'Wednesdays 8:00PM', 'start': 'January 3, 2018', 'slot': 'END' },
+  { 'name': 'Ash vs Evil Dead', 'network': 'Starz', 'link': 'https://www.starz.com/series/ashvsevildead', 'image': 'AshVsEvilDead3', 'info': 'Sundays 9:00PM', 'start': 'February 25, 2018', 'slot': 'END' },
+  { 'name': 'The Defenders', 'network': 'Netflix', 'link': 'http://www.netflix.com/defenders', 'image': 'Defenders', 'info': 'Streaming', 'start': 'August 18, 2017', 'slot': 'END' },
+  { 'name': 'Iron Fist', 'network': 'Netflix', 'link': 'http://www.netflix.com/ironfist', 'image': 'IronFist', 'info': 'Streaming', 'start': 'September 7, 2018', 'slot': 'END' },
+  { 'name': 'Luke Cage', 'network': 'Netflix', 'link': 'http://www.netflix.com/lukecage', 'image': 'LukeCage', 'info': 'Streaming', 'start': 'June 22, 2018', 'slot': 'END' },
+  { 'name': 'Who Is America', 'network': 'Showtime', 'link': 'http://www.sho.com/who-is-america', 'image': 'WhoIsAmerica', 'info': 'Sundays 10:00PM', 'start': 'July 15, 2018', 'slot': 'END' },
+  { 'name': 'House of Cards', 'network': 'Netflix', 'link': 'http://www.netflix.com/houseofcards', 'image': 'HouseOfCards', 'info': 'Streaming', 'start': 'November 2, 2018', 'slot': 'END' },
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
@@ -107,7 +104,8 @@ const TIMESLOTS: ITimeSlot[] = [
   { 'name': 'H8', 'shows': [] },
   { 'name': 'H9', 'shows': [] },
   { 'name': 'HX', 'shows': [] },
-  { 'name': 'SBS', 'shows': SHOWS }
+  { 'name': 'SBS', 'shows': SHOWS },
+  { 'name': 'END', 'shows': SHOWS.filter(show => show.slot === 'END') }
 ];
 
 @Injectable()

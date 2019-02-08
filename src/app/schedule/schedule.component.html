@@ -41,5 +41,23 @@
         </div>
       </mat-card>
     </div>
-  </div>
+
+    <div id="shows-ended" class="schedule-container">
+        <mat-card class="shows-ended">
+          <div class="shows-card">
+            <div class="shows-header">Ended Shows</div>
+            <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
+              id="END" class="timeslot div-scroll" [cdkDropListDisabled]="lockEndedShows"
+              [cdkDropListConnectedTo]="dropListIdArray">
+              <div *ngFor="let show of timeSlots[getTSIdx('END')]?.shows"
+                cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''"
+                [ngClass]="{ 'no-move': lockEndedShows }">
+                <app-show [show]="show"></app-show>
+                <div class="show-placeholder" *cdkDragPlaceholder></div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
 </div>

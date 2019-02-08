@@ -17,6 +17,7 @@ export class ScheduleComponent implements OnInit {
   private shows: IShow[] = [];
 
   dropListIdArray: string[];
+  lockEndedShows = true;
 
   constructor(
     private showsService: ShowsService,
@@ -36,7 +37,7 @@ export class ScheduleComponent implements OnInit {
     this.checkShows();
     this.sortShowsBetweenSeasons();
 
-    // Build time slot array
+    // Build drop list time slot array
     this.dropListIdArray = this.timeSlots.map(ts => ts.name);
   }
 
@@ -45,9 +46,25 @@ export class ScheduleComponent implements OnInit {
 
     // Add new shows to SBS (Shows Between Seasons)
     this.shows.forEach(s => {
-      if (!this.findShowInSavedTimeSlots(s.name)) {
-        console.log('[schedule] checkShows() Adding: ' + s.name);
-        this.timeSlots[this.showsService.getTimeSlotIndex('SBS')].shows.push(s);
+        if (!this.findShowInSavedTimeSlots(s.name)) {
+        // console.log('[schedule] checkShows() Adding: ' + s.name);
+        if (s.slot !== 'END') {
+          this.timeSlots[this.getTSIdx('SBS')].shows.push(s);
+        }
+      }
+    });
+
+    // Update shows in END (Ended Shows)
+    this.shows.forEach(s => {
+      if (s.slot === 'END') {
+        const slotIndex = this.getTSIdx('END');
+        if (!this.timeSlots[slotIndex]) {
+          const slotEND: ITimeSlot = { name: 'END', shows: [] };
+          this.timeSlots.push(slotEND);
+        }
+        if (!this.timeSlots[slotIndex].shows.find(sh => sh.name === s.name)) {
+          this.timeSlots[slotIndex].shows.push(s);
+        }
       }
     });
 

@@ -38,7 +38,7 @@
       }
     }
 
-    &.shows-between {
+    &.shows-between, &.shows-ended {
       margin-bottom: 12px;
       padding: 8px;
     }
@@ -79,6 +79,11 @@
   margin: 0px;
   border: 1px;
   padding: 1px;
+  cursor: move;
+
+  &.no-move {
+    cursor: not-allowed;
+  }
 }
 
 .show-placeholder {
