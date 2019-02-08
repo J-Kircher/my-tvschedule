@@ -89,6 +89,10 @@ export class ScheduleComponent implements OnInit {
     this.storageService.storeLocalStorage(this.timeSlots);
   }
 
+  toggleClicked() {
+    this.lockEndedShows = !this.lockEndedShows;
+  }
+
   onAnyDrop(event: CdkDragDrop<string[]>) {
     const slotName: string = event.container.id;
     const fromSlot: string = event.previousContainer.id;

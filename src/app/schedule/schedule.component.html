@@ -45,7 +45,10 @@
     <div id="shows-ended" class="schedule-container">
         <mat-card class="shows-ended">
           <div class="shows-card">
-            <div class="shows-header">Ended Shows</div>
+            <div class="shows-header" fxLayout="row" fxLayoutAlign="space-evenly center">
+              <span>Ended Shows</span>
+              <mat-slide-toggle [checked]="lockEndedShows" (change)="toggleClicked()" color="primary">{{ lockEndedShows ? 'Locked' : 'Unlocked' }}</mat-slide-toggle>
+            </div>
             <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
               id="END" class="timeslot div-scroll" [cdkDropListDisabled]="lockEndedShows"
               [cdkDropListConnectedTo]="dropListIdArray">

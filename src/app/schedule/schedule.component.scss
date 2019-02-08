@@ -56,6 +56,11 @@
     font-weight: bold;
     margin: 4px 0px 10px 0px;
     text-align: center;
+
+    mat-slide-toggle {
+      font-size: 12px;
+      font-weight: normal;
+    }
   }
 }
 
