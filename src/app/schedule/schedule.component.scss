@@ -86,6 +86,10 @@
   padding: 1px;
   cursor: move;
 
+  &.normal {
+    cursor: default;
+  }
+
   &.no-move {
     cursor: not-allowed;
   }

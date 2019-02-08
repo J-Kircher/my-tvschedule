@@ -33,7 +33,8 @@
             id="SBS" class="timeslot div-scroll"
             [cdkDropListConnectedTo]="dropListIdArray">
             <div *ngFor="let show of timeSlots[getTSIdx('SBS')]?.shows"
-              cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''">
+              cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''"
+              [ngClass]="{ 'normal': show.name === '' }">
               <app-show [show]="show"></app-show>
               <div class="show-placeholder" *cdkDragPlaceholder></div>
             </div>
@@ -43,24 +44,23 @@
     </div>
 
     <div id="shows-ended" class="schedule-container" [ngStyle]="{ 'display': (showEndedShows ? 'block' : 'none') }">
-        <mat-card class="shows-ended">
-          <div class="shows-card">
-            <div class="shows-header" fxLayout="row" fxLayoutAlign="space-evenly center">
-              <span>Ended Shows</span>
-              <mat-slide-toggle [checked]="lockEndedShows" (change)="toggleClicked()" color="primary">{{ lockEndedShows ? 'Locked' : 'Unlocked' }}</mat-slide-toggle>
-            </div>
-            <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
-              id="END" class="timeslot div-scroll" [cdkDropListDisabled]="lockEndedShows"
-              [cdkDropListConnectedTo]="dropListIdArray">
-              <div *ngFor="let show of timeSlots[getTSIdx('END')]?.shows"
-                cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''"
-                [ngClass]="{ 'no-move': lockEndedShows }">
-                <app-show [show]="show"></app-show>
-                <div class="show-placeholder" *cdkDragPlaceholder></div>
-              </div>
+      <mat-card class="shows-ended">
+        <div class="shows-card">
+          <div class="shows-header" fxLayout="row" fxLayoutAlign="space-evenly center">
+            <span>Ended Shows</span>
+            <mat-slide-toggle [checked]="lockEndedShows" (change)="toggleClicked()" color="primary">{{ lockEndedShows ? 'Locked' : 'Unlocked' }}</mat-slide-toggle>
+          </div>
+          <div cdkDropList (cdkDropListDropped)="onAnyDrop($event)"
+            id="END" class="timeslot div-scroll" [cdkDropListDisabled]="lockEndedShows"
+            [cdkDropListConnectedTo]="dropListIdArray">
+            <div *ngFor="let show of timeSlots[getTSIdx('END')]?.shows"
+              cdkDrag [cdkDragData]="show" class="show" [cdkDragDisabled]="show.name == ''"
+              [ngClass]="{ 'no-move': lockEndedShows }">
+              <app-show [show]="show"></app-show>
+              <div class="show-placeholder" *cdkDragPlaceholder></div>
             </div>
           </div>
-        </mat-card>
-      </div>
+        </div>
+      </mat-card>
     </div>
 </div>
