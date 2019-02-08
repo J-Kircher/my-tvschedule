@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ShowStatsDialogComponent } from '../dialog/show-stats-dialog/show-stats-dialog.component';
 
@@ -9,6 +9,9 @@ import { ShowStatsDialogComponent } from '../dialog/show-stats-dialog/show-stats
 })
 export class NavbarComponent implements OnInit {
 
+  @Output() toggleEndedShows = new EventEmitter<boolean>();
+  showEnded = false;
+
   dialogReturn: any;
 
   constructor(
@@ -16,6 +19,11 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  toggleEnded() {
+    this.showEnded = !this.showEnded;
+    this.toggleEndedShows.emit(this.showEnded);
   }
 
   openStatsDialog(): void {

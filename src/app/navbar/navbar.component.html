@@ -1,4 +1,7 @@
 <mat-toolbar class="menu" fxLayoutAlign="space-between center">
   <div><p class="tv-title">My TV Schedule</p></div>
-  <div><button mat-button type="button" (click)="openStats()">Stats Chart</button></div>
+  <div fxLayout="row">
+    <div><button mat-button type="button" (click)="toggleEnded()">{{ showEnded ? 'Hide Ended' : 'Show Ended' }}</button></div>
+    <div><button mat-button type="button" (click)="openStats()">Stats Chart</button></div>
+  </div>
 </mat-toolbar>

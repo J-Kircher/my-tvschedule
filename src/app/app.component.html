@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar (toggleEndedShows)="toggleEnded($event)"></app-navbar>
 <div class="content-wrapper">
-  <app-schedule></app-schedule>
+  <app-schedule [showEnded]="showEndedShows"></app-schedule>
 </div>

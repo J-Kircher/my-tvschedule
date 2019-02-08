@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { ShowsService } from '../service/shows.service';
 import { StorageService } from '../service/storage.service';
@@ -10,14 +10,16 @@ import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
   styleUrls: ['schedule.component.scss']
 })
 
-export class ScheduleComponent implements OnInit {
+export class ScheduleComponent implements OnInit, OnChanges {
   private schedule: ISchedule[] = [];
   private timeSlots: ITimeSlot[] = [];
   private shows: IShow[] = [];
 
-  dropListIdArray: string[];
+  @Input() showEnded: boolean;
   showEndedShows = false;
   lockEndedShows = true;
+
+  dropListIdArray: string[];
 
   constructor(
     private showsService: ShowsService,
@@ -39,6 +41,12 @@ export class ScheduleComponent implements OnInit {
 
     // Build drop list time slot array
     this.dropListIdArray = this.timeSlots.map(ts => ts.name);
+  }
+
+  ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
+    if ('showEnded' in changes) {
+      this.showEndedShows = this.showEnded;
+    }
   }
 
   checkShows(): void {
