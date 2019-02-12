@@ -30,7 +30,7 @@ import { IShow } from '../model/shows.model';
 
 export class ShowComponent implements OnInit {
   @Input() show: IShow;
-  private displayShow = true;
+  displayShow = true;
 
   constructor() { }
 

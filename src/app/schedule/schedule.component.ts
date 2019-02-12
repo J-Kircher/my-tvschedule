@@ -11,9 +11,9 @@ import { ISchedule, IShow, ITimeSlot } from '../model/shows.model';
 })
 
 export class ScheduleComponent implements OnInit, OnChanges {
-  private schedule: ISchedule[] = [];
-  private timeSlots: ITimeSlot[] = [];
-  private shows: IShow[] = [];
+  schedule: ISchedule[] = [];
+  timeSlots: ITimeSlot[] = [];
+  shows: IShow[] = [];
 
   @Input() showEnded: boolean;
   showEndedShows = false;
@@ -24,7 +24,7 @@ export class ScheduleComponent implements OnInit, OnChanges {
   constructor(
     private showsService: ShowsService,
     private storageService: StorageService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.schedule = this.showsService.getSchedule();

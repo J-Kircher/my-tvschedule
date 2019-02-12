@@ -11,13 +11,16 @@ import { Chart } from 'chart.js';
 })
 
 export class ChartComponent implements OnInit {
-  private chartView: string;
-  private myChart: Chart = []; // This will hold our chart info
-  private shows: IShow[] = [];
-  private timeSlots: ITimeSlot[] = [];
-  private networkStats: INetworkData[] = []; // This will contain the labels and data for the chart
+  chartView: string;
+  myChart: Chart = []; // This will hold our chart info
+  shows: IShow[] = [];
+  timeSlots: ITimeSlot[] = [];
+  networkStats: INetworkData[] = []; // This will contain the labels and data for the chart
 
-  constructor(private showsService: ShowsService, private storageService: StorageService) { }
+  constructor(
+    private showsService: ShowsService,
+    private storageService: StorageService
+  ) { }
 
   ngOnInit() {
     // console.log('[chart] ngOnInit()');
