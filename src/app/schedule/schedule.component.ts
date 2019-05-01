@@ -76,6 +76,19 @@ export class ScheduleComponent implements OnInit, OnChanges {
       }
     });
 
+    // Clean Ended Shows from TimeSlots
+    this.timeSlots[this.getTSIdx('END')].shows.forEach(s => {
+      // Check for existence in other slots (not END) and remove
+      this.timeSlots.forEach(ts => {
+        if (ts.name !== 'END') {
+          const foundShow: IShow = ts.shows.find(ss => s.name === ss.name);
+          if (foundShow) {
+            this.removeItem(foundShow, this.timeSlots[this.getTSIdx(ts.name)].shows);
+          }
+        }
+      });
+    });
+
     // Update changed shows and remove deleted shows from timeSlot
     this.timeSlots.forEach(slot => {
       slot.shows.forEach(show => {
@@ -157,7 +170,6 @@ export class ScheduleComponent implements OnInit, OnChanges {
     dest.info = source.info;
     dest.start = source.start;
   }
-
 
   findShowInSavedTimeSlots(showName): boolean {
     let found = false;
