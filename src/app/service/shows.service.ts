@@ -26,7 +26,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Dark Crystal: Age of Resistance', 'network': 'Netflix', 'link': 'http://www.netflix.com/title/80148535', 'image': 'DarkCrystalAge', 'info': 'Streaming', 'start': 'August 30, 2019', 'slot': 'SBS' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'info': 'Streaming', 'start': 'August 17, 2018', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'BBC', 'link': 'http://www.bbcamerica.com/doctor-who/', 'image': 'DoctorWho11', 'info': 'Sundays 8:00PM', 'start': 'October 7, 2018', 'slot': 'SBS' },
-  { 'name': 'Elementary', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/elementary/', 'image': 'Elementary', 'info': 'Mondays 10:00PM', 'start': 'May 23, 2019', 'slot': 'SBS' },
+  { 'name': 'Elementary', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/elementary/', 'image': 'Elementary', 'info': 'Thursdays 10:00PM', 'start': 'May 23, 2019', 'slot': 'SBS' },
   { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'info': 'Streaming', 'start': 'November 30, 2018', 'slot': 'SBS' },
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'info': 'Streaming', 'start': 'October 28, 2017', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/Good-Omens-Season-1/dp/B07FMHTRFD', 'image': 'GoodOmens', 'info': 'Streaming', 'start': 'May 31, 2019', 'slot': 'SBS' },
