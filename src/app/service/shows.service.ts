@@ -16,7 +16,7 @@ const SCHEDULE: ISchedule[] = [
 const SHOWS: IShow[] = [
   { 'name': 'Altered Carbon', 'network': 'Netflix', 'link': 'http://www.netflix.com/alteredcarbon', 'image': 'AlteredCarbon', 'info': 'Streaming', 'start': 'February 2, 2018', 'slot': 'SBS' },
   { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods', 'info': 'Sundays 9:00PM', 'start': 'March 10, 2019', 'slot': 'SBS' },
-  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'info': 'Wednesdays 10:00PM', 'start': 'September 12, 2018', 'slot': 'SBS' },
+  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'info': 'Wednesdays 10:00PM', 'start': 'September 18, 2019', 'slot': 'SBS' },
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer1999', 'info': 'Wednesdays 10:00PM', 'start': 'May 29, 2019', 'slot': 'SBS' },
   { 'name': 'Arrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/arrow/', 'image': 'Arrow', 'info': 'Tuesdays 8:00PM', 'start': 'October 15, 2019', 'slot': 'SBS' },
   { 'name': 'Batwoman', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/batwoman/', 'image': 'Batwoman', 'info': 'Sundays 8:00PM', 'start': 'October 6, 2019', 'slot': 'SBS' },
