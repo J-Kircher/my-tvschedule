@@ -46,7 +46,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Star Wars Resistance', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-resistance', 'image': 'Resistance', 'info': 'Sundays 10:00PM', 'start': 'October 6, 2019', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'info': 'Streaming', 'start': 'July 4, 2019', 'slot': 'SBS' },
   { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'info': 'Sundays 9:00PM', 'start': 'October 6, 2019', 'slot': 'SBS' },
-  { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural14', 'info': 'Thursdays 8:00PM', 'start': 'October 10, 2019', 'slot': 'SBS' },
+  { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural15', 'info': 'Thursdays 8:00PM', 'start': 'October 10, 2019', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor', 'info': 'Wednesdays 8:00PM', 'start': 'September 25, 2019', 'slot': 'SBS' },
   { 'name': 'Taboo', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/taboo/', 'image': 'Taboo', 'info': 'Tuesdays 10:00PM', 'start': 'January 10, 2017', 'slot': 'SBS' },
   { 'name': 'The Expanse', 'network': 'Amazon', 'link': 'https://www.amazon.com/gp/video/detail/B018BZ3UWU/', 'image': 'Expanse', 'info': 'Streaming', 'start': 'December 13, 2019', 'slot': 'SBS' },
