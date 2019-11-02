@@ -57,6 +57,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville', 'info': 'Thursdays 9:00PM', 'start': 'December 30, 2018', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'info': 'Sundays 10:00PM', 'start': 'September 29, 2019', 'slot': 'SBS' },
   { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead', 'info': 'Sundays 9:00PM', 'start': 'October 6, 2019', 'slot': 'SBS' },
+  { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'info': 'Streaming', 'start': 'November 20, 2019', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBO', 'link': 'http://www.hbo.com/true-detective/', 'image': 'TrueDetective3', 'info': 'Sundays 9:00PM', 'start': 'January 13, 2019', 'slot': 'SBS' },
   { 'name': 'Vikings', 'network': 'History', 'link': 'http://www.history.com/shows/vikings', 'image': 'Vikings', 'info': 'Wednesdays 9:00PM', 'start': 'December 4, 2019', 'slot': 'SBS' },
   { 'name': 'Watchmen', 'network': 'HBO', 'link': 'http://www.hbo.com/watchmen/', 'image': 'Watchmen', 'info': 'Sundays 9:00PM', 'start': 'October 20, 2019', 'slot': 'SBS' },
