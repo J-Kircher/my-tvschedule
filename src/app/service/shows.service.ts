@@ -28,7 +28,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Criminal Minds', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/criminal_minds/', 'image': 'CriminalMinds', 'info': 'Wednesdays 10:00PM', 'start': 'January 8, 2020', 'slot': 'SBS' },
   { 'name': 'Dark Crystal: Age of Resistance', 'network': 'Netflix', 'link': 'http://www.netflix.com/title/80148535', 'image': 'DarkCrystalAge', 'info': 'Streaming', 'start': 'August 30, 2019', 'slot': 'SBS' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'info': 'Streaming', 'start': 'September 20, 2019', 'slot': 'SBS' },
-  { 'name': 'Doctor Who', 'network': 'BBC', 'link': 'http://www.bbcamerica.com/doctor-who/', 'image': 'DoctorWho11', 'info': 'Sundays 8:00PM', 'start': 'October 7, 2018', 'slot': 'SBS' },
+  { 'name': 'Doctor Who', 'network': 'BBC', 'link': 'http://www.bbcamerica.com/doctor-who/', 'image': 'DoctorWho11', 'info': 'Sundays 8:00PM', 'start': 'January 1, 2020', 'slot': 'SBS' },
   { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'info': 'Streaming', 'start': 'November 30, 2018', 'slot': 'SBS' },
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'info': 'Streaming', 'start': 'October 28, 2017', 'slot': 'SBS' },
   { 'name': 'His Dark Materials', 'network': 'HBO', 'link': 'http://www.hbo.com/his-dark-materials/', 'image': 'HisDarkMaterials', 'info': 'Mondays 9:00PM', 'start': 'November 4, 2019', 'slot': 'SBS' },
@@ -42,7 +42,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Real Time with Bill Maher', 'network': 'HBO', 'link': 'http://www.hbo.com/real-time-with-bill-maher/', 'image': 'RealTime', 'info': 'Fridays 10:00PM', 'start': 'January 18, 2019', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'http://www.adultswim.com/RickAndMorty', 'image': 'RickAndMorty', 'info': 'Sundays', 'start': 'November 10, 2019', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive41', 'info': 'Saturdays 11:30PM', 'start': 'September 28, 2019', 'slot': 'SBS' },
-  { 'name': 'Silicon Valley', 'network': 'HBO', 'link': 'http://www.hbo.com/silicon-valley/', 'image': 'SiliconValley', 'info': 'Sundays 10:00PM', 'start': 'October 27, 2019', 'slot': 'SBS' },
   { 'name': 'Star Wars Resistance', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-resistance', 'image': 'Resistance', 'info': 'Sundays 10:00PM', 'start': 'October 6, 2019', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'info': 'Streaming', 'start': 'July 4, 2019', 'slot': 'SBS' },
   { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'info': 'Sundays 9:00PM', 'start': 'October 6, 2019', 'slot': 'SBS' },
@@ -82,7 +81,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Jessica Jones', 'network': 'Netflix', 'link': 'http://www.netflix.com/jessicajones', 'image': 'JessicaJones', 'info': 'Streaming', 'start': 'June 14, 2019', 'slot': 'END' },
   { 'name': 'Orange is the New Black', 'network': 'Netflix', 'link': 'http://www.netflix.com/orangeisthenewblack', 'image': 'OrangeIsTheNewBlack', 'info': 'Streaming', 'start': 'July 26, 2019', 'slot': 'END' },
   { 'name': 'Elementary', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/elementary/', 'image': 'Elementary', 'info': 'Thursdays 10:00PM', 'start': 'May 23, 2019', 'slot': 'END' },
-  { 'name': 'Krypton', 'network': 'Syfy', 'link': 'http://www.syfy.com/krypton/', 'image': 'Krypton', 'info': 'Wednesdays 10:00PM', 'start': 'June 12, 2019', 'slot': 'END' }
+  { 'name': 'Krypton', 'network': 'Syfy', 'link': 'http://www.syfy.com/krypton/', 'image': 'Krypton', 'info': 'Wednesdays 10:00PM', 'start': 'June 12, 2019', 'slot': 'END' },
+  { 'name': 'Silicon Valley', 'network': 'HBO', 'link': 'http://www.hbo.com/silicon-valley/', 'image': 'SiliconValley', 'info': 'Sundays 10:00PM', 'start': 'October 27, 2019', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
