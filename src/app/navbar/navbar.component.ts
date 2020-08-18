@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { ShowStatsDialogComponent } from '../dialog/show-stats-dialog/show-stats-dialog.component';
 
 @Component({
