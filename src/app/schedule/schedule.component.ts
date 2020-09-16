@@ -156,6 +156,7 @@ export class ScheduleComponent implements OnInit, OnChanges {
       || (s1.link !== s2.link)
       || (s1.image !== s2.image)
       || (s1.info !== s2.info)
+      || (s1.season !== s2.season)
       || (s1.start !== s2.start) ) {
       return false;
     } else {
@@ -168,6 +169,7 @@ export class ScheduleComponent implements OnInit, OnChanges {
     dest.link = source.link;
     dest.image = source.image;
     dest.info = source.info;
+    dest.season = source.season;
     dest.start = source.start;
   }
 

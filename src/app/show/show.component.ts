@@ -46,6 +46,9 @@ export class ShowComponent implements OnInit {
     const today = new Date();
     if (show.name !== '') {
       titleTxt = titleTxt.concat(show.name + ' / ' + show.info);
+      if (show.season) {
+        titleTxt = titleTxt.concat(' / Season ' + show.season);
+      }
       if (show.slot === 'SBS' && startDate > today) {
         titleTxt = titleTxt.concat(' / Starts on ' + show.start);
       } else {
