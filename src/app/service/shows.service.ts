@@ -53,7 +53,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Taboo', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/taboo/', 'image': 'Taboo', 'info': 'Tuesdays 10:00PM', 'season': 1, 'start': 'January 10, 2017', 'slot': 'SBS' },
   { 'name': 'The Boys', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0875L45GK', 'image': 'TheBoys', 'info': 'Streaming', 'season': 2, 'start': 'September 4, 2020', 'slot': 'SBS' },
   { 'name': 'The Expanse', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08MMJTJSH', 'image': 'Expanse', 'info': 'Streaming', 'season': 5, 'start': 'December 16, 2020', 'slot': 'SBS' },
-  { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'info': 'Tuesdays 8:00PM', 'season': 6, 'start': 'October 8, 2019', 'slot': 'SBS' },
+  { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'info': 'Tuesdays 8:00PM', 'season': 7, 'start': 'March 2, 2021', 'slot': 'SBS' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'info': 'Streaming', 'season': 3, 'start': 'June 5, 2019', 'slot': 'SBS' },
   { 'name': 'The Mandalorian', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/the-mandalorian', 'image': 'Mandalorian', 'info': 'Streaming', 'season': 2, 'start': 'October 30, 2020', 'slot': 'SBS' },
   { 'name': 'The Orville', 'network': 'FOX', 'link': 'http://www.fox.com/the-orville/', 'image': 'Orville', 'info': 'Thursdays 9:00PM', 'season': 2, 'start': 'December 30, 2018', 'slot': 'SBS' },
