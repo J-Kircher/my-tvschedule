@@ -17,7 +17,7 @@ const SHOWS: IShow[] = [
   { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods3', 'info': 'Sundays 8:00PM', 'season': 3, 'start': 'January 10, 2021', 'slot': 'SBS' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'info': 'Wednesdays 10:00PM', 'season': 9, 'start': 'September 18, 2019', 'slot': 'SBS' },
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'September 16, 2020', 'slot': 'SBS' },
-  { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.starwars.com/disneyplus', 'image': 'BadBatch', 'info': 'Streaming', 'season': 1, 'start': 'January 1, 2017', 'slot': 'SBS' },
+  { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.starwars.com/disneyplus', 'image': 'BadBatch', 'info': 'Streaming', 'season': 1, 'start': 'May 4, 2021', 'slot': 'SBS' },
   { 'name': 'Batwoman', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/batwoman/', 'image': 'Batwoman', 'info': 'Sundays 8:00PM', 'season': 2, 'start': 'January 17, 2021', 'slot': 'SBS' },
   { 'name': 'Better Call Saul', 'network': 'AMC', 'link': 'http://www.amctv.com/shows/better-call-saul/', 'image': 'BetterCallSaul', 'info': 'Sundays 10:00PM', 'season': 5, 'start': 'February 23, 2020', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'info': 'Streaming', 'season': 4, 'start': 'December 4, 2020', 'slot': 'SBS' },
@@ -61,7 +61,6 @@ const SHOWS: IShow[] = [
   { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead', 'info': 'Sundays 9:00PM', 'season': 10, 'start': 'October 6, 2019', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'info': 'Streaming', 'season': 1, 'start': 'December 20, 2019', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'TrueDetective3', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
-  { 'name': 'Truth Seekers', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08J18TQ9T', 'image': 'TruthSeekers', 'info': 'Streaming', 'season': 1, 'start': 'October 30, 2020', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Westworld', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'March 15, 2020', 'slot': 'SBS' },
   { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'info': 'Wednesdays 10:00PM', 'season': 2, 'start': 'April 15, 2020', 'slot': 'SBS' },
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'info': 'Streaming', 'season': 3, 'start': 'October 28, 2017', 'slot': 'END' },
@@ -102,6 +101,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Altered Carbon', 'network': 'Netflix', 'link': 'http://www.netflix.com/alteredcarbon', 'image': 'AlteredCarbon', 'info': 'Streaming', 'season': 2, 'start': 'February 27, 2020', 'slot': 'END' },
   { 'name': 'Penny Dreadful: City of Angels', 'network': 'Showtime', 'link': 'http://www.sho.com/penny-dreadful-city-of-angels', 'image': 'PennyDreadfulCityOfAngels', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'April 26, 2020', 'slot': 'END' },
   { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural15', 'info': 'Thursdays 8:00PM', 'season': 15, 'start': 'October 08, 2020', 'slot': 'END' },
+  { 'name': 'Truth Seekers', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08J18TQ9T', 'image': 'TruthSeekers', 'info': 'Streaming', 'season': 1, 'start': 'October 30, 2020', 'slot': 'END' },
   { 'name': 'Chilling Adventures of Sabrina', 'network': 'Netflix', 'link': 'http://www.netflix.com/chillingadventuresofsabrina', 'image': 'Sabrina', 'info': 'Streaming', 'season': 4, 'start': 'December 31, 2020', 'slot': 'END' },
   { 'name': 'Your Honor', 'network': 'Showtime', 'link': 'http://www.sho.com/your-honor', 'image': 'YourHonor', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'December 6, 2020', 'slot': 'END' }
 ];
