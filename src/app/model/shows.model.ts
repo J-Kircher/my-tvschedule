@@ -12,6 +12,7 @@ export interface IShow {
   network: string;
   link: string;
   image: string;
+  type: string;
   info: string;
   season?: number;
   start: string;

@@ -9,7 +9,7 @@ import { IShow } from '../model/shows.model';
         [style.background-image]="displayShow ? 'url(./assets/images/Networks/' + show.network + '.gif)' : null">
       </div>
       <div [ngClass]="{ 'myShow': displayShow }"
-        [style.background-image]="displayShow ? 'url(./assets/images/Shows/' + show.image + '.gif)' : null">
+        [style.background-image]="displayShow ? 'url(./assets/images/Shows/' + show.image + '.' + show.type + ')' : null">
         <a *ngIf="displayShow" href="{{ show.link }}" target="{{ '_' + show.image }}">
           <mat-icon class="link-icon">open_in_new</mat-icon>
         </a>

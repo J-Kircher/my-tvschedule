@@ -226,15 +226,15 @@ export class ScheduleComponent implements OnInit, OnChanges {
 
     // Add spacer to start for 'Started this week'
     const startedHeadingArr: IShow[] = [];
-    startedHeadingArr.push({ name: '', network: '', link: '', image: '', info: 'Season started this week', start: '', slot: 'SBS' });
+    startedHeadingArr.push({ name: '', network: '', link: '', image: '', type: '', info: 'Season started this week', start: '', slot: 'SBS' });
 
     // Add spacer to start for 'Starting soon'
     const soonHeadingArr: IShow[] = [];
-    soonHeadingArr.push({ name: '', network: '', link: '', image: '', info: 'Season starting soon', start: '', slot: 'SBS' });
+    soonHeadingArr.push({ name: '', network: '', link: '', image: '', type: '', info: 'Season starting soon', start: '', slot: 'SBS' });
 
     // Add spacer to middle for 'Recently ended'
     const endedHeadingArr: IShow[] = [];
-    endedHeadingArr.push({ name: '', network: '', link: '', image: '', info: 'Season recently ended', start: '', slot: 'SBS' });
+    endedHeadingArr.push({ name: '', network: '', link: '', image: '', type: '', info: 'Season recently ended', start: '', slot: 'SBS' });
 
     // Combine the parts so that the first item is the next show to start
     if (arrStartedShows.length > 0) {
