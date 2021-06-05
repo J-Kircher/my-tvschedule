@@ -15,8 +15,8 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods3', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 3, 'start': 'January 10, 2021', 'slot': 'SBS' },
-  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 9, 'start': 'September 18, 2019', 'slot': 'SBS' },
-  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'September 16, 2020', 'slot': 'SBS' },
+  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 10, 'start': 'August 25, 2021', 'slot': 'SBS' },
+  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 12, 'start': 'August 26, 2021', 'slot': 'SBS' },
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Avenue5', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'January 19, 2020', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 4, 2021', 'slot': 'SBS' },
   { 'name': 'Batwoman', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/batwoman/', 'image': 'Batwoman', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 2, 'start': 'January 17, 2021', 'slot': 'SBS' },
@@ -35,6 +35,7 @@ const SHOWS: IShow[] = [
   { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 2, 'start': 'November 16, 2020', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08WJMRHYZ', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 25, 2021', 'slot': 'SBS' },
   { 'name': 'Jack Ryan', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07V3TNS85', 'image': 'JackRyan', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'November 1, 2019', 'slot': 'SBS' },
+  { 'name': 'Jupiters Legacy', 'network': 'Netflix', 'link': 'http://www.netflix.com/jupiterslegacy', 'image': 'JupitersLegacy', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 7, 2021', 'slot': 'SBS' },
   { 'name': 'Kenobi', 'network': 'Disney+', 'link': 'https://www.starwars.com/disneyplus', 'image': 'Kenobi', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'January 1, 2017', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 8, 'start': 'February 14, 2021', 'slot': 'SBS' },
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'May 2, 2021', 'slot': 'SBS' },
@@ -70,7 +71,7 @@ const SHOWS: IShow[] = [
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'TrueDetective3', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
   { 'name': 'WandaVision', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/wandavision/4SrN28ZjDLwH', 'image': 'WandaVision', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'January 15, 2021', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Westworld', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'March 15, 2020', 'slot': 'SBS' },
-  { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 2, 'start': 'April 15, 2020', 'slot': 'SBS' },
+  { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Thursdays 10:00PM', 'season': 3, 'start': 'September 2, 2021', 'slot': 'SBS' },
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'October 28, 2017', 'slot': 'END' },
   { 'name': 'Bloodline', 'network': 'Netflix', 'link': 'http://www.netflix.com/bloodline', 'image': 'Bloodline', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'May 26, 2017', 'slot': 'END' },
   { 'name': 'Star Wars Rebels', 'network': 'DisneyXD', 'link': 'http://www.starwars.com/tv-shows/star-wars-rebels', 'image': 'Rebels', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 4, 'start': 'October 16, 2017', 'slot': 'END' },
