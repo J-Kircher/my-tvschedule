@@ -14,9 +14,8 @@ const SCHEDULE: ISchedule[] = [
 ];
 
 const SHOWS: IShow[] = [
-  { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods3', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 3, 'start': 'January 10, 2021', 'slot': 'SBS' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 10, 'start': 'August 25, 2021', 'slot': 'SBS' },
-  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 12, 'start': 'August 26, 2021', 'slot': 'SBS' },
+  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 12, 'start': 'August 25, 2021', 'slot': 'SBS' },
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Avenue5', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'January 19, 2020', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 4, 2021', 'slot': 'SBS' },
   { 'name': 'Batwoman', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/batwoman/', 'image': 'Batwoman', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 2, 'start': 'January 17, 2021', 'slot': 'SBS' },
@@ -25,7 +24,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'June 5, 2019', 'slot': 'SBS' },
   { 'name': 'Book of Boba Fett', 'network': 'Disney+', 'link': 'https://www.starwars.com/disneyplus', 'image': 'BookOfBobaFett', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'January 1, 2017', 'slot': 'SBS' },
   { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07S47J47H', 'image': 'CarnivalRow', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'August 30, 2019', 'slot': 'SBS' },
-  { 'name': 'Castlevania', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevania', 'image': 'Castlevania', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'May 13, 2021', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'January 1, 2021', 'slot': 'SBS' },
   { 'name': 'Crossing Swords', 'network': 'Hulu', 'link': 'http://www.hulu.com/crossing-swords/', 'image': 'CrossingSwords', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'June 12, 2020', 'slot': 'SBS' },
   { 'name': 'Cursed', 'network': 'Netflix', 'link': 'http://www.netflix.com/cursed', 'image': 'Cursed', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'July 17, 2020', 'slot': 'SBS' },
@@ -35,14 +33,12 @@ const SHOWS: IShow[] = [
   { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 2, 'start': 'November 16, 2020', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08WJMRHYZ', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 25, 2021', 'slot': 'SBS' },
   { 'name': 'Jack Ryan', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07V3TNS85', 'image': 'JackRyan', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'November 1, 2019', 'slot': 'SBS' },
-  { 'name': 'Jupiters Legacy', 'network': 'Netflix', 'link': 'http://www.netflix.com/jupiterslegacy', 'image': 'JupitersLegacy', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 7, 2021', 'slot': 'SBS' },
   { 'name': 'Kenobi', 'network': 'Disney+', 'link': 'https://www.starwars.com/disneyplus', 'image': 'Kenobi', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'January 1, 2017', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 8, 'start': 'February 14, 2021', 'slot': 'SBS' },
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'May 2, 2021', 'slot': 'SBS' },
   { 'name': 'Locke and Key', 'network': 'Netflix', 'link': 'http://www.netflix.com/locke&key', 'image': 'LockeAndKey', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'February 7, 2020', 'slot': 'SBS' },
   { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'June 9, 2021', 'slot': 'SBS' },
   { 'name': 'Lost In Space', 'network': 'Netflix', 'link': 'http://www.netflix.com/lostinspace', 'image': 'LostInSpace', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 24, 2019', 'slot': 'SBS' },
-  { 'name': 'Lovecraft Country', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'LovecraftCountry', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'August 16, 2020', 'slot': 'SBS' },
   { 'name': 'Ozark', 'network': 'Netflix', 'link': 'http://www.netflix.com/ozark', 'image': 'Ozark', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'March 27, 2020', 'slot': 'SBS' },
   { 'name': 'Paradise P.D.', 'network': 'Netflix', 'link': 'http://www.netflix.com/paradisepd', 'image': 'ParadisePD', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'March 12, 2021', 'slot': 'SBS' },
   { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'June 21, 2020', 'slot': 'SBS' },
@@ -112,7 +108,11 @@ const SHOWS: IShow[] = [
   { 'name': 'Supernatural', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supernatural/', 'image': 'Supernatural15', 'type': 'gif', 'info': 'Thursdays 8:00PM', 'season': 15, 'start': 'October 08, 2020', 'slot': 'END' },
   { 'name': 'Truth Seekers', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08J18TQ9T', 'image': 'TruthSeekers', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'October 30, 2020', 'slot': 'END' },
   { 'name': 'Chilling Adventures of Sabrina', 'network': 'Netflix', 'link': 'http://www.netflix.com/chillingadventuresofsabrina', 'image': 'Sabrina', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'December 31, 2020', 'slot': 'END' },
-  { 'name': 'Your Honor', 'network': 'Showtime', 'link': 'http://www.sho.com/your-honor', 'image': 'YourHonor', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'December 6, 2020', 'slot': 'END' }
+  { 'name': 'Your Honor', 'network': 'Showtime', 'link': 'http://www.sho.com/your-honor', 'image': 'YourHonor', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'December 6, 2020', 'slot': 'END' },
+  { 'name': 'American Gods', 'network': 'Starz', 'link': 'http://www.starz.com/americangods/', 'image': 'AmericanGods3', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 3, 'start': 'January 10, 2021', 'slot': 'END' },
+  { 'name': 'Castlevania', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevania', 'image': 'Castlevania', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'May 13, 2021', 'slot': 'END' },
+  { 'name': 'Jupiters Legacy', 'network': 'Netflix', 'link': 'http://www.netflix.com/jupiterslegacy', 'image': 'JupitersLegacy', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 7, 2021', 'slot': 'END' },
+  { 'name': 'Lovecraft Country', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'LovecraftCountry', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'August 16, 2020', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
