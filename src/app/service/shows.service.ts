@@ -29,7 +29,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Dexter - New Blood', 'network': 'Showtime', 'link': 'https://www.sho.com/dexter-new-blood', 'image': 'DexterNewBlood', 'type': 'png', 'info': 'Sundays 10:00PM', 'start': 'November 7, 2021', 'slot': 'SBS' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'January 15, 2021', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'BBC', 'link': 'http://www.bbcamerica.com/doctor-who/', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 12, 'start': 'January 1, 2020', 'slot': 'SBS' },
-  { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 25, 2021', 'slot': 'SBS' },
+  { 'name': 'Hawkeye', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/hawkeye/11Zy8m9Dkj5l', 'image': 'Hawkeye', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 24, 2021', 'slot': 'SBS' },
   { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 2, 'start': 'November 16, 2020', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08WJMRHYZ', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 25, 2021', 'slot': 'SBS' },
   { 'name': 'Jack Ryan', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07V3TNS85', 'image': 'JackRyan', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'November 1, 2019', 'slot': 'SBS' },
@@ -65,6 +65,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'July 31, 2020', 'slot': 'SBS' },
   { 'name': 'The Walking Dead', 'network': 'AMC', 'link': 'http://www.amctv.com/series/The-Walking-Dead/', 'image': 'WalkingDead', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 11, 'start': 'August 22, 2021', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 17, 2021', 'slot': 'SBS' },
+  { 'name': 'The WheelOfTime', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09F5KBXB6', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 19, 2021', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'TrueDetective3', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
   { 'name': 'WandaVision', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/wandavision/4SrN28ZjDLwH', 'image': 'WandaVision', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'January 15, 2021', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Westworld', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'March 15, 2020', 'slot': 'SBS' },
@@ -115,7 +116,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Jupiters Legacy', 'network': 'Netflix', 'link': 'http://www.netflix.com/jupiterslegacy', 'image': 'JupitersLegacy', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 7, 2021', 'slot': 'END' },
   { 'name': 'Cursed', 'network': 'Netflix', 'link': 'http://www.netflix.com/cursed', 'image': 'Cursed', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'July 17, 2020', 'slot': 'END' },
   { 'name': 'Lovecraft Country', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'LovecraftCountry', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'August 16, 2020', 'slot': 'END' },
-  { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'March 30, 2021', 'slot': 'END' }
+  { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'March 30, 2021', 'slot': 'END' },
+  { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 25, 2021', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
