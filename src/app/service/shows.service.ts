@@ -22,7 +22,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Better Call Saul', 'network': 'AMC', 'link': 'http://www.amctv.com/shows/better-call-saul/', 'image': 'BetterCallSaul', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 5, 'start': 'February 23, 2020', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 5, 2021', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'June 5, 2019', 'slot': 'SBS' },
-  { 'name': 'Book of Boba Fett', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/the-book-of-boba-fett', 'image': 'BookOfBobaFett', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'December 29, 2021', 'slot': 'SBS' },
+  { 'name': 'Book of Boba Fett', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/the-book-of-boba-fett', 'image': 'BookOfBobaFett', 'type': 'gif', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'December 29, 2021', 'slot': 'SBS' },
   { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07S47J47H', 'image': 'CarnivalRow', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'August 30, 2019', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'December 31, 2021', 'slot': 'SBS' },
   { 'name': 'Crossing Swords', 'network': 'Hulu', 'link': 'http://www.hulu.com/crossing-swords/', 'image': 'CrossingSwords', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 10, 2021', 'slot': 'SBS' },
@@ -38,16 +38,15 @@ const SHOWS: IShow[] = [
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 7, 'start': 'October 13, 2021', 'slot': 'SBS' },
   { 'name': 'Locke and Key', 'network': 'Netflix', 'link': 'http://www.netflix.com/locke&key', 'image': 'LockeAndKey', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'October 22, 2021', 'slot': 'SBS' },
   { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'June 9, 2021', 'slot': 'SBS' },
-  { 'name': 'Lost In Space', 'network': 'Netflix', 'link': 'http://www.netflix.com/lostinspace', 'image': 'LostInSpace', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'December 1, 2021', 'slot': 'SBS' },
   { 'name': 'Ozark', 'network': 'Netflix', 'link': 'http://www.netflix.com/ozark', 'image': 'Ozark', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'January 21, 2022', 'slot': 'SBS' },
   { 'name': 'Paradise P.D.', 'network': 'Netflix', 'link': 'http://www.netflix.com/paradisepd', 'image': 'ParadisePD', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'March 12, 2021', 'slot': 'SBS' },
   { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'June 21, 2020', 'slot': 'SBS' },
   { 'name': 'Ratched', 'network': 'Netflix', 'link': 'http://www.netflix.com/ratched', 'image': 'Ratched', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2020', 'slot': 'SBS' },
-  { 'name': 'Real Time with Bill Maher', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'RealTime', 'type': 'gif', 'info': 'Fridays 10:00PM', 'season': 18, 'start': 'January 15, 2021', 'slot': 'SBS' },
+  { 'name': 'Real Time with Bill Maher', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'RealTime', 'type': 'gif', 'info': 'Fridays 10:00PM', 'season': 20, 'start': 'January 21, 2022', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'http://www.adultswim.com/RickAndMorty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays', 'season': 5, 'start': 'June 20, 2021', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive41', 'type': 'gif', 'info': 'Saturdays 11:30PM', 'season': 47, 'start': 'October 2, 2021', 'slot': 'SBS' },
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'March 26, 2021', 'slot': 'SBS' },
-  { 'name': 'Space Force', 'network': 'Netflix', 'link': 'http://www.netflix.com/spaceforce', 'image': 'SpaceForce', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'May 29, 2020', 'slot': 'SBS' },
+  { 'name': 'Space Force', 'network': 'Netflix', 'link': 'http://www.netflix.com/spaceforce', 'image': 'SpaceForce', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'February 18, 2022', 'slot': 'SBS' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 17, 2021', 'slot': 'SBS' },
   { 'name': 'Staged', 'network': 'Hulu', 'link': 'http://www.hulu.com/series/staged/', 'image': 'Staged', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'March 16, 2021', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'July 4, 2019', 'slot': 'SBS' },
@@ -117,7 +116,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Cursed', 'network': 'Netflix', 'link': 'http://www.netflix.com/cursed', 'image': 'Cursed', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'July 17, 2020', 'slot': 'END' },
   { 'name': 'Lovecraft Country', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'LovecraftCountry', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'August 16, 2020', 'slot': 'END' },
   { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'March 30, 2021', 'slot': 'END' },
-  { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 25, 2021', 'slot': 'END' }
+  { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 25, 2021', 'slot': 'END' },
+  { 'name': 'Lost In Space', 'network': 'Netflix', 'link': 'http://www.netflix.com/lostinspace', 'image': 'LostInSpace', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'December 1, 2021', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
