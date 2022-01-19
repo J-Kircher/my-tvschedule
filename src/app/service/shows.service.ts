@@ -37,6 +37,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 7, 'start': 'October 13, 2021', 'slot': 'SBS' },
   { 'name': 'Locke and Key', 'network': 'Netflix', 'link': 'http://www.netflix.com/locke&key', 'image': 'LockeAndKey', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'October 22, 2021', 'slot': 'SBS' },
   { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'June 9, 2021', 'slot': 'SBS' },
+  { 'name': 'Moon Knight', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/moon-knight', 'image': 'MoonKnight', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 30, 2022', 'slot': 'SBS' },
   { 'name': 'Ozark', 'network': 'Netflix', 'link': 'http://www.netflix.com/ozark', 'image': 'Ozark', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'January 21, 2022', 'slot': 'SBS' },
   { 'name': 'Paradise P.D.', 'network': 'Netflix', 'link': 'http://www.netflix.com/paradisepd', 'image': 'ParadisePD', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'March 12, 2021', 'slot': 'SBS' },
   { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'June 21, 2020', 'slot': 'SBS' },
