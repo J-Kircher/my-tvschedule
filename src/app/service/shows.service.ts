@@ -25,7 +25,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07S47J47H', 'image': 'CarnivalRow', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'August 30, 2019', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'December 31, 2021', 'slot': 'SBS' },
   { 'name': 'Crossing Swords', 'network': 'Hulu', 'link': 'http://www.hulu.com/crossing-swords/', 'image': 'CrossingSwords', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 10, 2021', 'slot': 'SBS' },
-  { 'name': 'Dexter - New Blood', 'network': 'Showtime', 'link': 'https://www.sho.com/dexter-new-blood', 'image': 'DexterNewBlood', 'type': 'png', 'info': 'Sundays 10:00PM', 'start': 'November 7, 2021', 'slot': 'SBS' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'February 9, 2022', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/doctor-who--1010579', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 13, 'start': 'October 31, 2021', 'slot': 'SBS' },
   { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 2, 'start': 'November 16, 2020', 'slot': 'SBS' },
@@ -55,9 +54,8 @@ const SHOWS: IShow[] = [
   { 'name': 'The Crown', 'network': 'Netflix', 'link': 'http://www.netflix.com/thecrown', 'image': 'Crown', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'November 15, 2020', 'slot': 'SBS' },
   { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'type': 'gif', 'info': 'Tuesdays 8:00PM', 'season': 8, 'start': 'November 16, 2021', 'slot': 'SBS' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'April 28, 2021', 'slot': 'SBS' },
-  { 'name': 'The Lost Symbol', 'network': 'Peacock', 'link': 'https://www.peacocktv.com/stream-tv/dan-browns-the-lost-symbol', 'image': 'TheLostSymbol', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 16, 2021', 'slot': 'SBS' },
   { 'name': 'The Mandalorian', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/the-mandalorian-season-two', 'image': 'Mandalorian', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'October 30, 2020', 'slot': 'SBS' },
-  { 'name': 'The Orville', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-orville/', 'image': 'Orville', 'type': 'gif', 'info': 'Thursdays 9:00PM', 'season': 3, 'start': 'March 10, 2022', 'slot': 'SBS' },
+  { 'name': 'The Orville', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-orville/', 'image': 'Orville', 'type': 'gif', 'info': 'Thursdays 9:00PM', 'season': 3, 'start': 'June 2, 2022', 'slot': 'SBS' },
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09QHCPD34', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 22, 2022', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 4, 'start': 'September 26, 2021', 'slot': 'SBS' },
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'July 31, 2020', 'slot': 'SBS' },
@@ -118,8 +116,10 @@ const SHOWS: IShow[] = [
   { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'March 30, 2021', 'slot': 'END' },
   { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 25, 2021', 'slot': 'END' },
   { 'name': 'Lost In Space', 'network': 'Netflix', 'link': 'http://www.netflix.com/lostinspace', 'image': 'LostInSpace', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'December 1, 2021', 'slot': 'END' },
+  { 'name': 'The Lost Symbol', 'network': 'Peacock', 'link': 'https://www.peacocktv.com/stream-tv/dan-browns-the-lost-symbol', 'image': 'TheLostSymbol', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 16, 2021', 'slot': 'END' },
   { 'name': 'Hawkeye', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/hawkeye/11Zy8m9Dkj5l', 'image': 'Hawkeye', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'November 24, 2021', 'slot': 'END' },
   { 'name': 'The Expanse', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09LGJ5QNB', 'image': 'Expanse', 'type': 'gif', 'info': 'Streaming Thursdays', 'season': 6, 'start': 'December 10, 2021', 'slot': 'END' },
+  { 'name': 'Dexter - New Blood', 'network': 'Showtime', 'link': 'https://www.sho.com/dexter-new-blood', 'image': 'DexterNewBlood', 'type': 'png', 'info': 'Sundays 10:00PM', 'start': 'November 7, 2021', 'slot': 'END' },
   { 'name': 'Book of Boba Fett', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/the-book-of-boba-fett', 'image': 'BookOfBobaFett', 'type': 'gif', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'December 29, 2021', 'slot': 'END' }
 ];
 
