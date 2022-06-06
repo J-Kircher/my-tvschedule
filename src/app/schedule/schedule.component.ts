@@ -169,6 +169,7 @@ export class ScheduleComponent implements OnInit, OnChanges {
     dest.network = source.network;
     dest.link = source.link;
     dest.image = source.image;
+    dest.type = source.type;
     dest.info = source.info;
     dest.season = source.season;
     dest.start = source.start;
