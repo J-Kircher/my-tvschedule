@@ -15,6 +15,7 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 10, 'start': 'August 25, 2021', 'slot': 'SBS' },
+  { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/andor', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 31, 2022', 'slot': 'SBS' },
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 12, 'start': 'August 25, 2021', 'slot': 'SBS' },
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Avenue5', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'January 19, 2020', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 4, 2021', 'slot': 'SBS' },
