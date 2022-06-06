@@ -155,6 +155,7 @@ export class ScheduleComponent implements OnInit, OnChanges {
     if ( (s1.network !== s2.network)
       || (s1.link !== s2.link)
       || (s1.image !== s2.image)
+      || (s1.type !== s2.type)
       || (s1.info !== s2.info)
       || (s1.season !== s2.season)
       || (s1.start !== s2.start) ) {
