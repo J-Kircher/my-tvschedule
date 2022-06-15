@@ -61,6 +61,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The Orville', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-orville/', 'image': 'Orville3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'June 2, 2022', 'slot': 'SBS' },
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09QHCPD34', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 22, 2022', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 4, 'start': 'September 26, 2021', 'slot': 'SBS' },
+  { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 5, 2022', 'slot': 'SBS' },
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 22, 2022', 'slot': 'SBS' },
   { 'name': 'The Walking Dead', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/the-walking-dead--1002293', 'image': 'WalkingDead', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 11, 'start': 'August 22, 2021', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 17, 2021', 'slot': 'SBS' },
