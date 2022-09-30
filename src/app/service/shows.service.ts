@@ -19,7 +19,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 13, 'start': 'August 24, 2022', 'slot': 'SBS' },
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://www.hbo.com/avenue-5', 'image': 'Avenue5', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 2, 'start': 'October 10, 2022', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 4, 2023', 'slot': 'SBS' },
-  { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 5, 2021', 'slot': 'SBS' },
+  { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 28, 2022', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'June 5, 2019', 'slot': 'SBS' },
   { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07S47J47H', 'image': 'CarnivalRow', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'August 30, 2019', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'September 9, 2022', 'slot': 'SBS' },
