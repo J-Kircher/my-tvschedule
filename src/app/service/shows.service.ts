@@ -16,8 +16,7 @@ const SCHEDULE: ISchedule[] = [
 const SHOWS: IShow[] = [
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 10, 'start': 'August 25, 2021', 'slot': 'SBS' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/andor', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
-  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 13, 'start': 'August 24, 2022', 'slot': 'SBS' },
-  { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://www.hbo.com/avenue-5', 'image': 'Avenue5', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 2, 'start': 'October 10, 2022', 'slot': 'SBS' },
+  { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://www.hbo.com/avenue-5', 'image': 'Avenue5', 'type': 'gif', 'info': 'Mondays 10:00PM', 'season': 2, 'start': 'October 10, 2022', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 4, 2023', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 28, 2022', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'June 5, 2019', 'slot': 'SBS' },
@@ -28,7 +27,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Doctor Who', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:GXnzXWA8PcFSpjQEAAATH:type:series', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 13, 'start': 'October 31, 2021', 'slot': 'SBS' },
   { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens', 'type': 'gif', 'info': 'Streaming', 'start': 'May 31, 2019', 'slot': 'SBS' },
-  { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://www.hbo.com/his-dark-materials', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 2, 'start': 'November 16, 2020', 'slot': 'SBS' },
+  { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://www.hbo.com/his-dark-materials', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 3, 'start': 'December 5, 2022', 'slot': 'SBS' },
   { 'name': 'House of the Dragon', 'network': 'HBOMax', 'link': 'http://www.hbo.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'start': 'August 21, 2022', 'slot': 'SBS' },
   { 'name': 'Human Resources', 'network': 'Netflix', 'link': 'http://www.netflix.com/humanresources', 'image': 'HumanResources', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 18, 2022', 'slot': 'SBS' },
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/pages/anne-rice-collection', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'October 2, 2022', 'slot': 'SBS' },
@@ -41,7 +40,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Moon Knight', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/moon-knight', 'image': 'MoonKnight', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 30, 2022', 'slot': 'SBS' },
   { 'name': 'Paradise P.D.', 'network': 'Netflix', 'link': 'http://www.netflix.com/paradisepd', 'image': 'ParadisePD', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'December 16, 2022', 'slot': 'SBS' },
   { 'name': 'Peacemaker', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 1, 'start': 'January 13, 2022', 'slot': 'SBS' },
-  { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://www.hbo.com/perry-mason', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'June 21, 2020', 'slot': 'SBS' },
+  { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://www.hbo.com/perry-mason', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'February 26, 2023', 'slot': 'SBS' },
   { 'name': 'Ratched', 'network': 'Netflix', 'link': 'http://www.netflix.com/ratched', 'image': 'Ratched', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2020', 'slot': 'SBS' },
   { 'name': 'Real Time with Bill Maher', 'network': 'HBOMax', 'link': 'https://www.hbo.com/real-time-with-bill-maher', 'image': 'RealTime20', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 20, 'start': 'January 21, 2022', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'http://www.adultswim.com/RickAndMorty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 6, 'start': 'September 4, 2022', 'slot': 'SBS' },
@@ -68,6 +67,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 17, 2021', 'slot': 'SBS' },
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09F5KBXB6', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 19, 2021', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://www.hbo.com/true-detective', 'image': 'TrueDetective3', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
+  { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 20212', 'slot': 'SBS' },
   { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://www.hbo.com/westworld', 'image': 'Westworld', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'June 26, 2022', 'slot': 'SBS' },
   { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 4, 'start': 'July 12, 2022', 'slot': 'SBS' },
   { 'name': 'Willow', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/willow', 'image': 'Willow', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 30, 2022', 'slot': 'SBS' },
@@ -132,7 +132,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 7, 'start': 'October 13, 2021', 'slot': 'END' },
   { 'name': 'Ozark', 'network': 'Netflix', 'link': 'http://www.netflix.com/ozark', 'image': 'Ozark', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'January 21, 2022', 'slot': 'END' },
   { 'name': 'The Orville', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-orville/', 'image': 'Orville3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'June 2, 2022', 'slot': 'END' },
-  { 'name': 'Better Call Saul', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/better-call-saul--1002228', 'image': 'BetterCallSaul', 'type': 'png', 'info': 'Mondays 10:00PM', 'season': 6, 'start': 'April 18, 2022', 'slot': 'END' }
+  { 'name': 'Better Call Saul', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/better-call-saul--1002228', 'image': 'BetterCallSaul', 'type': 'png', 'info': 'Mondays 10:00PM', 'season': 6, 'start': 'April 18, 2022', 'slot': 'END' },
+  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 13, 'start': 'August 24, 2022', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
