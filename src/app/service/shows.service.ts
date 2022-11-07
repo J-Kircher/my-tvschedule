@@ -68,7 +68,6 @@ const SHOWS: IShow[] = [
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09F5KBXB6', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 19, 2021', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://www.hbo.com/true-detective', 'image': 'TrueDetective3', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 2022', 'slot': 'SBS' },
-  { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://www.hbo.com/westworld', 'image': 'Westworld', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'June 26, 2022', 'slot': 'SBS' },
   { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 4, 'start': 'July 12, 2022', 'slot': 'SBS' },
   { 'name': 'Willow', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/willow', 'image': 'Willow', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 30, 2022', 'slot': 'SBS' },
   { 'name': 'Your Honor', 'network': 'Showtime', 'link': 'http://www.sho.com/your-honor', 'image': 'YourHonor', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'December 6, 2020', 'slot': 'SBS' },
@@ -132,6 +131,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Legends of Tomorrow', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/dcs-legends-of-tomorrow/', 'image': 'LegendsOfTomorrow', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 7, 'start': 'October 13, 2021', 'slot': 'END' },
   { 'name': 'Ozark', 'network': 'Netflix', 'link': 'http://www.netflix.com/ozark', 'image': 'Ozark', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'January 21, 2022', 'slot': 'END' },
   { 'name': 'The Orville', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-orville/', 'image': 'Orville3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'June 2, 2022', 'slot': 'END' },
+  { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://www.hbo.com/westworld', 'image': 'Westworld', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'June 26, 2022', 'slot': 'END' },
   { 'name': 'Better Call Saul', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/better-call-saul--1002228', 'image': 'BetterCallSaul', 'type': 'png', 'info': 'Mondays 10:00PM', 'season': 6, 'start': 'April 18, 2022', 'slot': 'END' },
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 13, 'start': 'August 24, 2022', 'slot': 'END' }
 ];
