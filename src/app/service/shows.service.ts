@@ -14,7 +14,7 @@ const SCHEDULE: ISchedule[] = [
 ];
 
 const SHOWS: IShow[] = [
-  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 10, 'start': 'August 25, 2021', 'slot': 'SBS' },
+  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'October 19, 2022', 'slot': 'SBS' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/andor', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://www.hbo.com/avenue-5', 'image': 'Avenue5', 'type': 'gif', 'info': 'Mondays 10:00PM', 'season': 2, 'start': 'October 10, 2022', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 4, 2023', 'slot': 'SBS' },
@@ -27,7 +27,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'February 9, 2022', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:GXnzXWA8PcFSpjQEAAATH:type:series', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 13, 'start': 'October 31, 2021', 'slot': 'SBS' },
   { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'SBS' },
-  { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens', 'type': 'gif', 'info': 'Streaming', 'start': 'May 31, 2019', 'slot': 'SBS' },
+  { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'May 31, 2019', 'slot': 'SBS' },
   { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://www.hbo.com/his-dark-materials', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 3, 'start': 'December 5, 2022', 'slot': 'SBS' },
   { 'name': 'House of the Dragon', 'network': 'HBOMax', 'link': 'http://www.hbo.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'start': 'August 21, 2022', 'slot': 'SBS' },
   { 'name': 'Human Resources', 'network': 'Netflix', 'link': 'http://www.netflix.com/humanresources', 'image': 'HumanResources', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 18, 2022', 'slot': 'SBS' },
@@ -36,7 +36,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Jack Ryan', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07V3TNS85', 'image': 'JackRyan3', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'December 21, 2022', 'slot': 'SBS' },
   { 'name': 'Kenobi', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/obi-wan-kenobi', 'image': 'Kenobi', 'type': 'gif', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'May 27, 2022', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBOMax', 'link': 'https://www.hbo.com/last-week-tonight-with-john-oliver', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 9, 'start': 'February 20, 2022', 'slot': 'SBS' },
-  { 'name': 'Locke and Key', 'network': 'Netflix', 'link': 'http://www.netflix.com/locke&key', 'image': 'LockeAndKey', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'August 10, 2022', 'slot': 'SBS' },
   { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'June 9, 2021', 'slot': 'SBS' },
   { 'name': 'Moon Knight', 'network': 'Disney+', 'link': 'https://disneyplusoriginals.disney.com/show/moon-knight', 'image': 'MoonKnight', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 30, 2022', 'slot': 'SBS' },
   { 'name': 'Paradise P.D.', 'network': 'Netflix', 'link': 'http://www.netflix.com/paradisepd', 'image': 'ParadisePD', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'December 16, 2022', 'slot': 'SBS' },
@@ -64,7 +63,6 @@ const SHOWS: IShow[] = [
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 5, 'start': 'September 25, 2022', 'slot': 'SBS' },
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 5, 2022', 'slot': 'SBS' },
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 22, 2022', 'slot': 'SBS' },
-  { 'name': 'The Walking Dead', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/the-walking-dead--1002293', 'image': 'WalkingDead', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 11, 'start': 'August 22, 2021', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 17, 2021', 'slot': 'SBS' },
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09F5KBXB6', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 19, 2021', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://www.hbo.com/true-detective', 'image': 'TrueDetective3', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
@@ -134,7 +132,9 @@ const SHOWS: IShow[] = [
   { 'name': 'The Orville', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-orville/', 'image': 'Orville3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'June 2, 2022', 'slot': 'END' },
   { 'name': 'Westworld', 'network': 'HBOMax', 'link': 'https://www.hbo.com/westworld', 'image': 'Westworld', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'June 26, 2022', 'slot': 'END' },
   { 'name': 'Better Call Saul', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/better-call-saul--1002228', 'image': 'BetterCallSaul', 'type': 'png', 'info': 'Mondays 10:00PM', 'season': 6, 'start': 'April 18, 2022', 'slot': 'END' },
-  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 13, 'start': 'August 24, 2022', 'slot': 'END' }
+  { 'name': 'Locke and Key', 'network': 'Netflix', 'link': 'http://www.netflix.com/locke&key', 'image': 'LockeAndKey', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'August 10, 2022', 'slot': 'END' },
+  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 13, 'start': 'August 24, 2022', 'slot': 'END' },
+  { 'name': 'The Walking Dead', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/the-walking-dead--1002293', 'image': 'WalkingDead', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 11, 'start': 'August 22, 2021', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
