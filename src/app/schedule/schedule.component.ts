@@ -218,12 +218,22 @@ export class ScheduleComponent implements OnInit, OnChanges {
     let arrEndedShows, arrStartedShows, arrSoonShows;
     if (idxStarted > -1) {
       arrEndedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idxStarted);
-      arrStartedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxStarted, idxSoon);
-      arrSoonShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxSoon);
+      if (idxSoon > -1) {
+        arrStartedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxStarted, idxSoon);
+        arrSoonShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxSoon);
+      } else {
+        arrStartedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxStarted);
+        arrSoonShows = [];
+      }
     } else {
       arrStartedShows = [];
-      arrEndedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idxSoon);
-      arrSoonShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxSoon);
+      if (idxSoon > -1) {
+        arrEndedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0, idxSoon);
+        arrSoonShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(idxSoon);
+      } else {
+        arrEndedShows = this.timeSlots[this.getTSIdx('SBS')].shows.slice(0);
+        arrSoonShows = [];
+      }
     }
 
     // Add spacer to start for 'Started this week'
@@ -239,7 +249,7 @@ export class ScheduleComponent implements OnInit, OnChanges {
     endedHeadingArr.push({ name: '', network: '', link: '', image: '', type: '', info: 'Season recently ended', start: '', slot: 'SBS' });
 
     // Combine the parts so that the first item is the next show to start
-    if (arrStartedShows.length > 0) {
+    if ((arrStartedShows.length > 0) && (arrSoonShows.length > 0)) {
       this.timeSlots[this.getTSIdx('SBS')].shows = startedHeadingArr
         .concat(arrStartedShows)
         .concat(soonHeadingArr)
@@ -247,10 +257,20 @@ export class ScheduleComponent implements OnInit, OnChanges {
         .concat(endedHeadingArr)
         .concat(arrEndedShows);
     } else {
-      this.timeSlots[this.getTSIdx('SBS')].shows = soonHeadingArr
-        .concat(arrSoonShows)
-        .concat(endedHeadingArr)
-        .concat(arrEndedShows);
+      if (arrStartedShows.length > 0) {
+        this.timeSlots[this.getTSIdx('SBS')].shows = startedHeadingArr
+          .concat(arrStartedShows)
+          .concat(endedHeadingArr)
+          .concat(arrEndedShows);
+      } else if (arrSoonShows.length > 0) {
+        this.timeSlots[this.getTSIdx('SBS')].shows = soonHeadingArr
+          .concat(arrSoonShows)
+          .concat(endedHeadingArr)
+          .concat(arrEndedShows);
+      } else {
+        this.timeSlots[this.getTSIdx('SBS')].shows = endedHeadingArr
+          .concat(arrEndedShows);
+      }
     }
   }
 
