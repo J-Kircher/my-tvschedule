@@ -20,14 +20,12 @@ const SHOWS: IShow[] = [
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 2, 'start': 'January 4, 2023', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 28, 2022', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'June 5, 2019', 'slot': 'SBS' },
-  { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0B65WKLPS', 'image': 'CarnivalRow2', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'February 17, 2023', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 5, 'start': 'September 9, 2022', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Wednesdays 10:00PM', 'season': 1, 'start': 'November 24, 2022', 'slot': 'SBS' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'February 9, 2022', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:GXnzXWA8PcFSpjQEAAATH:type:series', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 13, 'start': 'October 31, 2021', 'slot': 'SBS' },
   { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens', 'type': 'gif', 'info': 'Streaming Tuesdays', 'season': 1, 'start': 'May 31, 2019', 'slot': 'SBS' },
-  { 'name': 'History of the World Part II', 'network': 'Hulu', 'link': 'https://www.hulu.com/series/history-of-the-world-part-ii', 'image': 'HistoryOfTheWorld2', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 6, 2023', 'slot': 'SBS' },
   { 'name': 'House of the Dragon', 'network': 'HBOMax', 'link': 'http://www.hbo.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'August 21, 2022', 'slot': 'SBS' },
   { 'name': 'Human Resources', 'network': 'Netflix', 'link': 'http://www.netflix.com/humanresources', 'image': 'HumanResources', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 18, 2022', 'slot': 'SBS' },
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-interview-with-the-vampire--1053259', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'October 2, 2022', 'slot': 'SBS' },
@@ -40,7 +38,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Moon Knight', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/moon-knight/4S3oOF1knocS', 'image': 'MoonKnight', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'March 30, 2022', 'slot': 'SBS' },
   { 'name': 'Peacemaker', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 1, 'start': 'January 13, 2022', 'slot': 'SBS' },
   { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://www.hbo.com/perry-mason', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 6, 2023', 'slot': 'SBS' },
-  { 'name': 'Ratched', 'network': 'Netflix', 'link': 'http://www.netflix.com/ratched', 'image': 'Ratched', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2020', 'slot': 'SBS' },
   { 'name': 'Real Time with Bill Maher', 'network': 'HBOMax', 'link': 'https://www.hbo.com/real-time-with-bill-maher', 'image': 'RealTime20', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 21, 'start': 'January 20, 2023', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'http://www.adultswim.com/RickAndMorty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 6, 'start': 'September 4, 2022', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive48', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 48, 'start': 'October 1, 2022', 'slot': 'SBS' },
@@ -117,6 +114,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Jupiters Legacy', 'network': 'Netflix', 'link': 'http://www.netflix.com/jupiterslegacy', 'image': 'JupitersLegacy', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'May 7, 2021', 'slot': 'END' },
   { 'name': 'Cursed', 'network': 'Netflix', 'link': 'http://www.netflix.com/cursed', 'image': 'Cursed', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'July 17, 2020', 'slot': 'END' },
   { 'name': 'Lovecraft Country', 'network': 'HBOMax', 'link': 'https://www.hbo.com/lovecraft-country', 'image': 'LovecraftCountry', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'August 16, 2020', 'slot': 'END' },
+  { 'name': 'Ratched', 'network': 'Netflix', 'link': 'http://www.netflix.com/ratched', 'image': 'Ratched', 'type': 'gif', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2020', 'slot': 'END' },
   { 'name': 'Supergirl', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/supergirl/', 'image': 'Supergirl', 'type': 'gif', 'info': 'Tuesdays 9:00PM', 'season': 6, 'start': 'March 30, 2021', 'slot': 'END' },
   { 'name': 'Staged', 'network': 'Hulu', 'link': 'http://www.hulu.com/series/staged/', 'image': 'Staged', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'March 16, 2021', 'slot': 'END' },
   { 'name': 'F is for Family', 'network': 'Netflix', 'link': 'http://www.netflix.com/fisforfamily', 'image': 'FIsForFamily', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 25, 2021', 'slot': 'END' },
@@ -140,7 +138,9 @@ const SHOWS: IShow[] = [
   { 'name': 'Paradise P.D.', 'network': 'Netflix', 'link': 'http://www.netflix.com/paradisepd', 'image': 'ParadisePD', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'December 16, 2022', 'slot': 'END' },
   { 'name': 'His Dark Materials', 'network': 'HBOMax', 'link': 'https://www.hbo.com/his-dark-materials', 'image': 'HisDarkMaterials', 'type': 'gif', 'info': 'Mondays 9:00PM', 'season': 3, 'start': 'December 5, 2022', 'slot': 'END' },
   { 'name': 'The Witcher: Blood Origin', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcherbloodorigin', 'image': 'WitcherBloodOrigin', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'December 25, 2022', 'slot': 'END' },
-  { 'name': 'Your Honor', 'network': 'Showtime', 'link': 'http://www.sho.com/your-honor', 'image': 'YourHonor2', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'January 13, 2023', 'slot': 'END' }
+  { 'name': 'Your Honor', 'network': 'Showtime', 'link': 'http://www.sho.com/your-honor', 'image': 'YourHonor2', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'January 13, 2023', 'slot': 'END' },
+  { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0B65WKLPS', 'image': 'CarnivalRow2', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'February 17, 2023', 'slot': 'END' },
+  { 'name': 'History of the World Part II', 'network': 'Hulu', 'link': 'https://www.hulu.com/series/history-of-the-world-part-ii', 'image': 'HistoryOfTheWorldPart2', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 6, 2023', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
