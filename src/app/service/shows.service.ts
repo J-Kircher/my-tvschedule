@@ -19,7 +19,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 2, 'start': 'January 4, 2023', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 28, 2022', 'slot': 'SBS' },
-  { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'June 5, 2019', 'slot': 'SBS' },
+  { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'June 9, 2023', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 5, 'start': 'September 9, 2022', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Wednesdays 10:00PM', 'season': 1, 'start': 'November 24, 2022', 'slot': 'SBS' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'February 9, 2022', 'slot': 'SBS' },
@@ -46,7 +46,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'July 13, 2022', 'slot': 'SBS' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 17, 2021', 'slot': 'SBS' },
   { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming', 'season': 4, 'start': 'November 18, 2021', 'slot': 'SBS' },
-  { 'name': 'Star Trek: Picard', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-picard/', 'image': 'Picard3', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'February 16, 2023', 'slot': 'SBS' },
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'June 15, 2023', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'May 27, 2022', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 44, 'start': 'March 1, 2023', 'slot': 'SBS' },
@@ -61,9 +60,9 @@ const SHOWS: IShow[] = [
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 5, 'start': 'September 25, 2022', 'slot': 'SBS' },
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 5, 2022', 'slot': 'SBS' },
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 22, 2022', 'slot': 'SBS' },
-  { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 2, 'start': 'December 17, 2021', 'slot': 'SBS' },
+  { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 29, 2023', 'slot': 'SBS' },
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09F5KBXB6', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 19, 2021', 'slot': 'SBS' },
-  { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://www.hbo.com/true-detective', 'image': 'TrueDetective3', 'type': 'gif', 'info': 'Sundays 9:00PM', 'season': 3, 'start': 'January 13, 2019', 'slot': 'SBS' },
+  { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://www.hbo.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'September 24, 2023', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 2022', 'slot': 'SBS' },
   { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 4, 'start': 'July 12, 2022', 'slot': 'SBS' },
 
@@ -141,7 +140,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Carnival Row', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0B65WKLPS', 'image': 'CarnivalRow2', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'February 17, 2023', 'slot': 'END' },
   { 'name': 'History of the World Part II', 'network': 'Hulu', 'link': 'https://www.hulu.com/series/history-of-the-world-part-ii', 'image': 'HistoryOfTheWorldPart2', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'March 6, 2023', 'slot': 'END' },
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://www.hbo.com/avenue-5', 'image': 'Avenue5', 'type': 'gif', 'info': 'Mondays 10:00PM', 'season': 2, 'start': 'October 10, 2022', 'slot': 'END' },
-  { 'name': 'Willow', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/willow/PfeL8yCNXD3r', 'image': 'Willow', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'November 30, 2022', 'slot': 'END' }
+  { 'name': 'Willow', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/willow/PfeL8yCNXD3r', 'image': 'Willow', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'November 30, 2022', 'slot': 'END' },
+  { 'name': 'Star Trek: Picard', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-picard/', 'image': 'Picard3', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'February 16, 2023', 'slot': 'END' },
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
