@@ -53,7 +53,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Survivor', 'network': 'CBS', 'link': 'http://www.cbs.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 44, 'start': 'March 1, 2023', 'slot': 'SBS' },
   { 'name': 'The Boys', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09WV8HF7Q', 'image': 'TheBoys3', 'type': 'png', 'info': 'Streaming Fridays', 'season': 3, 'start': 'June 3, 2022', 'slot': 'SBS' },
   { 'name': 'The Crown', 'network': 'Netflix', 'link': 'http://www.netflix.com/thecrown', 'image': 'Crown', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 9, 2022', 'slot': 'SBS' },
-  { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 9, 'start': 'February 8, 2023', 'slot': 'SBS' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Wednesdays', 'season': 5, 'start': 'September 14, 2022', 'slot': 'SBS' },
   { 'name': 'The Last of Us', 'network': 'HBOMax', 'link': 'http://www.hbo.com/the-last-of-us/', 'image': 'LastOfUs', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 15, 2023', 'slot': 'SBS' },
   { 'name': 'The Mandalorian', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD', 'image': 'Mandalorian3', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'March 1, 2023', 'slot': 'SBS' },
@@ -143,6 +142,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Avenue 5', 'network': 'HBOMax', 'link': 'https://www.hbo.com/avenue-5', 'image': 'Avenue5', 'type': 'gif', 'info': 'Mondays 10:00PM', 'season': 2, 'start': 'October 10, 2022', 'slot': 'END' },
   { 'name': 'Willow', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/willow/PfeL8yCNXD3r', 'image': 'Willow', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'November 30, 2022', 'slot': 'END' },
   { 'name': 'Star Trek: Picard', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-picard/', 'image': 'Picard3', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'February 16, 2023', 'slot': 'END' },
+  { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 9, 'start': 'February 8, 2023', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
