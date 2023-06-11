@@ -65,6 +65,7 @@ const SHOWS: IShow[] = [
   { 'name': 'True Detective', 'network': 'HBOMax', 'link': 'https://www.hbo.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'September 24, 2023', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 2022', 'slot': 'SBS' },
   { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 5, 'start': 'July 13, 2023', 'slot': 'SBS' },
+  { 'name': 'Yellowjackets', 'network': 'Showtime', 'link': 'http://www.sho.com/yellowjackets', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 26, 2023', 'slot': 'SBS' },
 
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'October 28, 2017', 'slot': 'END' },
   { 'name': 'Bloodline', 'network': 'Netflix', 'link': 'http://www.netflix.com/bloodline', 'image': 'Bloodline', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'May 26, 2017', 'slot': 'END' },
