@@ -28,7 +28,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens2', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'July 28, 2023', 'slot': 'SBS' },
   { 'name': 'House of the Dragon', 'network': 'HBOMax', 'link': 'http://www.hbo.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'August 21, 2022', 'slot': 'SBS' },
-  { 'name': 'Human Resources', 'network': 'Netflix', 'link': 'http://www.netflix.com/humanresources', 'image': 'HumanResources', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'June 9, 2023', 'slot': 'SBS' },
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-interview-with-the-vampire--1053259', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'October 2, 2022', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08WJMRHYZ', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'March 25, 2021', 'slot': 'SBS' },
   { 'name': 'Jack Ryan', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0BYTB2PTZ', 'image': 'JackRyan4', 'type': 'png', 'info': 'Streaming Fridays', 'season': 4, 'start': 'June 30, 2023', 'slot': 'SBS' },
@@ -143,7 +142,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Willow', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/willow/PfeL8yCNXD3r', 'image': 'Willow', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'November 30, 2022', 'slot': 'END' },
   { 'name': 'Star Trek: Picard', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-picard/', 'image': 'Picard3', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'February 16, 2023', 'slot': 'END' },
   { 'name': 'The Flash', 'network': 'CW', 'link': 'http://www.cwtv.com/shows/the-flash/', 'image': 'TheFlash', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 9, 'start': 'February 8, 2023', 'slot': 'END' },
-  { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://www.hbo.com/perry-mason', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 6, 2023', 'slot': 'END' }
+  { 'name': 'Perry Mason', 'network': 'HBOMax', 'link': 'https://www.hbo.com/perry-mason', 'image': 'PerryMason', 'type': 'gif', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 6, 2023', 'slot': 'END' },
+  { 'name': 'Human Resources', 'network': 'Netflix', 'link': 'http://www.netflix.com/humanresources', 'image': 'HumanResources', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'June 9, 2023', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
