@@ -25,14 +25,12 @@ const SHOWS: IShow[] = [
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 5, 'start': 'September 9, 2022', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Wednesdays 10:00PM', 'season': 1, 'start': 'November 24, 2022', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:GXnzXWA8PcFSpjQEAAATH:type:series', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 13, 'start': 'October 31, 2021', 'slot': 'SBS' },
-  { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens2', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'July 28, 2023', 'slot': 'SBS' },
   { 'name': 'House of the Dragon', 'network': 'HBOMax', 'link': 'http://www.hbo.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'August 21, 2022', 'slot': 'SBS' },
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-interview-with-the-vampire--1053259', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'October 2, 2022', 'slot': 'SBS' },
-  { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B08WJMRHYZ', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'November 3, 2023', 'slot': 'SBS' },
+  { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0C6X2CF21', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'November 3, 2023', 'slot': 'SBS' },
   { 'name': 'Justified: City Primeval', 'network': 'Hulu', 'link': 'http://www.hulu.com/justified/', 'image': 'Justified7', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 7, 'start': 'July 18, 2023', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'HBOMax', 'link': 'https://www.hbo.com/last-week-tonight-with-john-oliver', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 10, 'start': 'February 19, 2023', 'slot': 'SBS' },
-  { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'October 6, 2023', 'slot': 'SBS' },
   { 'name': 'Mayfair Witches', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/mayfair-witches--1059404', 'image': 'MayfairWitches', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 8, 2023', 'slot': 'SBS' },
   { 'name': 'Peacemaker', 'network': 'HBOMax', 'link': 'https://play.hbomax.com/page/urn:hbo:page:home', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 1, 'start': 'January 13, 2022', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.adultswim.com/videos/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 7, 'start': 'October 15, 2023', 'slot': 'SBS' },
@@ -145,7 +143,9 @@ const SHOWS: IShow[] = [
   { 'name': 'Jack Ryan', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0BYTB2PTZ', 'image': 'JackRyan4', 'type': 'png', 'info': 'Streaming Fridays', 'season': 4, 'start': 'June 30, 2023', 'slot': 'END' },
   { 'name': 'Real Time with Bill Maher', 'network': 'HBOMax', 'link': 'https://www.hbo.com/real-time-with-bill-maher', 'image': 'RealTime20', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 21, 'start': 'January 20, 2023', 'slot': 'END' },
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'September 1, 2023', 'slot': 'END' },
-  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 14, 'start': 'August 30, 2023', 'slot': 'END' }
+  { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 14, 'start': 'August 30, 2023', 'slot': 'END' },
+  { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'October 6, 2023', 'slot': 'END' },
+  { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
