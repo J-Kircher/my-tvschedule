@@ -37,7 +37,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.adultswim.com/videos/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 7, 'start': 'October 15, 2023', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive48', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 49, 'start': 'October 14, 2023', 'slot': 'SBS' },
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'February 18, 2022', 'slot': 'SBS' },
-  { 'name': 'Shining Vale', 'network': 'Starz', 'link': 'https://www.starz.com/us/en/series/shining-vale/64078', 'image': 'ShiningVale', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 2, 'start': 'October 13, 2023', 'slot': 'SBS' },
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 14, 2023', 'slot': 'SBS' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 17, 2021', 'slot': 'SBS' },
   { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming', 'season': 5, 'start': 'April 18, 2024', 'slot': 'SBS' },
@@ -146,7 +145,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Disenchanement', 'network': 'Netflix', 'link': 'http://www.netflix.com/disenchantment', 'image': 'Disenchantment', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'September 1, 2023', 'slot': 'END' },
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 14, 'start': 'August 30, 2023', 'slot': 'END' },
   { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'October 6, 2023', 'slot': 'END' },
-  { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'END' }
+  { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'END' },
+  { 'name': 'Shining Vale', 'network': 'Starz', 'link': 'https://www.starz.com/us/en/series/shining-vale/64078', 'image': 'ShiningVale', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 2, 'start': 'October 13, 2023', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
