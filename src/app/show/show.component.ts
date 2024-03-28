@@ -6,7 +6,7 @@ import { IShow } from '../model/shows.model';
   template: `
     <div class="slot" [title]="getTitleText(show)">
       <div [ngClass]="{ 'network': displayShow }"
-        [style.background-image]="displayShow ? 'url(./assets/images/Networks/' + show.network + '.gif)' : null">
+        [style.background-image]="displayShow ? 'url(./assets/images/Networks/' + show.network + '.gif), url(./assets/images/Networks/' + show.network + '.png)' : null">
       </div>
       <div [ngClass]="{ 'myShow': displayShow }"
         [style.background-image]="displayShow ? 'url(./assets/images/Shows/' + show.image + '.' + show.type + ')' : null">
