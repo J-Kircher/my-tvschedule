@@ -15,15 +15,13 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
-  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'October 19, 2022', 'slot': 'SBS' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
-  { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'February 21, 2024', 'slot': 'SBS' },
   { 'name': 'Beavis and Butt-Head', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/mike-judges-beavis-and-butt-head/', 'image': 'BeavisAndButtHead', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'April 20, 2023', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'October 20, 2023', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'June 15, 2023', 'slot': 'SBS' },
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 28, 2023', 'slot': 'SBS' },
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 5, 'start': 'September 9, 2022', 'slot': 'SBS' },
-  { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Wednesdays 10:00PM', 'season': 1, 'start': 'November 24, 2022', 'slot': 'SBS' },
+  { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 2, 'start': 'June 6, 2024', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'Max', 'link': 'https://play.max.com/show/b36dc8c3-d424-45eb-8eb0-18c514d566df', 'image': 'DoctorWho11', 'type': 'gif', 'info': 'Sundays 8:00PM', 'season': 13, 'start': 'October 31, 2021', 'slot': 'SBS' },
   { 'name': 'Fallout', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CN4H1V9D', 'image': 'Fallout', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'April 9, 2024', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens2', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'July 28, 2023', 'slot': 'SBS' },
@@ -45,7 +43,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'May 27, 2022', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 46, 'start': 'February 28, 2024', 'slot': 'SBS' },
   { 'name': 'The Boys', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09WV8HF7Q', 'image': 'TheBoys3', 'type': 'png', 'info': 'Streaming Fridays', 'season': 4, 'start': 'June 13, 2024', 'slot': 'SBS' },
-  { 'name': 'The Crown', 'network': 'Netflix', 'link': 'http://www.netflix.com/thecrown', 'image': 'Crown', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'November 16, 2023', 'slot': 'SBS' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Wednesdays', 'season': 5, 'start': 'September 14, 2022', 'slot': 'SBS' },
   { 'name': 'The Last of Us', 'network': 'Max', 'link': 'https://play.max.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a', 'image': 'LastOfUs', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 15, 2023', 'slot': 'SBS' },
   { 'name': 'The Mandalorian', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD', 'image': 'Mandalorian3', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'March 1, 2023', 'slot': 'SBS' },
@@ -147,7 +144,10 @@ const SHOWS: IShow[] = [
   { 'name': 'Archer', 'network': 'FXX', 'link': 'http://www.fxnetworks.com/shows/archer/', 'image': 'Archer', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 14, 'start': 'August 30, 2023', 'slot': 'END' },
   { 'name': 'Loki', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/loki/6pARMvILBGzF', 'image': 'Loki', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'October 6, 2023', 'slot': 'END' },
   { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'END' },
-  { 'name': 'Shining Vale', 'network': 'Starz', 'link': 'https://www.starz.com/us/en/series/shining-vale/64078', 'image': 'ShiningVale', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 2, 'start': 'October 13, 2023', 'slot': 'END' }
+  { 'name': 'Shining Vale', 'network': 'Starz', 'link': 'https://www.starz.com/us/en/series/shining-vale/64078', 'image': 'ShiningVale', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 2, 'start': 'October 13, 2023', 'slot': 'END' },
+  { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'October 19, 2022', 'slot': 'END' },
+  { 'name': 'The Crown', 'network': 'Netflix', 'link': 'http://www.netflix.com/thecrown', 'image': 'Crown', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'November 16, 2023', 'slot': 'END' },
+  { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'February 21, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
