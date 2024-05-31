@@ -38,7 +38,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'February 18, 2022', 'slot': 'SBS' },
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 14, 2023', 'slot': 'SBS' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 17, 2021', 'slot': 'SBS' },
-  { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 5, 'start': 'April 4, 2024', 'slot': 'SBS' },
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'June 15, 2023', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'May 27, 2022', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 46, 'start': 'February 28, 2024', 'slot': 'SBS' },
@@ -148,7 +147,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Shining Vale', 'network': 'Starz', 'link': 'https://www.starz.com/us/en/series/shining-vale/64078', 'image': 'ShiningVale', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 2, 'start': 'October 13, 2023', 'slot': 'END' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'October 19, 2022', 'slot': 'END' },
   { 'name': 'The Crown', 'network': 'Netflix', 'link': 'http://www.netflix.com/thecrown', 'image': 'Crown', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'November 16, 2023', 'slot': 'END' },
-  { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'February 21, 2024', 'slot': 'END' }
+  { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'February 21, 2024', 'slot': 'END' },
+  { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 5, 'start': 'April 4, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
