@@ -16,7 +16,6 @@ const SCHEDULE: ISchedule[] = [
 const SHOWS: IShow[] = [
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
-  { 'name': 'Beavis and Butt-Head', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/mike-judges-beavis-and-butt-head/', 'image': 'BeavisAndButtHead', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'April 20, 2023', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'October 20, 2023', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'June 15, 2023', 'slot': 'SBS' },
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 28, 2023', 'slot': 'SBS' },
@@ -28,7 +27,6 @@ const SHOWS: IShow[] = [
   { 'name': 'House of the Dragon', 'network': 'Max', 'link': 'http://www.max.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 2, 'start': 'June 16, 2024', 'slot': 'SBS' },
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-interview-with-the-vampire--1053259', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'May 12, 2024', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0C6X2CF21', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'November 3, 2023', 'slot': 'SBS' },
-  { 'name': 'Justified: City Primeval', 'network': 'Hulu', 'link': 'http://www.hulu.com/justified/', 'image': 'Justified7', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 7, 'start': 'July 18, 2023', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'Max', 'link': 'https://play.max.com/topical/f7ebcd02-6641-4ec5-a392-07e58196808f', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 11, 'start': 'February 18, 2024', 'slot': 'SBS' },
   { 'name': 'Mayfair Witches', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/mayfair-witches--1059404', 'image': 'MayfairWitches', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 8, 2023', 'slot': 'SBS' },
   { 'name': 'Monarch: Legacy of Monsters', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/monarch-legacy-of-monsters/umc.cmc.62l8x0ixrhyq3yaqa5y8yo7ew', 'image': 'Monarch', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 17, 2023', 'slot': 'SBS' },
@@ -41,7 +39,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'June 15, 2023', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'May 27, 2022', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 47, 'start': 'September 18, 2024', 'slot': 'SBS' },
-  { 'name': 'The Acolyte', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-acolyte/39RAA0bOYXQ0', 'image': 'Acolyte', 'type': 'png', 'info': 'Streaming Tuesdays 9:00PM', 'season': 1, 'start': 'June 4, 2024', 'slot': 'SBS' },
   { 'name': 'The Boys', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CLWVYPXF', 'image': 'TheBoys4', 'type': 'png', 'info': 'Streaming Fridays', 'season': 4, 'start': 'June 13, 2024', 'slot': 'SBS' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Wednesdays', 'season': 5, 'start': 'September 14, 2022', 'slot': 'SBS' },
   { 'name': 'The Last of Us', 'network': 'Max', 'link': 'https://play.max.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a', 'image': 'LastOfUs', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 15, 2023', 'slot': 'SBS' },
@@ -50,7 +47,6 @@ const SHOWS: IShow[] = [
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B09QHCPD34', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'August 29, 2024', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 6, 'start': 'February 20, 2024', 'slot': 'SBS' },
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 5, 2022', 'slot': 'SBS' },
-  { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 8, 2024', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 29, 2023', 'slot': 'SBS' },
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0C942RTL1', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'September 1, 2023', 'slot': 'SBS' },
   { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'October 30, 2022', 'slot': 'SBS' },
@@ -148,9 +144,13 @@ const SHOWS: IShow[] = [
   { 'name': 'Farzar', 'network': 'Netflix', 'link': 'http://www.netflix.com/farzar', 'image': 'Farzar', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'July 15, 2022', 'slot': 'END' },
   { 'name': 'Shining Vale', 'network': 'Starz', 'link': 'https://www.starz.com/us/en/series/shining-vale/64078', 'image': 'ShiningVale', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 2, 'start': 'October 13, 2023', 'slot': 'END' },
   { 'name': 'American Horror Story', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/american-horror-story/', 'image': 'AmericanHorrorStory', 'type': 'gif', 'info': 'Wednesdays 10:00PM', 'season': 11, 'start': 'October 19, 2022', 'slot': 'END' },
+  { 'name': 'Beavis and Butt-Head', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/mike-judges-beavis-and-butt-head/', 'image': 'BeavisAndButtHead', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'April 20, 2023', 'slot': 'END' },
   { 'name': 'The Crown', 'network': 'Netflix', 'link': 'http://www.netflix.com/thecrown', 'image': 'Crown', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'November 16, 2023', 'slot': 'END' },
   { 'name': 'Bad Batch', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC', 'image': 'BadBatch', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'February 21, 2024', 'slot': 'END' },
-  { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 5, 'start': 'April 4, 2024', 'slot': 'END' }
+  { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 5, 'start': 'April 4, 2024', 'slot': 'END' },
+  { 'name': 'Justified: City Primeval', 'network': 'Hulu', 'link': 'http://www.hulu.com/justified/', 'image': 'Justified7', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 7, 'start': 'July 18, 2023', 'slot': 'END' },
+  { 'name': 'The Acolyte', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-acolyte/39RAA0bOYXQ0', 'image': 'Acolyte', 'type': 'png', 'info': 'Streaming Tuesdays 9:00PM', 'season': 1, 'start': 'June 4, 2024', 'slot': 'END' },
+  { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 8, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
