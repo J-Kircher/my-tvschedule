@@ -14,6 +14,7 @@ const SCHEDULE: ISchedule[] = [
 ];
 
 const SHOWS: IShow[] = [
+  { 'name': 'Agatha All Along', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/agatha-all-along/6Nf0RIVHbJnh', 'image': 'AgathaAllAlong', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2024', 'slot': 'SBS' },
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'October 20, 2023', 'slot': 'SBS' },
