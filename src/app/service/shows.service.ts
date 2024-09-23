@@ -52,8 +52,8 @@ const SHOWS: IShow[] = [
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 29, 2023', 'slot': 'SBS' },
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0C942RTL1', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'September 1, 2023', 'slot': 'SBS' },
   { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'October 30, 2022', 'slot': 'SBS' },
-  { 'name': 'Time Bandits', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/time-bandits/umc.cmc.1oenx8mbap78we9b35c52s07s', 'image': 'TimeBandits', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'July 24, 2024', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'Max', 'link': 'https://www.max.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'January 14, 2024', 'slot': 'SBS' },
+  { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 2022', 'slot': 'SBS' },
   { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Thursdays 10:00PM', 'season': 5, 'start': 'July 13, 2023', 'slot': 'SBS' },
   { 'name': 'Yellowjackets', 'network': 'Showtime', 'link': 'http://www.sho.com/yellowjackets', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 26, 2023', 'slot': 'SBS' },
@@ -152,7 +152,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Star Trek: Discovery', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-discovery/', 'image': 'Discovery', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 5, 'start': 'April 4, 2024', 'slot': 'END' },
   { 'name': 'Justified: City Primeval', 'network': 'Hulu', 'link': 'http://www.hulu.com/justified/', 'image': 'Justified7', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 7, 'start': 'July 18, 2023', 'slot': 'END' },
   { 'name': 'The Acolyte', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-acolyte/39RAA0bOYXQ0', 'image': 'Acolyte', 'type': 'png', 'info': 'Streaming Tuesdays 9:00PM', 'season': 1, 'start': 'June 4, 2024', 'slot': 'END' },
-  { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 8, 2024', 'slot': 'END' }
+  { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 8, 2024', 'slot': 'END' },
+  { 'name': 'Time Bandits', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/time-bandits/umc.cmc.1oenx8mbap78we9b35c52s07s', 'image': 'TimeBandits', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'July 24, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
