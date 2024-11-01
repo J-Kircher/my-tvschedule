@@ -14,7 +14,6 @@ const SCHEDULE: ISchedule[] = [
 ];
 
 const SHOWS: IShow[] = [
-  { 'name': 'Agatha All Along', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/agatha-all-along/6Nf0RIVHbJnh', 'image': 'AgathaAllAlong', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2024', 'slot': 'SBS' },
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'October 20, 2023', 'slot': 'SBS' },
@@ -37,6 +36,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.adultswim.com/videos/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 7, 'start': 'October 15, 2023', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive50', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 50, 'start': 'September 28, 2024', 'slot': 'SBS' },
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'January 17, 2025', 'slot': 'SBS' },
+  { 'name': 'Skeleton Crew', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/browse/entity-4a73a750-f18c-450a-b9f7-d9f40974ff9d', 'image': 'SkeletonCrew', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 1, 'start': 'December 3, 2024', 'slot': 'SBS' },
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'August 12, 2024', 'slot': 'SBS' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'December 26, 2024', 'slot': 'SBS' },
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'June 15, 2023', 'slot': 'SBS' },
@@ -155,7 +155,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Justified: City Primeval', 'network': 'Hulu', 'link': 'http://www.hulu.com/justified/', 'image': 'Justified7', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 7, 'start': 'July 18, 2023', 'slot': 'END' },
   { 'name': 'The Acolyte', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-acolyte/39RAA0bOYXQ0', 'image': 'Acolyte', 'type': 'png', 'info': 'Streaming Tuesdays 9:00PM', 'season': 1, 'start': 'June 4, 2024', 'slot': 'END' },
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 8, 2024', 'slot': 'END' },
-  { 'name': 'Time Bandits', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/time-bandits/umc.cmc.1oenx8mbap78we9b35c52s07s', 'image': 'TimeBandits', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'July 24, 2024', 'slot': 'END' }
+  { 'name': 'Time Bandits', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/time-bandits/umc.cmc.1oenx8mbap78we9b35c52s07s', 'image': 'TimeBandits', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'July 24, 2024', 'slot': 'END' },
+  { 'name': 'Agatha All Along', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/agatha-all-along/6Nf0RIVHbJnh', 'image': 'AgathaAllAlong', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
