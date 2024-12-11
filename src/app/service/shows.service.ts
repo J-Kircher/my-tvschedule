@@ -18,8 +18,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'October 20, 2023', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'June 15, 2023', 'slot': 'SBS' },
-  { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 24, 2025', 'slot': 'SBS' },
-  { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 6, 'start': 'November 15, 2024', 'slot': 'SBS' },
+  { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 16, 2025', 'slot': 'SBS' },
+  { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 6, 'start': 'February 13, 2025', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 2, 'start': 'June 6, 2024', 'slot': 'SBS' },
   { 'name': 'Daredevil: Born Again', 'network': 'Disney+', 'link': 'https://ondisneyplus.disney.com/show/daredevil-born-again', 'image': 'DaredevilBA', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 1, 'start': 'March 4, 2025', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/browse/entity-29965333-8179-4002-9228-b356a21b636a', 'image': 'DoctorWho14', 'type': 'png', 'info': 'Sundays 8:00PM', 'season': 14, 'start': 'May 11, 2024', 'slot': 'SBS' },
@@ -47,7 +47,6 @@ const SHOWS: IShow[] = [
   { 'name': 'The Last of Us', 'network': 'Max', 'link': 'https://play.max.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a', 'image': 'LastOfUs', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 15, 2023', 'slot': 'SBS' },
   { 'name': 'The Mandalorian', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD', 'image': 'Mandalorian3', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 3, 'start': 'March 1, 2023', 'slot': 'SBS' },
   { 'name': 'The Old Man', 'network': 'FX', 'link': 'http://www.fxnetworks.com/shows/the-old-man/', 'image': 'TheOldMan', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 2, 'start': 'Sepetember 12, 2024', 'slot': 'SBS' },
-  { 'name': 'The Penguin', 'network': 'Max', 'link': 'https://www.max.com/thepenguin', 'image': 'Penguin', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 1, 'start': 'September 19, 2024', 'slot': 'SBS' },
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CXGQPRFP', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'August 29, 2024', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 6, 'start': 'February 20, 2024', 'slot': 'SBS' },
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 5, 2022', 'slot': 'SBS' },
@@ -57,7 +56,6 @@ const SHOWS: IShow[] = [
   { 'name': 'True Detective', 'network': 'Max', 'link': 'https://www.max.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'January 14, 2024', 'slot': 'SBS' },
   { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 2022', 'slot': 'SBS' },
-  { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Mondays 10:00PM', 'season': 6, 'start': 'October 21, 2024', 'slot': 'SBS' },
   { 'name': 'Yellowjackets', 'network': 'Showtime', 'link': 'http://www.sho.com/yellowjackets', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 26, 2023', 'slot': 'SBS' },
 
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'October 28, 2017', 'slot': 'END' },
@@ -156,7 +154,9 @@ const SHOWS: IShow[] = [
   { 'name': 'The Acolyte', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/the-acolyte/39RAA0bOYXQ0', 'image': 'Acolyte', 'type': 'png', 'info': 'Streaming Tuesdays 9:00PM', 'season': 1, 'start': 'June 4, 2024', 'slot': 'END' },
   { 'name': 'The Umbrella Academy', 'network': 'Netflix', 'link': 'http://www.netflix.com/umbrellaacademy', 'image': 'UmbrellaAcademy', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'August 8, 2024', 'slot': 'END' },
   { 'name': 'Time Bandits', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/time-bandits/umc.cmc.1oenx8mbap78we9b35c52s07s', 'image': 'TimeBandits', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'July 24, 2024', 'slot': 'END' },
-  { 'name': 'Agatha All Along', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/agatha-all-along/6Nf0RIVHbJnh', 'image': 'AgathaAllAlong', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2024', 'slot': 'END' }
+  { 'name': 'Agatha All Along', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/agatha-all-along/6Nf0RIVHbJnh', 'image': 'AgathaAllAlong', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 18, 2024', 'slot': 'END' },
+  { 'name': 'The Penguin', 'network': 'Max', 'link': 'https://www.max.com/thepenguin', 'image': 'Penguin', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 1, 'start': 'September 19, 2024', 'slot': 'END' },
+  { 'name': 'What We Do in the Shadows', 'network': 'FX', 'link': 'https://www.fxnetworks.com/shows/what-we-do-in-the-shadows', 'image': 'WhatWeDoInTheShadows', 'type': 'gif', 'info': 'Mondays 10:00PM', 'season': 6, 'start': 'October 21, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
