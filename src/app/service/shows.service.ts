@@ -15,7 +15,7 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
-  { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'September 21, 2022', 'slot': 'SBS' },
+  { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'April 22, 2025', 'slot': 'SBS' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'October 20, 2023', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'June 15, 2023', 'slot': 'SBS' },
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 16, 2025', 'slot': 'SBS' },
@@ -31,7 +31,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-interview-with-the-vampire--1053259', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'May 12, 2024', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0C6X2CF21', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'February 6, 2025', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'Max', 'link': 'https://play.max.com/topical/f7ebcd02-6641-4ec5-a392-07e58196808f', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 11, 'start': 'February 18, 2024', 'slot': 'SBS' },
-  { 'name': 'Mayfair Witches', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/mayfair-witches--1059404', 'image': 'MayfairWitches', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'January 8, 2023', 'slot': 'SBS' },
+  { 'name': 'Mayfair Witches', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/mayfair-witches--1059404', 'image': 'MayfairWitches', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'January 5, 2025', 'slot': 'SBS' },
   { 'name': 'Monarch: Legacy of Monsters', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/monarch-legacy-of-monsters/umc.cmc.62l8x0ixrhyq3yaqa5y8yo7ew', 'image': 'Monarch', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 17, 2023', 'slot': 'SBS' },
   { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 1, 'start': 'January 13, 2022', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.adultswim.com/videos/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 7, 'start': 'October 15, 2023', 'slot': 'SBS' },
@@ -53,11 +53,11 @@ const SHOWS: IShow[] = [
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 5, 2022', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 29, 2023', 'slot': 'SBS' },
   { 'name': 'The Wheel Of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0C942RTL1', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'September 1, 2023', 'slot': 'SBS' },
-  { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'October 30, 2022', 'slot': 'SBS' },
+  { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 3, 'start': 'February 16, 2025', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'Max', 'link': 'https://www.max.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'January 14, 2024', 'slot': 'SBS' },
   { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'November 23, 2022', 'slot': 'SBS' },
-  { 'name': 'Yellowjackets', 'network': 'Showtime', 'link': 'http://www.sho.com/yellowjackets', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'March 26, 2023', 'slot': 'SBS' },
+  { 'name': 'Yellowjackets', 'network': 'Showtime', 'link': 'http://www.sho.com/yellowjackets', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 3, 'start': 'February 14, 2025', 'slot': 'SBS' },
 
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'October 28, 2017', 'slot': 'END' },
   { 'name': 'Bloodline', 'network': 'Netflix', 'link': 'http://www.netflix.com/bloodline', 'image': 'Bloodline', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'May 26, 2017', 'slot': 'END' },
