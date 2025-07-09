@@ -15,7 +15,6 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
-  { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 8, 'start': 'May 23, 2025', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'April 10, 2025', 'slot': 'SBS' },
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 16, 2025', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 3, 'start': 'May 8, 2025', 'slot': 'SBS' },
@@ -159,7 +158,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Cobra Kai', 'network': 'Netflix', 'link': 'http://www.netflix.com/CobraKai', 'image': 'CobraKai6', 'type': 'png', 'info': 'Streaming', 'season': 6, 'start': 'February 13, 2025', 'slot': 'END' },
   { 'name': 'The Wheel of Time', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0D2VH77R1', 'image': 'WheelOfTime', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'March 13, 2025', 'slot': 'END' },
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'April 22, 2025', 'slot': 'END' },
-  { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Tuesdays', 'season': 6, 'start': 'April 8, 2025', 'slot': 'END' }
+  { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Tuesdays', 'season': 6, 'start': 'April 8, 2025', 'slot': 'END' },
+  { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 8, 'start': 'May 23, 2025', 'slot': 'END' },
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
