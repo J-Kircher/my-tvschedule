@@ -36,7 +36,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive50', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 50, 'start': 'September 28, 2024', 'slot': 'SBS' },
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'January 17, 2025', 'slot': 'SBS' },
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'August 12, 2024', 'slot': 'SBS' },
-  { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'June 27, 2025', 'slot': 'SBS' },
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'July 17, 2025', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 26, 2025', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 48, 'start': 'February 26, 2025', 'slot': 'SBS' },
@@ -160,6 +159,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Andor', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/andor/3xsQKWG00GL5', 'image': 'Andor', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'April 22, 2025', 'slot': 'END' },
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Tuesdays', 'season': 6, 'start': 'April 8, 2025', 'slot': 'END' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 8, 'start': 'May 23, 2025', 'slot': 'END' },
+  { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'June 27, 2025', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
