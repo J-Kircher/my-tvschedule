@@ -15,7 +15,7 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
-  { 'name': 'Alien: Earth', 'network': 'Hulu', 'link': 'http://www.hulu.com/series/alien-earth/', 'image': 'AlienEarth', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'August 12, 2025', 'slot': 'SBS' },
+  { 'name': 'Alien: Earth', 'network': 'Hulu', 'link': 'http://www.hulu.com/series/alien-earth/', 'image': 'AlienEarth', 'type': 'png', 'info': 'Tuesdays 8:00PM', 'season': 1, 'start': 'August 12, 2025', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'April 10, 2025', 'slot': 'SBS' },
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 16, 2025', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 3, 'start': 'May 8, 2025', 'slot': 'SBS' },
@@ -46,7 +46,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CXGQPRFP', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'August 29, 2024', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 7, 'start': 'January 7, 2025', 'slot': 'SBS' },
   { 'name': 'The Traitors', 'network': 'Peacock', 'link': 'https://www.peacocktv.com/stream-tv/the-traitors', 'image': 'Traitors3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'January 9, 2025', 'slot': 'SBS' },
-  { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'June 29, 2023', 'slot': 'SBS' },
+  { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'October 30, 2025', 'slot': 'SBS' },
   { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus3', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 3, 'start': 'February 16, 2025', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'Max', 'link': 'https://www.max.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'January 14, 2024', 'slot': 'SBS' },
   { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'SBS' },
