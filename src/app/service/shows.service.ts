@@ -20,7 +20,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 16, 2025', 'slot': 'SBS' },
   { 'name': 'Criminal Minds - Evolution', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/criminal_minds/', 'image': 'CriminalMindsEvolution', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 3, 'start': 'May 8, 2025', 'slot': 'SBS' },
   { 'name': 'Daredevil: Born Again', 'network': 'Disney+', 'link': 'https://ondisneyplus.disney.com/show/daredevil-born-again', 'image': 'DaredevilBornAgain', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 1, 'start': 'March 4, 2025', 'slot': 'SBS' },
-  { 'name': 'Dexter - Original Sin', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/dexter-original-sin/', 'image': 'DexterOriginalSin', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 1, 'start': 'December 13, 2024', 'slot': 'SBS' },
   { 'name': 'Dexter - Resurrection', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/dexter-resurrection/', 'image': 'DexterResurrection', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 1, 'start': 'July 11, 2025', 'slot': 'SBS' },
   { 'name': 'Doctor Who', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/browse/entity-29965333-8179-4002-9228-b356a21b636a', 'image': 'DoctorWho14', 'type': 'png', 'info': 'Sundays 8:00PM', 'season': 14, 'start': 'May 11, 2024', 'slot': 'SBS' },
   { 'name': 'Dune: Prophecy', 'network': 'Max', 'link': 'https://www.max.com/duneprophecy', 'image': 'DuneProphecy', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'November 17, 2024', 'slot': 'SBS' },
@@ -161,6 +160,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 8, 'start': 'May 23, 2025', 'slot': 'END' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'June 27, 2025', 'slot': 'END' },
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'July 3, 2025', 'slot': 'END' },
+  { 'name': 'Dexter - Original Sin', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/dexter-original-sin/', 'image': 'DexterOriginalSin', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 1, 'start': 'December 13, 2024', 'slot': 'END' },
   { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 9:00PM', 'season': 2, 'start': 'August 21, 2025', 'slot': 'END' }
 ];
 
