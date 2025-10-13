@@ -33,7 +33,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Last Week Tonight', 'network': 'Max', 'link': 'https://play.max.com/topical/f7ebcd02-6641-4ec5-a392-07e58196808f', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 12, 'start': 'February 16, 2025', 'slot': 'SBS' },
   { 'name': 'Mayfair Witches', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/mayfair-witches--1059404', 'image': 'MayfairWitches', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'January 5, 2025', 'slot': 'SBS' },
   { 'name': 'Monarch: Legacy of Monsters', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/monarch-legacy-of-monsters/umc.cmc.62l8x0ixrhyq3yaqa5y8yo7ew', 'image': 'Monarch', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 17, 2023', 'slot': 'SBS' },
-  { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 10:00PM', 'season': 2, 'start': 'August 21, 2025', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.wco.tv/anime/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 8, 'start': 'May 25, 2025', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive50', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 51, 'start': 'October 4, 2025', 'slot': 'SBS' },
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'January 17, 2025', 'slot': 'SBS' },
@@ -161,7 +160,8 @@ const SHOWS: IShow[] = [
   { 'name': 'The Handmaids Tale', 'network': 'Hulu', 'link': 'http://www.hulu.com/the-handmaids-tale/', 'image': 'HandmaidsTale', 'type': 'gif', 'info': 'Streaming Tuesdays', 'season': 6, 'start': 'April 8, 2025', 'slot': 'END' },
   { 'name': 'Big Mouth', 'network': 'Netflix', 'link': 'http://www.netflix.com/bigmouth', 'image': 'BigMouth', 'type': 'gif', 'info': 'Streaming', 'season': 8, 'start': 'May 23, 2025', 'slot': 'END' },
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'June 27, 2025', 'slot': 'END' },
-  { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'July 3, 2025', 'slot': 'END' }
+  { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'July 3, 2025', 'slot': 'END' },
+  { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 9:00PM', 'season': 2, 'start': 'August 21, 2025', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
