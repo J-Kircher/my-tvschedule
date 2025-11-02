@@ -35,7 +35,6 @@ const SHOWS: IShow[] = [
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.wco.tv/anime/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 8, 'start': 'May 25, 2025', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive50', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 51, 'start': 'October 4, 2025', 'slot': 'SBS' },
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'January 17, 2025', 'slot': 'SBS' },
-  { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 13, 2025', 'slot': 'SBS' },
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'July 17, 2025', 'slot': 'SBS' },
   { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 26, 2025', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 49, 'start': 'September 24, 2025', 'slot': 'SBS' },
@@ -162,7 +161,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Squid Game', 'network': 'Netflix', 'link': 'http://www.netflix.com/squidgame', 'image': 'SquidGame', 'type': 'png', 'info': 'Streaming', 'season': 3, 'start': 'June 27, 2025', 'slot': 'END' },
   { 'name': 'The Sandman', 'network': 'Netflix', 'link': 'http://www.netflix.com/thesandman', 'image': 'Sandman', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'July 3, 2025', 'slot': 'END' },
   { 'name': 'Dexter - Original Sin', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/dexter-original-sin/', 'image': 'DexterOriginalSin', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 1, 'start': 'December 13, 2024', 'slot': 'END' },
-  { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 9:00PM', 'season': 2, 'start': 'August 21, 2025', 'slot': 'END' }
+  { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 9:00PM', 'season': 2, 'start': 'August 21, 2025', 'slot': 'END' },
+  { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 13, 2025', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
