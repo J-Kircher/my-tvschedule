@@ -30,7 +30,7 @@ const SHOWS: IShow[] = [
   { 'name': 'It: Welcome to Derry', 'network': 'HBOMax', 'link': 'https://www.hbomax.com/it-welcome-to-derry', 'image': 'WelcomeToDerry', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'October 25, 2025', 'slot': 'SBS' },
   { 'name': 'Last Week Tonight', 'network': 'Max', 'link': 'https://play.max.com/topical/f7ebcd02-6641-4ec5-a392-07e58196808f', 'image': 'LastWeekTonight', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 12, 'start': 'February 16, 2025', 'slot': 'SBS' },
   { 'name': 'Mayfair Witches', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/mayfair-witches--1059404', 'image': 'MayfairWitches', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'January 5, 2025', 'slot': 'SBS' },
-  { 'name': 'Monarch: Legacy of Monsters', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/monarch-legacy-of-monsters/umc.cmc.62l8x0ixrhyq3yaqa5y8yo7ew', 'image': 'Monarch', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 17, 2023', 'slot': 'SBS' },
+  { 'name': 'Monarch: Legacy of Monsters', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/monarch-legacy-of-monsters/umc.cmc.62l8x0ixrhyq3yaqa5y8yo7ew', 'image': 'Monarch', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'February 27, 2026', 'slot': 'SBS' },
   { 'name': 'Pluribus', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/pluribus/umc.cmc.37axgovs2yozlyh3c2cmwzlza', 'image': 'Pluribus', 'type': 'png', 'info': 'Streaming Fridays', 'season': 1, 'start': 'November 7, 2025', 'slot': 'SBS' },
   { 'name': 'Rick and Morty', 'network': 'AS', 'link': 'https://www.wco.tv/anime/rick-and-morty', 'image': 'RickAndMorty', 'type': 'gif', 'info': 'Sundays 11:00PM', 'season': 8, 'start': 'May 25, 2025', 'slot': 'SBS' },
   { 'name': 'Saturday Night Live', 'network': 'NBC', 'link': 'http://www.nbc.com/saturday-night-live/', 'image': 'SaturdayNightLive50', 'type': 'png', 'info': 'Saturdays 11:30PM', 'season': 51, 'start': 'October 4, 2025', 'slot': 'SBS' },
@@ -43,11 +43,10 @@ const SHOWS: IShow[] = [
   { 'name': 'The Last of Us', 'network': 'Max', 'link': 'https://play.max.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a', 'image': 'LastOfUs', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'April 13, 2025', 'slot': 'SBS' },
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CXGQPRFP', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'August 29, 2024', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 8, 'start': 'January 6, 2026', 'slot': 'SBS' },
-  { 'name': 'The Traitors', 'network': 'Peacock', 'link': 'https://www.peacocktv.com/stream-tv/the-traitors', 'image': 'Traitors3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'January 9, 2025', 'slot': 'SBS' },
+  { 'name': 'The Traitors', 'network': 'Peacock', 'link': 'https://www.peacocktv.com/stream-tv/the-traitors', 'image': 'Traitors3', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 4, 'start': 'January 8, 2026', 'slot': 'SBS' },
   { 'name': 'The Witcher', 'network': 'Netflix', 'link': 'http://www.netflix.com/thewitcher', 'image': 'Witcher', 'type': 'gif', 'info': 'Streaming', 'season': 4, 'start': 'October 30, 2025', 'slot': 'SBS' },
   { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus3', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 3, 'start': 'February 16, 2025', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'Max', 'link': 'https://www.max.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'January 14, 2024', 'slot': 'SBS' },
-  { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'August 6, 2025', 'slot': 'SBS' },
   { 'name': 'Yellowjackets', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/yellowjackets/', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 3, 'start': 'February 14, 2025', 'slot': 'SBS' },
 
@@ -163,7 +162,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Dexter - Original Sin', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/dexter-original-sin/', 'image': 'DexterOriginalSin', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 1, 'start': 'December 13, 2024', 'slot': 'END' },
   { 'name': 'Peacemaker', 'network': 'Max', 'link': 'https://www.max.com/peacemaker', 'image': 'Peacemaker', 'type': 'png', 'info': 'Thursdays 9:00PM', 'season': 2, 'start': 'August 21, 2025', 'slot': 'END' },
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 13, 2025', 'slot': 'END' },
-  { 'name': 'Doctor Who', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/browse/entity-29965333-8179-4002-9228-b356a21b636a', 'image': 'DoctorWho14', 'type': 'png', 'info': 'Sundays 8:00PM', 'season': 14, 'start': 'May 11, 2024', 'slot': 'END' }
+  { 'name': 'Doctor Who', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/browse/entity-29965333-8179-4002-9228-b356a21b636a', 'image': 'DoctorWho14', 'type': 'png', 'info': 'Sundays 8:00PM', 'season': 14, 'start': 'May 11, 2024', 'slot': 'END' },
+  { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
