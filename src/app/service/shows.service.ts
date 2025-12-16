@@ -14,6 +14,7 @@ const SCHEDULE: ISchedule[] = [
 ];
 
 const SHOWS: IShow[] = [
+  { 'name': 'A Knight of the Seven Kingdoms', 'network': 'HBOMax', 'link': 'http://www.hbomax.com/a-knight-of-the-seven-kingdoms/', 'image': 'KnightOfSevenKingdoms', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'January 18, 2026', 'slot': 'SBS' },
   { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
   { 'name': 'Alien: Earth', 'network': 'Hulu', 'link': 'http://www.hulu.com/series/alien-earth/', 'image': 'AlienEarth', 'type': 'png', 'info': 'Tuesdays 8:00PM', 'season': 1, 'start': 'August 12, 2025', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'April 10, 2025', 'slot': 'SBS' },
@@ -24,7 +25,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Dune: Prophecy', 'network': 'Max', 'link': 'https://www.max.com/duneprophecy', 'image': 'DuneProphecy', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 1, 'start': 'November 17, 2024', 'slot': 'SBS' },
   { 'name': 'Fallout', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CN4H1V9D', 'image': 'Fallout', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 2, 'start': 'December 17, 2025', 'slot': 'SBS' },
   { 'name': 'Good Omens', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B07FMHTRFD', 'image': 'GoodOmens2', 'type': 'png', 'info': 'Streaming Tuesdays', 'season': 2, 'start': 'July 28, 2023', 'slot': 'SBS' },
-  { 'name': 'House of the Dragon', 'network': 'Max', 'link': 'http://www.max.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 2, 'start': 'June 16, 2024', 'slot': 'SBS' },
+  { 'name': 'House of the Dragon', 'network': 'HBOMax', 'link': 'http://www.hbomax.com/house-of-the-dragon/', 'image': 'HouseOfTheDragon', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 2, 'start': 'June 16, 2024', 'slot': 'SBS' },
   { 'name': 'Interview with the Vampire', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-interview-with-the-vampire--1053259', 'image': 'InterviewWithTheVampire', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'May 12, 2024', 'slot': 'SBS' },
   { 'name': 'Invincible', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0D7D3VHCF', 'image': 'Invincible', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'February 6, 2025', 'slot': 'SBS' },
   { 'name': 'It: Welcome to Derry', 'network': 'HBOMax', 'link': 'https://www.hbomax.com/it-welcome-to-derry', 'image': 'WelcomeToDerry', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'October 25, 2025', 'slot': 'SBS' },
