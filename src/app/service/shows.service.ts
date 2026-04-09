@@ -39,8 +39,7 @@ const SHOWS: IShow[] = [
   { 'name': 'Severence', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx', 'image': 'Severance', 'type': 'png', 'info': 'Streaming Fridays', 'season': 2, 'start': 'January 17, 2025', 'slot': 'SBS' },
   { 'name': 'Star Trek: Strange New Worlds', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/star-trek-strange-new-worlds/', 'image': 'StrangeNewWorlds', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 3, 'start': 'July 17, 2025', 'slot': 'SBS' },
   { 'name': 'Survivor', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/survivor/', 'image': 'Survivor', 'type': 'gif', 'info': 'Wednesdays 8:00PM', 'season': 50, 'start': 'February 25, 2026', 'slot': 'SBS' },
-  { 'name': 'Talamasca', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-talamasca-the-secret-order--1072344', 'image': 'Talamasca', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'October 26, 2025', 'slot': 'SBS' },
-  { 'name': 'The Boys', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CLWVYPXF', 'image': 'TheBoys4', 'type': 'png', 'info': 'Streaming Fridays', 'season': 5, 'start': 'April 8, 2026', 'slot': 'SBS' },
+  { 'name': 'The Boys', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CLWVYPXF', 'image': 'TheBoys5', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 5, 'start': 'April 8, 2026', 'slot': 'SBS' },
   { 'name': 'The Last of Us', 'network': 'Max', 'link': 'https://play.max.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a', 'image': 'LastOfUs', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 2, 'start': 'April 13, 2025', 'slot': 'SBS' },
   { 'name': 'The Rings of Power', 'network': 'Amazon', 'link': 'https://www.amazon.com/dp/B0CXGQPRFP', 'image': 'RingsOfPower', 'type': 'png', 'info': 'Streaming Thursdays', 'season': 2, 'start': 'August 29, 2024', 'slot': 'SBS' },
   { 'name': 'The Rookie', 'network': 'ABC', 'link': 'http://www.abc.com/shows/the-rookie', 'image': 'TheRookie', 'type': 'gif', 'info': 'Tuesdays 10:00PM', 'season': 8, 'start': 'January 6, 2026', 'slot': 'SBS' },
@@ -165,7 +164,8 @@ const SHOWS: IShow[] = [
   { 'name': 'Solar Opposites', 'network': 'Hulu', 'link': 'http://www.hulu.com/solar-opposites/', 'image': 'SolarOpposites', 'type': 'gif', 'info': 'Streaming', 'season': 6, 'start': 'October 13, 2025', 'slot': 'END' },
   { 'name': 'Doctor Who', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/browse/entity-29965333-8179-4002-9228-b356a21b636a', 'image': 'DoctorWho14', 'type': 'png', 'info': 'Sundays 8:00PM', 'season': 14, 'start': 'May 11, 2024', 'slot': 'END' },
   { 'name': 'Twilight of the Gods', 'network': 'Netflix', 'link': 'http://www.netflix.com/TwilightOfTheGods', 'image': 'TwilightOfTheGods', 'type': 'png', 'info': 'Streaming', 'season': 1, 'start': 'September 19, 2024', 'slot': 'END' },
-  { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 26, 2025', 'slot': 'END' }
+  { 'name': 'Stranger Things', 'network': 'Netflix', 'link': 'http://www.netflix.com/strangerthings', 'image': 'StrangerThings', 'type': 'gif', 'info': 'Streaming', 'season': 5, 'start': 'November 26, 2025', 'slot': 'END' },
+  { 'name': 'Talamasca', 'network': 'AMC+', 'link': 'https://www.amcplus.com/shows/anne-rice-talamasca-the-secret-order--1072344', 'image': 'Talamasca', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'October 26, 2025', 'slot': 'END' }
 ];
 
 const TIMESLOTS: ITimeSlot[] = [
