@@ -46,6 +46,7 @@ const SHOWS: IShow[] = [
   { 'name': 'The White Lotus', 'network': 'Max', 'link': 'https://www.hbo.com/the-white-lotus', 'image': 'WhiteLotus3', 'type': 'png', 'info': 'Sundays 10:00PM', 'season': 3, 'start': 'February 16, 2025', 'slot': 'SBS' },
   { 'name': 'True Detective', 'network': 'Max', 'link': 'https://www.max.com/true-detective', 'image': 'TrueDetective4', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 4, 'start': 'January 14, 2024', 'slot': 'SBS' },
   { 'name': 'Wednesday', 'network': 'Netflix', 'link': 'http://www.netflix.com/wednesday', 'image': 'Wednesday', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'August 6, 2025', 'slot': 'SBS' },
+  { 'name': 'Widows Bay', 'network': 'AppleTV', 'link': 'https://tv.apple.com/us/show/widows-bay/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2', 'image': 'WidowsBay', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'April 29, 2026', 'slot': 'SBS' },
   { 'name': 'Yellowjackets', 'network': 'Paramount+', 'link': 'https://www.paramountplus.com/shows/yellowjackets/', 'image': 'Yellowjackets', 'type': 'png', 'info': 'Fridays 10:00PM', 'season': 3, 'start': 'February 14, 2025', 'slot': 'SBS' },
 
   { 'name': 'Fugget About It', 'network': 'Hulu', 'link': 'http://www.hulu.com/fugget-about-it/', 'image': 'FuggetAboutIt', 'type': 'gif', 'info': 'Streaming', 'season': 3, 'start': 'October 28, 2017', 'slot': 'END' },
