@@ -15,7 +15,7 @@ const SCHEDULE: ISchedule[] = [
 
 const SHOWS: IShow[] = [
   { 'name': 'A Knight of the Seven Kingdoms', 'network': 'HBOMax', 'link': 'http://www.hbomax.com/a-knight-of-the-seven-kingdoms/', 'image': 'KnightOfSevenKingdoms', 'type': 'png', 'info': 'Sundays 9:00PM', 'season': 1, 'start': 'January 18, 2026', 'slot': 'SBS' },
-  { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 1, 'start': 'August 23, 2023', 'slot': 'SBS' },
+  { 'name': 'Ahsoka', 'network': 'Disney+', 'link': 'https://www.disneyplus.com/series/ahsoka/pdpjs2TO4zJ4', 'image': 'Ahsoka', 'type': 'png', 'info': 'Streaming Wednesdays', 'season': 2, 'start': 'January 20, 2027', 'slot': 'SBS' },
   { 'name': 'Alien: Earth', 'network': 'Hulu', 'link': 'http://www.hulu.com/series/alien-earth/', 'image': 'AlienEarth', 'type': 'png', 'info': 'Tuesdays 8:00PM', 'season': 1, 'start': 'August 12, 2025', 'slot': 'SBS' },
   { 'name': 'Black Mirror', 'network': 'Netflix', 'link': 'http://www.netflix.com/blackmirror', 'image': 'BlackMirror', 'type': 'gif', 'info': 'Streaming', 'season': 7, 'start': 'April 10, 2025', 'slot': 'SBS' },
   { 'name': 'Castlevania: Nocturne', 'network': 'Netflix', 'link': 'http://www.netflix.com/castlevanianocturne', 'image': 'CastlevaniaNocturne', 'type': 'png', 'info': 'Streaming', 'season': 2, 'start': 'January 16, 2025', 'slot': 'SBS' },
